@@ -1,0 +1,33 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Calgary Red background with rounded corners -->
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="#C8102E"/>
+  
+  <!-- Subtle Calgary Tower ring/halo element behind houses -->
+  <ellipse cx="32" cy="32" rx="20" ry="20" fill="none" stroke="#6B7280" stroke-width="1" opacity="0.4"/>
+  <ellipse cx="32" cy="32" rx="16" ry="16" fill="none" stroke="white" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- White houses representing neighbourhoods -->
+  
+  <!-- House 1 (left) -->
+  <path d="M12 28 L18 22 L24 28 V42 H12 V28Z" fill="white"/>
+  <rect x="15" y="34" width="6" height="8" rx="1" fill="#C8102E"/>
+  
+  <!-- House 2 (center, larger) -->
+  <path d="M26 26 L34 18 L42 26 V44 H26 V26Z" fill="white"/>
+  <rect x="31" y="34" width="8" height="10" rx="1" fill="#C8102E"/>
+  
+  <!-- House 3 (right) -->
+  <path d="M40 28 L46 22 L52 28 V42 H40 V28Z" fill="white"/>
+  <rect x="43" y="34" width="6" height="8" rx="1" fill="#C8102E"/>
+  
+  <!-- Community connection dots (grey) -->
+  <circle cx="18" cy="38" r="2" fill="#6B7280"/>
+  <circle cx="34" cy="39" r="2" fill="#6B7280"/>
+  <circle cx="46" cy="38" r="2" fill="#6B7280"/>
+  
+  <!-- Connection line -->
+  <path d="M18 38 L34 39 L46 38" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Subtle star/badge at top (like Calgary Tower top) -->
+  <path d="M32 12 L33 15 L36 16 L33 17 L32 20 L31 17 L28 16 L31 15 Z" fill="white" opacity="0.6"/>
+</svg>
