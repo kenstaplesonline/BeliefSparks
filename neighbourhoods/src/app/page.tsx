@@ -34,7 +34,7 @@ export default function Home() {
         { lat: 51.0553, lng: -114.0748, name: 'Kensington' },
         { lat: 51.0414, lng: -114.0753, name: 'Mission Cliff Bungalow' },
         { lat: 51.0670, lng: -114.0800, name: 'Sunnyside' },
-        { lat: 50.9558, lng: -113.9983, name: 'Deer Valley' },
+        { lat: 50.9181, lng: -114.0083, name: 'Deer Run' },
         { lat: 51.0383, lng: -114.1000, name: 'Altadore' },
         { lat: 50.9570, lng: -114.0844, name: 'Southwood' },
       ];

@@ -37,7 +37,7 @@ const neighbourhoods: Record<string, NeighbourhoodData> = {
     tagline: "Vibrant & Walkable Urban Village",
     description: "Kensington is one of Calgary's most beloved neighbourhoods, known for its walkable streets, eclectic mix of independent shops, and incredible food scene. Located just north of downtown along the Bow River, this historic community has evolved into a cultural hub where vintage charm meets modern energy.",
     address: "10 Street NW, Calgary, AB",
-    coordinates: { lat: 51.0553, lng: -114.0748 },
+    coordinates: { lat: 51.0525, lng: -114.0944 },
     stats: {
       population: 4200,
       avgHomePrice: "$550K-$900K",
@@ -74,7 +74,7 @@ const neighbourhoods: Record<string, NeighbourhoodData> = {
     tagline: "Historic Charm Meets River Living",
     description: "Nestled along the Elbow River, Mission Cliff Bungalow is a hidden gem that combines the character of historic homes with stunning natural beauty. This small but mighty community offers a peaceful retreat from city life while keeping you connected to Calgary's vibrant urban core.",
     address: "Cliff Street SW, Calgary, AB",
-    coordinates: { lat: 51.0414, lng: -114.0753 },
+    coordinates: { lat: 51.0333, lng: -114.0742 },
     stats: {
       population: 1800,
       avgHomePrice: "$600K-$950K",
@@ -111,7 +111,7 @@ const neighbourhoods: Record<string, NeighbourhoodData> = {
     tagline: "Community Spirit & Stunning Views",
     description: "Sunnyside lives up to its name — bright, welcoming, and full of life. This tight-knit community is famous for its active residents, beautiful parks, and some of the best downtown views in the city. It's where urban convenience meets small-town warmth.",
     address: "2 Avenue NW, Calgary, AB",
-    coordinates: { lat: 51.0670, lng: -114.0800 },
+    coordinates: { lat: 51.0528, lng: -114.0983 },
     stats: {
       population: 4100,
       avgHomePrice: "$500K-$850K",
@@ -148,7 +148,7 @@ const neighbourhoods: Record<string, NeighbourhoodData> = {
     tagline: "Family Paradise with Endless Amenities",
     description: "Deer Run is designed for families who want it all — safe streets, excellent schools, abundant parks, and every convenience you could need. This master-planned community has grown into one of SE Calgary's most sought-after family destinations.",
     address: "Deer Run Way SE, Calgary, AB",
-    coordinates: { lat: 50.9558, lng: -113.9983 },
+    coordinates: { lat: 50.9181, lng: -114.0083 },
     stats: {
       population: 12500,
       avgHomePrice: "$450K-$700K",
@@ -185,7 +185,7 @@ const neighbourhoods: Record<string, NeighbourhoodData> = {
     tagline: "Urban Oasis Steps from the River",
     description: "Altadore is where Calgary's urban pulse meets natural beauty. This sought-after community offers the perfect balance: quiet, tree-lined streets and spacious homes, all within walking distance of the river, vibrant 17th Avenue, and some of the city's best amenities.",
     address: "Altadore Road SW, Calgary, AB",
-    coordinates: { lat: 51.0383, lng: -114.1000 },
+    coordinates: { lat: 51.0250, lng: -114.1039 },
     stats: {
       population: 5200,
       avgHomePrice: "$650K-$1M+",
@@ -222,7 +222,7 @@ const neighbourhoods: Record<string, NeighbourhoodData> = {
     tagline: "Established Comfort with Modern Appeal",
     description: "Southwood has it all — mature trees, spacious lots, friendly neighbours, and fantastic schools. This well-established community has thoughtfully evolved, welcoming new families while preserving the charm that has made it a Calgary favorite for over 50 years.",
     address: "Southwood Drive SW, Calgary, AB",
-    coordinates: { lat: 50.9570, lng: -114.0844 },
+    coordinates: { lat: 50.9569, lng: -114.0844 },
     stats: {
       population: 8900,
       avgHomePrice: "$550K-$850K",
