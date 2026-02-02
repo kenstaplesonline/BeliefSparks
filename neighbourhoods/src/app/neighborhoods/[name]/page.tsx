@@ -185,7 +185,7 @@ const neighbourhoods: Record<string, NeighbourhoodData> = {
     tagline: "Urban Oasis Steps from the River",
     description: "Altadore is where Calgary's urban pulse meets natural beauty. This sought-after community offers the perfect balance: quiet, tree-lined streets and spacious homes, all within walking distance of the river, vibrant 17th Avenue, and some of the city's best amenities.",
     address: "Altadore Road SW, Calgary, AB",
-    coordinates: { lat: 51.0250, lng: -114.1039 },
+    coordinates: { lat: 51.0160, lng: -114.1005 },
     stats: {
       population: 5200,
       avgHomePrice: "$650K-$1M+",
