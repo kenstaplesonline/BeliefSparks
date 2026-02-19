@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-lato), sans-serif;
+  
+  --color-stone-50: #fafaf9;
+  --color-stone-100: #f5f5f4;
+  --color-stone-200: #e7e5e4;
+  --color-stone-300: #d6d3d1;
+  --color-stone-400: #a8a29e;
+  --color-stone-500: #78716c;
+  --color-stone-600: #57534e;
+  --color-stone-700: #44403c;
+  --color-stone-800: #292524;
+  --color-stone-900: #1c1917;
+
+  --color-vatican-gold: #D4AF37; /* Metallic Gold */
+  --color-vatican-red: #8B0000; /* Deep Dark Red */
+}
+
+/* 
+  Custom styles for text readability and elegance
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+body {
+  font-family: var(--font-sans);
+}
