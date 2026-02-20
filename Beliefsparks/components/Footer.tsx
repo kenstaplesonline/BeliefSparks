@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="flex space-x-8">
           <Link href="/site-map" className="text-stone-500 hover:text-stone-900 font-medium transition-colors">Sitemap</Link>
           <Link href="/privacy" className="text-stone-500 hover:text-stone-900 font-medium transition-colors">Privacy</Link>
-          <Link href="#" className="text-stone-500 hover:text-stone-900 font-medium transition-colors">Terms</Link>
+          <Link href="/terms" className="text-stone-500 hover:text-stone-900 font-medium transition-colors">Terms</Link>
           <Link href="#" className="text-stone-500 hover:text-stone-900 font-medium transition-colors">Contact</Link>
         </div>
       </div>
