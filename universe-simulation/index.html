@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Bang Simulation - View from Earth</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+        }
+
+        #canvas {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #controls {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            border: 1px solid #333;
+            max-width: 300px;
+        }
+
+        #controls h2 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .control-group {
+            margin-bottom: 15px;
+        }
+
+        .control-group label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 5px;
+            color: #aaa;
+        }
+
+        .control-group input[type="range"] {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .control-group input[type="button"] {
+            background: #333;
+            color: #fff;
+            border: 1px solid #555;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-family: inherit;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .control-group input[type="button"]:hover {
+            background: #444;
+        }
+
+        .value-display {
+            font-size: 11px;
+            color: #888;
+            text-align: right;
+        }
+
+        #info {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            color: #888;
+            font-size: 11px;
+            border: 1px solid #333;
+            max-width: 350px;
+        }
+
+        #info h3 {
+            color: #ffd700;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        #info p {
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+
+        .highlight {
+            color: #00ff88;
+        }
+
+        #cosmic-microwave {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 11px;
+            border: 1px solid #333;
+        }
+
+        #cosmic-microwave h3 {
+            color: #ffd700;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .temperature {
+            font-size: 24px;
+            color: #ff6b6b;
+        }
+
+        #title-overlay {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.9);
+            padding: 30px 50px;
+            border-radius: 15px;
+            color: #fff;
+            text-align: center;
+            border: 2px solid #ffd700;
+            z-index: 100;
+            transition: opacity 1s ease-out;
+        }
+
+        #title-overlay h1 {
+            font-size: 28px;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        #title-overlay p {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        #title-overlay .highlight {
+            color: #00ff88;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div id="title-overlay">
+        <h1>🌍 View from Earth</h1>
+        <p>Watch the universe expand from Earth's perspective</p>
+        <p class="highlight">Everything expands away from you</p>
+    </div>
+
+    <div id="controls">
+        <h2>🌍 View from Earth</h2>
+
+        <div class="control-group">
+            <label>Universe Age</label>
+            <input type="range" id="ageSlider" min="0.1" max="13.8" step="0.1" value="13.8">
+            <div class="value-display"><span id="ageValue">13.8</span> billion years</div>
+        </div>
+
+        <div class="control-group">
+            <label>Expansion Rate (H)</label>
+            <input type="range" id="hSlider" min="10" max="100" step="5" value="70">
+            <div class="value-display"><span id="hValue">70</span> km/s/Mpc</div>
+        </div>
+
+        <div class="control-group">
+            <label>Galaxy Count</label>
+            <input type="range" id="galaxySlider" min="100" max="1000" step="50" value="300">
+            <div class="value-display"><span id="galaxyValue">300</span> galaxies</div>
+        </div>
+
+        <div class="control-group">
+            <input type="button" id="restartBtn" value="Restart from Big Bang">
+        </div>
+
+        <div class="control-group">
+            <input type="button" id="playPauseBtn" value="Play Animation">
+        </div>
+
+        <div class="control-group">
+            <label>Simulation Time</label>
+            <div class="value-display"><span id="timerValue">0:00</span> / 2:00</div>
+        </div>
+    </div>
+
+    <div id="info">
+        <h3>📍 Earth's Perspective</h3>
+        <p>You are on <span class="highlight">Earth</span>, observing the Big Bang.</p>
+        <p>All galaxies expand <span class="highlight">away from Earth</span>.</p>
+        <p>Galaxies recede in <span class="highlight">all directions</span>.</p>
+        <p>Farther = Faster (Hubble's Law).</p>
+        <p>Distant objects <span class="highlight">redshift</span> & dim.</p>
+        <p>CMB visible in all directions.</p>
+    </div>
+
+    <div id="cosmic-microwave">
+        <h3>🌡️ Cosmic Microwave Background</h3>
+        <div class="temperature"><span id="temperature">2.725</span> K</div>
+        <div style="margin-top: 5px; color: #888;">Seen from Earth in all directions</div>
+    </div>
+
+    <div style="position: fixed; bottom: 20px; right: 20px; background: rgba(0, 0, 0, 0.8); padding: 15px; border-radius: 10px; color: #fff; font-size: 11px; border: 1px solid #333;">
+        <h3 style="color: #ffd700; font-size: 12px; margin-bottom: 8px;">⏱️ Simulation Info</h3>
+        <p style="margin-bottom: 5px;">Duration: <span style="color: #00ff88;">2 minutes</span></p>
+        <p style="margin-bottom: 5px;">Viewpoint: <span style="color: #00ff88;">Earth</span></p>
+        <p style="margin-bottom: 0;">Everything expands away from Earth</p>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        let width, height, centerX, centerY;
+
+        // Universe parameters
+        let universeAge = 13.8; // billion years
+        let hubbleConstant = 70; // km/s/Mpc
+        let galaxyCount = 300;
+        let isPlaying = false;
+        let animationAge = 0.1;
+        let animationSpeed = 0.05;
+
+        // Timer parameters (2 minutes = 120 seconds)
+        let simulationStartTime = null;
+        let simulationDuration = 120000; // 2 minutes in milliseconds
+        let timeElapsed = 0;
+
+        // Galaxies array
+        let galaxies = [];
+
+        // Scale factors
+        const SCALE_FACTOR = 0.8; // Visual scaling
+        const DISTANCE_SCALE = 0.5; // Distance scaling for visualization
+
+        // Initialize canvas
+        function resizeCanvas() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            centerX = width / 2;
+            centerY = height / 2;
+        }
+
+        // Create galaxies
+        function createGalaxies() {
+            galaxies = [];
+            for (let i = 0; i < galaxyCount; i++) {
+                // Random direction (uniform in 3D sphere, projected to 2D)
+                const theta = Math.random() * 2 * Math.PI;
+                const phi = Math.acos(2 * Math.random() - 1);
+
+                // Distance from observer (light-years, scaled)
+                const distance = (Math.random() * 13.8) * DISTANCE_SCALE;
+
+                galaxies.push({
+                    x: Math.sin(phi) * Math.cos(theta),
+                    y: Math.sin(phi) * Math.sin(theta),
+                    z: Math.cos(phi),
+                    distance: distance,
+                    originalDistance: distance,
+                    size: Math.random() * 3 + 1,
+                    brightness: Math.random() * 0.5 + 0.5,
+                    colorType: Math.random() // 0-1 determines color
+                });
+            }
+        }
+
+        // Calculate redshift based on distance and universe age
+        function calculateRedshift(distance, age) {
+            // Simplified redshift calculation
+            // z increases with distance and decreases with age
+            if (age < 0.1) return 1000; // Early universe - extreme redshift
+
+            const maxDistance = age * DISTANCE_SCALE;
+            const normalizedDistance = distance / maxDistance;
+
+            if (normalizedDistance >= 1) return 1000; // Beyond cosmic horizon
+
+            return normalizedDistance * 5; // z up to 5 for visible objects
+        }
+
+        // Apply redshift to color
+        function applyRedshift(baseColor, redshift) {
+            if (redshift > 10) {
+                // Far beyond visible - CMB
+                return { r: 20, g: 10, b: 30, alpha: 0.3 };
+            }
+
+            // Base colors (blue to red sequence)
+            const blueStars = { r: 150, g: 170, b: 255 };
+            const whiteStars = { r: 255, g: 255, b: 255 };
+            const yellowStars = { r: 255, g: 240, b: 180 };
+            const redStars = { r: 255, g: 180, b: 150 };
+            const redshifted = { r: 255, g: 50, b: 50 };
+
+            let base;
+            if (baseColor < 0.33) {
+                base = blueStars;
+            } else if (baseColor < 0.66) {
+                base = whiteStars;
+            } else {
+                base = yellowStars;
+            }
+
+            // Interpolate toward redshifted
+            const t = Math.min(redshift / 3, 1);
+            return {
+                r: Math.round(base.r + (redshifted.r - base.r) * t),
+                g: Math.round(base.g + (redshifted.g - base.g) * t),
+                b: Math.round(base.b + (redshifted.b - base.b) * t),
+                alpha: 1
+            };
+        }
+
+        // Draw cosmic microwave background
+        function drawCMB(age) {
+            if (age < 0.1) {
+                // Early universe - hot plasma
+                const temperature = 3000 * Math.pow(10, -age);
+                const intensity = Math.min(temperature / 3000, 1);
+                ctx.fillStyle = `rgba(255, ${Math.round(200 * (1 - intensity))}, ${Math.round(150 * (1 - intensity))}, ${intensity})`;
+                ctx.fillRect(0, 0, width, height);
+            } else {
+                // Modern CMB
+                ctx.fillStyle = 'rgba(20, 10, 30, 0.1)';
+                ctx.fillRect(0, 0, width, height);
+            }
+
+            // Update CMB temperature display
+            const cmbTemp = age < 0.1 ? (3000 * Math.pow(10, -age)).toFixed(2) : '2.725';
+            document.getElementById('temperature').textContent = cmbTemp;
+        }
+
+        // Draw galaxies from observer's perspective
+        function drawGalaxies(age) {
+            const scale = Math.pow(age / 13.8, 0.5) * SCALE_FACTOR;
+
+            galaxies.forEach(galaxy => {
+                // Current distance (expanded)
+                const currentDistance = galaxy.originalDistance * Math.pow(age / 0.1, 0.7);
+
+                // Calculate redshift
+                const redshift = calculateRedshift(currentDistance, age);
+
+                // If beyond cosmic horizon, don't draw
+                if (redshift > 10) return;
+
+                // Project 3D to 2D
+                const visualDistance = currentDistance * scale * 100;
+                const x = centerX + galaxy.x * visualDistance;
+                const y = centerY + galaxy.y * visualDistance;
+
+                // Check if within canvas
+                if (x < 0 || x > width || y < 0 || y > height) return;
+
+                // Apply redshift
+                const color = applyRedshift(galaxy.colorType, redshift);
+
+                // Calculate brightness (dim with distance and redshift)
+                const distanceFactor = 1 / (currentDistance + 0.1);
+                const redshiftFactor = 1 / (redshift + 0.1);
+                const brightness = galaxy.brightness * distanceFactor * redshiftFactor;
+
+                // Size also appears smaller with distance
+                const apparentSize = galaxy.size * Math.sqrt(distanceFactor);
+
+                // Draw galaxy
+                ctx.beginPath();
+                ctx.arc(x, y, Math.max(apparentSize, 0.5), 0, 2 * Math.PI);
+                ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${color.alpha * brightness})`;
+                ctx.fill();
+
+                // Add glow for brighter galaxies
+                if (brightness > 0.3) {
+                    ctx.beginPath();
+                    ctx.arc(x, y, apparentSize * 2, 0, 2 * Math.PI);
+                    ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${color.alpha * brightness * 0.3})`;
+                    ctx.fill();
+                }
+            });
+        }
+
+        // Draw Earth (observer position)
+        function drawObserver() {
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 8, 0, 2 * Math.PI);
+            ctx.fillStyle = '#00ff88';
+            ctx.fill();
+
+            // Earth glow effect
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 12, 0, 2 * Math.PI);
+            ctx.fillStyle = 'rgba(0, 255, 136, 0.3)';
+            ctx.fill();
+
+            // Label
+            ctx.fillStyle = '#00ff88';
+            ctx.font = '12px Courier New';
+            ctx.textAlign = 'center';
+            ctx.fillText('EARTH IS HERE', centerX, centerY - 15);
+        }
+
+        // Main draw function
+        function draw(age) {
+            // Clear canvas
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, width, height);
+
+            // Draw CMB background
+            drawCMB(age);
+
+            // Draw galaxies
+            drawGalaxies(age);
+
+            // Draw observer
+            drawObserver();
+
+            // Draw expansion arrows
+            drawExpansionArrows();
+        }
+
+        // Draw expansion direction arrows
+        function drawExpansionArrows() {
+            const arrowLength = 50;
+            const arrows = [
+                { x: centerX - 150, y: centerY - 150 },
+                { x: centerX + 150, y: centerY - 150 },
+                { x: centerX - 150, y: centerY + 150 },
+                { x: centerX + 150, y: centerY + 150 }
+            ];
+
+            ctx.strokeStyle = 'rgba(255, 200, 100, 0.3)';
+            ctx.lineWidth = 1;
+            arrows.forEach(arrow => {
+                // Arrow pointing outward from center
+                const dx = arrow.x - centerX;
+                const dy = arrow.y - centerY;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                const dirX = dx / dist;
+                const dirY = dy / dist;
+
+                ctx.beginPath();
+                ctx.moveTo(arrow.x, arrow.y);
+                ctx.lineTo(arrow.x + dirX * arrowLength, arrow.y + dirY * arrowLength);
+                ctx.stroke();
+
+                // Arrowhead
+                ctx.beginPath();
+                ctx.arc(arrow.x + dirX * arrowLength, arrow.y + dirY * arrowLength, 3, 0, 2 * Math.PI);
+                ctx.fillStyle = 'rgba(255, 200, 100, 0.5)';
+                ctx.fill();
+            });
+        }
+
+        // Animation loop
+        function animate() {
+            if (!simulationStartTime) {
+                simulationStartTime = Date.now();
+            }
+
+            timeElapsed = Date.now() - simulationStartTime;
+
+            // Update timer display
+            const minutes = Math.floor(timeElapsed / 60000);
+            const seconds = Math.floor((timeElapsed % 60000) / 1000);
+            document.getElementById('timerValue').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+            // Stop after 2 minutes
+            if (timeElapsed >= simulationDuration) {
+                isPlaying = false;
+                document.getElementById('playPauseBtn').textContent = 'Simulation Complete';
+                return;
+            }
+
+            if (isPlaying) {
+                // Continue animation even at max age for the full 2 minutes
+                animationAge += animationSpeed;
+                if (animationAge > universeAge) {
+                    animationAge = universeAge; // Cap at max age but keep animating
+                }
+                document.getElementById('ageSlider').value = animationAge;
+                document.getElementById('ageValue').textContent = animationAge.toFixed(1);
+                draw(animationAge);
+                requestAnimationFrame(animate);
+            }
+        }
+
+        // Event listeners
+        document.getElementById('ageSlider').addEventListener('input', (e) => {
+            universeAge = parseFloat(e.target.value);
+            animationAge = universeAge;
+            document.getElementById('ageValue').textContent = universeAge.toFixed(1);
+            draw(universeAge);
+        });
+
+        document.getElementById('hSlider').addEventListener('input', (e) => {
+            hubbleConstant = parseFloat(e.target.value);
+            document.getElementById('hValue').textContent = hubbleConstant;
+            draw(universeAge);
+        });
+
+        document.getElementById('galaxySlider').addEventListener('input', (e) => {
+            galaxyCount = parseInt(e.target.value);
+            document.getElementById('galaxyValue').textContent = galaxyCount;
+            createGalaxies();
+            draw(universeAge);
+        });
+
+        document.getElementById('restartBtn').addEventListener('click', () => {
+            animationAge = 0.1;
+            simulationStartTime = null;
+            timeElapsed = 0;
+            document.getElementById('timerValue').textContent = '0:00';
+            isPlaying = true;
+            document.getElementById('playPauseBtn').textContent = 'Pause Animation';
+
+            // Fade out title overlay
+            const titleOverlay = document.getElementById('title-overlay');
+            titleOverlay.style.opacity = '0';
+            setTimeout(() => {
+                titleOverlay.style.display = 'none';
+            }, 1000);
+
+            animate();
+        });
+
+        document.getElementById('playPauseBtn').addEventListener('click', () => {
+            isPlaying = !isPlaying;
+
+            // Reset timer if starting fresh
+            if (isPlaying && (timeElapsed === 0 || timeElapsed >= simulationDuration)) {
+                simulationStartTime = Date.now();
+            }
+
+            document.getElementById('playPauseBtn').textContent = isPlaying ? 'Pause Animation' : 'Play Animation';
+
+            if (isPlaying) {
+                // Fade out title overlay on first play
+                const titleOverlay = document.getElementById('title-overlay');
+                if (titleOverlay.style.display !== 'none') {
+                    titleOverlay.style.opacity = '0';
+                    setTimeout(() => {
+                        titleOverlay.style.display = 'none';
+                    }, 1000);
+                }
+                animate();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            draw(universeAge);
+        });
+
+        // Initialize
+        resizeCanvas();
+        createGalaxies();
+        draw(universeAge);
+    </script>
+</body>
+</html>

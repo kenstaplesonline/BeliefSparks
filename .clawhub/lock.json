@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "skills": {
+    "sonoscli": {
+      "version": "1.0.0",
+      "installedAt": 1770506695016
+    },
+    "browser-agent-ij1": {
+      "version": "1.0.0",
+      "installedAt": 1770506814771
+    },
+    "brave-search": {
+      "version": "1.0.1",
+      "installedAt": 1770507142010
+    },
+    "tavily-search": {
+      "version": "1.0.0",
+      "installedAt": 1770507185951
+    }
+  }
+}
