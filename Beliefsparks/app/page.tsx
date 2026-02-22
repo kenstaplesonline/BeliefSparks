@@ -1,39 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Flame, BookOpen, MessageCircle, Heart, Menu } from "lucide-react";
+import { BookOpen, MessageCircle, Heart } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-stone-50 font-sans text-stone-900">
-      {/* Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-stone-50/90 backdrop-blur-sm border-b border-stone-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center py-4">
-            <div className="mb-4">
-              <Image 
-                src="/logo-header-new.png" 
-                alt="Belief Sparks" 
-                width={360} 
-                height={90} 
-                className="h-[80px] w-auto object-contain"
-                priority
-              />
-            </div>
-            
-            <nav className="hidden md:flex space-x-8">
-              <Link href="#" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">God</Link>
-              <Link href="#" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Christianity</Link>
-              <Link href="/catholicism" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Catholicism</Link>
-              <Link href="#" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Faith</Link>
-            </nav>
-
-            <button className="md:hidden absolute right-4 top-8 text-stone-600">
-              <Menu className="h-6 w-6" />
-            </button>
-          </div>
-        </div>
-      </header>
-
       <main className="pt-36">
         {/* Hero Section */}
         <section className="relative py-24 lg:py-32 overflow-hidden min-h-[600px] flex items-center">
@@ -145,21 +116,6 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-widest text-stone-500">Patron of the Internet</p>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="bg-stone-50 border-t border-stone-200 py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center space-y-6">
-            <div>
-              <span className="font-serif text-xl font-bold text-stone-900">Belief Sparks</span>
-              <p className="text-sm text-stone-500 mt-2">© 2026 Belief Sparks. All rights reserved.</p>
-            </div>
-            <div className="flex space-x-8">
-              <Link href="#" className="text-stone-500 hover:text-stone-900 font-medium">Privacy</Link>
-              <Link href="#" className="text-stone-500 hover:text-stone-900 font-medium">Terms</Link>
-              <Link href="#" className="text-stone-500 hover:text-stone-900 font-medium">Contact</Link>
-            </div>
-          </div>
-        </footer>
       </main>
     </div>
   );
