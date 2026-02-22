@@ -104,6 +104,14 @@ export default function HeterodoxPage() {
               <p>
                 The seven-day structure, therefore, is not a timeline of 168 literal hours. It is a liturgical structure. It creates a "temple in time." By ending on the Sabbath, the text declares that the ultimate purpose of creation is not labor (as the Babylonians thought), but rest and communion with God. Reading Genesis 1 as a scientific treatise on the age of the earth misses the entire point. It is like reading a love poem and complaining that it lacks a proper weather report. The text answers the question "Who?" and "Why?", not "How?" or "When?". It provided a beleaguered people with dignity and hope, reminding them that their God, not Marduk, held the stars in His hands.
               </p>
+              <div className="mt-6 pt-6 border-t border-stone-200">
+                <Link 
+                  href="/heterodox/view-from-babylon"
+                  className="inline-flex items-center px-6 py-3 bg-vatican-gold text-stone-900 font-semibold rounded-lg hover:bg-white transition-colors duration-300"
+                >
+                  Read Full Exploration <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </section>
 
@@ -140,6 +148,14 @@ export default function HeterodoxPage() {
               <p>
                 Furthermore, science has purified religion. It has stopped us from using God as a "God of the gaps"—an explanation for things we don't understand yet (like lightning or disease). As our scientific knowledge grows, the "gaps" shrink, but the true ground of being—the Why behind the How—remains untouched. Science tells us how the heavens go; Scripture tells us how to go to heaven. Science gives us the mechanism; Scripture gives us the meaning. Embracing the scientific narrative as the HD detailed view of the Genesis poetic summary allows a believer to stand in awe of both the text and the telescope.
               </p>
+              <div className="mt-6 pt-6 border-t border-stone-200">
+                <Link 
+                  href="/heterodox/science-as-hd"
+                  className="inline-flex items-center px-6 py-3 bg-vatican-gold text-stone-900 font-semibold rounded-lg hover:bg-white transition-colors duration-300"
+                >
+                  Read Full Exploration <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </section>
 
@@ -176,6 +192,14 @@ export default function HeterodoxPage() {
               <p>
                 This reframes the entire Bible. The story of salvation becomes the story of God rebuilding His Temple—first through the tabernacle of Moses, then the stone temple of Solomon, then the true Temple of Jesus' body (John 2:21), and finally, the temple of the Church and the New Jerusalem, where "the Lord God Almighty and the Lamb are its temple" (Revelation 21:22). We are not just trying to get back to a garden; we are moving toward a Garden-City, a cosmic Temple where the separation between sacred and secular is finally erased.
               </p>
+              <div className="mt-6 pt-6 border-t border-stone-200">
+                <Link 
+                  href="/heterodox/eden-as-temple"
+                  className="inline-flex items-center px-6 py-3 bg-vatican-gold text-stone-900 font-semibold rounded-lg hover:bg-white transition-colors duration-300"
+                >
+                  Read Full Exploration <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </section>
 
@@ -209,6 +233,14 @@ export default function HeterodoxPage() {
               <p>
                 This interpretation resolves the conflict with biological data (humans have never lived 900 years) while preserving the text's historical intent. It affirms that there was a real, unbroken chain of custody for the "seed of the woman" (Genesis 3:15). These were the guardians of the promise, the faithful few who maintained the worship of Yahweh in a world rapidly descending into violence. Their "long lives" are a testament to the endurance of God's grace, sustaining a witness through the dark centuries of the antediluvian world.
               </p>
+              <div className="mt-6 pt-6 border-t border-stone-200">
+                <Link 
+                  href="/heterodox/ages-of-ministry"
+                  className="inline-flex items-center px-6 py-3 bg-vatican-gold text-stone-900 font-semibold rounded-lg hover:bg-white transition-colors duration-300"
+                >
+                  Read Full Exploration <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </section>
 
