@@ -185,14 +185,13 @@ export default function AgesOfMinistryPage() {
 
           {/* Section 5: Practical and Theological Implications */}
           <section className="grid md:grid-cols-12 gap-12 items-start">
-             <div className="md:col-span-4 sticky top-24">
+            <div className="md:col-span-4 sticky top-24">
               <div className="bg-vatican-gold/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <Heart className="h-8 w-8 text-vatican-gold" />
               </div>
               <h2 className="text-2xl font-serif font-bold text-stone-900 mb-2">Living Implications</h2>
               <div className="w-12 h-1 bg-vatican-gold mx-auto my-4 rounded-full"></div>
-                <p className="text-stone-500 text-sm font-medium uppercase tracking-widest">Faith &amp; Science</p>
-              </div>
+              <p className="text-stone-500 text-sm font-medium uppercase tracking-widest">Faith &amp; Science</p>
             </div>
             <div className="md:col-span-8 prose prose-stone prose-lg">
               <p>

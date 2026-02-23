@@ -156,14 +156,13 @@ export default function ViewFromBabylonPage() {
 
           {/* Section 4: What This Means for Modern Readers */}
           <section className="grid md:grid-cols-12 gap-12 items-start">
-             <div className="md:col-span-4 sticky top-24">
+            <div className="md:col-span-4 sticky top-24">
               <div className="bg-vatican-red/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <Scroll className="h-8 w-8 text-vatican-red" />
               </div>
               <h2 className="text-2xl font-serif font-bold text-stone-900 mb-2">Reading Genesis Today</h2>
               <div className="w-12 h-1 bg-vatican-red mx-auto my-4 rounded-full"></div>
               <p className="text-stone-500 text-sm font-medium uppercase tracking-widest">Beyond Literalism</p>
-              </div>
             </div>
             <div className="md:col-span-8 prose prose-stone prose-lg">
               <p>
