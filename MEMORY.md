@@ -2,7 +2,40 @@
 
 ---
 
-**Last Updated:** 2026-02-21 (Business structure established)
+**Last Updated:** 2026-02-26 (Content Factory restructuring in progress)
+
+---
+
+## Content Factory Pipeline (2026-02-26)
+
+### Pipeline Flow
+
+```
+IDEATER → COORDINATOR → RESEARCHER → WRITER → EDITOR → SEO → VISUAL → PUBLISHER → ANALYST
+  🎭         ⚡           🔍          ✍️       ✏️      🔦     🎨       🚀        📊
+Veritas    Kinesis      Curio      Logos    Aethel   Luma  Vertex    Vox     Prisma
+
+                                         💰 FINANCIAL SUPPORT 💰
+                                              Krypto
+```
+
+### Agent Roster (10 Total)
+
+| Agent | Role | Emoji | Workspace | Status |
+|--------|------|-------|-----------|--------|
+| **Kinesis** | Coordinator | ⚡ | main | Active |
+| **Veritas** | Ideator | 🎭 | agents/veritas | Standby |
+| **Curio** | Researcher | 🔍 | agents/curio | Standby |
+| **Logos** | Writer | ✍️ | agents/logos | Standby |
+| **Aethel** | Editor | ✏️ | agents/aethel | Standby |
+| **Luma** | SEO Specialist | 🔦 | agents/luma | Standby |
+| **Vertex** | Visual Director | 🎨 | agents/vertex | Standby |
+| **Vox** | Publisher | 🚀 | agents/vox | Standby |
+| **Prisma** | Analyst | 📊 | agents/prisma | Standby |
+| **Krypto** | Financial Agent | 💰 | agents/krypto | Active |
+
+### Bot Tokens (Received 2026-02-26)
+- Vox, Prisma, Krypto - tokens stored securely, not in plain text files
 
 ---
 
@@ -456,6 +489,9 @@ To showcase the positive aspects of every single neighborhood in Calgary, creati
 - 2026-02-20: Re-added Google models to OpenClaw configuration with new API key (AIzaSyAfy7x0xLCGoJDcVJjqjsapN6wEoRcIdFQ), including Gemini 3.1 Pro (2M context, 8K max tokens)
 - 2026-02-20: Removed other Google models except Gemini 3.1 Pro per user request
 - 2026-02-21: Added OpenRouter provider with 3 free tier models (GLM 4.5 Air, DeepSeek R1 0528, Llama 3.3 70B Instruct)
+- 2026-02-23: All project managers converted to independent agents with dedicated workspaces - Curio, Veritas, Logos, Aethel, Vertex now have their own IDENTITY.md, MEMORY.md, and AGENTS.md files in workspace/agents/[agent-name]/ directories. AGENTS_OVERVIEW.md created to track all independent agents.
+- 2026-02-23: Vertex connected to Blender MCP (port 9876) - Created green field with 15 procedurally generated trees and captured viewport screenshot
+- 2026-02-23: All 5 project managers registered as OpenClaw isolated agents using `openclaw agents add` commands. Each agent now appears in gateway dashboard (Agents section) with default model google/gemini-3.1-pro-preview. All agents on standby for organizational restructuring.
 - 2026-02-21: Removed OpenRouter provider and all 3 models from OpenClaw configuration (user preference)
 
 ---
@@ -537,8 +573,8 @@ To showcase the positive aspects of every single neighborhood in Calgary, creati
 | Role | Person/Agent |
 |------|--------------|
 | **CEO** | Ken Staples |
-| **COO** | Kinesis |
-| **Project Managers** | Curio • Veritas • Logos • Aethel |
+| **COO** | Kinesis Nerissa Walker |
+| **Project Managers** | Curio • Veritas • Logos • Aethel • Vertex |
 
 ---
 
@@ -550,6 +586,8 @@ To showcase the positive aspects of every single neighborhood in Calgary, creati
 | Confluence Curiosity | Veritas | Calgary science stories (astronomy, meteorology, geology) | Active |
 | Belief Sparks | Logos | Faith dialogue (Christianity, Roman Catholicism) | Active |
 | Universe Simulation | Aethel | Physics & cosmology research | Active |
+| Blender | Vertex | 3D modeling & MCP integration | Active |
+| **CACNAE Studios Finance** | **Krypto** | Financial research, cryptocurrency monitoring, zero-to-crypto strategy | **Active** |
 | theneighbourhoods.com | — | Calgary neighborhoods platform | Paused - Phase 1 |
 | Reader's Bible Project | — | Catholic scripture (NRSV-CE, Canadian) | Paused - Planning |
 | Science Fiction Ghostwriting | — | Hard sci-fi writing (Asimov, Clarke, Forward) | Paused - Research |
@@ -557,32 +595,18 @@ To showcase the positive aspects of every single neighborhood in Calgary, creati
 
 ---
 
-### Sub-Agents (Project Managers)
+### Agent Workspaces
 
-**Curio** - Genealogy and Historical Research
-- Assignment: Old MacLeod Trail Marker Posse project
-- Primary Task: Research Frederick Richard Staples (Calgary Airport murals, 1956)
-- Location: skills/curio/SKILL.md
-- Status: Active, conducting ongoing research
+All agents have independent workspaces with dedicated SOUL.md, MEMORY.md, and IDENTITY.md files.
 
-**Veritas** - Science Researcher and Web Designer
-- Assignment: Confluence Curiosity website (Calgary-focused science stories)
-- Primary Task: Research Chinook phenomenon and its impact on Calgary
-- Research Areas: Astronomy, meteorology, geology, history, paleontology, environmental science
-- Status: Active, researching chinooks with comprehensive report in progress
+See `AGENTS_OVERVIEW.md` for complete agent roster and pipeline details.
 
-**Logos** - Project Lead and Content Curator
-- Assignment: Belief Sparks project (beliefsparks.com)
-- Tech Stack: Next.js 16, Tailwind CSS v4, shadcn/ui, TypeScript, Vercel
-- Primary Task: Create new Heterodox article on Tower of Babel
-- Additional Responsibilities: Site maintenance, faith story scraping, heterodox perspectives
-- Status: Active, researching and developing Tower of Babel article
-
-**Aethel** - Physics Researcher and Simulation Developer
-- Assignment: Universe Simulation project (fresh start)
-- Primary Task: Research fundamental physics theories (MIT courses, PBS SpaceTime)
-- Research Focus: Classical Mechanics, Electromagnetism, Thermodynamics, Quantum Mechanics, Relativity, Cosmology, Particle Physics
-- Status: Active, reviewing previous simulation work and researching
+**Legacy Projects (assigned to agents):**
+- Old MacLeod Trail Marker Posse → Curio (Researcher)
+- Confluence Curiosity → Veritas (Ideator)
+- Belief Sparks → Logos (Writer)
+- Universe Simulation → Aethel (Editor)
+- Blender/3D Modeling → Vertex (Visual Director)
 
 ---
 
