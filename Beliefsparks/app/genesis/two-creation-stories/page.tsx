@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, Scroll, BookOpen, Eye, Layers } from "lucide-react";
+import { ChevronLeft, Scroll, BookOpen, Eye, Layers, Sparkles, Heart, MessageCircle } from "lucide-react";
 
 export default function TwoCreationStoriesPage() {
   return (
@@ -44,105 +44,268 @@ export default function TwoCreationStoriesPage() {
         {/* Content Container */}
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           
-          <div className="bg-amber-50 border-l-4 border-vatican-gold p-8 rounded-r-lg shadow-sm">
-            <p className="text-stone-800 text-lg">
-              <strong>The Puzzle:</strong> Open your Bible to Genesis 1, then to Genesis 2. You'll notice something curious: two different creation narratives, with different styles, different vocabularies, and even different orders of events. For centuries, readers have wrestled with why. Are these contradictions — or something deeper?
+          {/* Introduction */}
+          <section className="bg-amber-50 border-l-4 border-vatican-gold p-8 rounded-r-lg shadow-sm">
+            <h2 className="text-2xl font-serif font-bold text-stone-900 mb-4 flex items-center">
+              <BookOpen className="h-6 w-6 mr-2 text-vatican-gold" />
+              The Puzzle of Two Beginnings
+            </h2>
+            <p className="text-stone-800 text-lg leading-relaxed mb-4">
+              Open your Bible to Genesis 1, then to Genesis 2. You'll notice something curious: two different creation narratives, with different styles, different vocabularies, and even different orders of events. For centuries, readers have wrestled with why. Are these contradictions — or something deeper?
             </p>
-          </div>
+            <p className="text-stone-800 text-lg leading-relaxed">
+              This question has fascinated biblical scholars, theologians, and ordinary believers for millennia. The answer reveals not just how to read Genesis, but how to understand the nature of Scripture itself.
+            </p>
+          </section>
 
-          {/* Section 1 */}
-          <section className="grid md:grid-cols-12 gap-12 items-start">
-            <div className="md:col-span-4 sticky top-24">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 text-center">
-                <div className="bg-vatican-gold/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Eye className="h-8 w-8 text-vatican-gold" />
+          {/* Chapter 1: The Cosmic Canvas */}
+          <section className="space-y-6">
+            <h2 className="text-3xl font-serif font-bold text-stone-900 flex items-center">
+              <Eye className="h-7 w-7 mr-3 text-vatican-red" />
+              The First Account: A Cosmic Overview (Genesis 1:1–2:4a)
+            </h2>
+            
+            <p className="text-lg text-stone-700 leading-relaxed">
+              The first creation account reads like a majestic hymn. It opens with those unforgettable words: "In the beginning, God created the heavens and the earth." What follows is a carefully structured narrative spanning seven days, each building upon the last with deliberate artistry.
+            </p>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+              <h3 className="text-xl font-bold text-stone-900 mb-4">The Seven-Day Structure</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <p className="font-semibold text-vatican-red">Days of Formation:</p>
+                  <ul className="space-y-1 text-stone-700">
+                    <li><strong>Day 1:</strong> Light separated from darkness</li>
+                    <li><strong>Day 2:</strong> Waters separated (sky created)</li>
+                    <li><strong>Day 3:</strong> Land separated from seas; vegetation</li>
+                  </ul>
                 </div>
-                <h2 className="text-2xl font-serif font-bold text-stone-900 mb-2">The Cosmic View</h2>
-                <div className="w-12 h-1 bg-vatican-gold mx-auto my-4 rounded-full"></div>
-                <p className="text-stone-500 text-sm font-medium uppercase tracking-widest">Genesis 1</p>
+                <div className="space-y-2">
+                  <p className="font-semibold text-vatican-red">Days of Filling:</p>
+                  <ul className="space-y-1 text-stone-700">
+                    <li><strong>Day 4:</strong> Sun, moon, and stars fill the sky</li>
+                    <li><strong>Day 5:</strong> Fish and birds fill waters and air</li>
+                    <li><strong>Day 6:</strong> Animals and humanity fill the land</li>
+                    <li><strong>Day 7:</strong> God rests — creation complete</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div className="md:col-span-8 prose prose-stone prose-lg">
-              <p>
-                Genesis 1 reads like a cosmic symphony. "In the beginning, God created the heavens and the earth." The language is majestic, rhythmic, almost liturgical. Each day follows a pattern: God speaks, creation responds, evening and morning mark the passage of time. The universe unfolds in an orderly progression from chaos to cosmos, from formless void to a world teeming with life.
-              </p>
-              <p>
-                This account emphasizes God's transcendence — He speaks, and creation obeys. The Hebrew name used is <em>Elohim</em>, the generic term for God that emphasizes His power and majesty. Humans appear at the climax, created "in the image of God" as the crown of creation, given dominion over all the earth. The tone is universal, cosmic, almost abstract.
-              </p>
-              <p>
-                The seven-day structure suggests a liturgical purpose. This isn't just history — it's theology in narrative form, teaching Israel about their God, their world, and their place in it. The Sabbath rest on the seventh day isn't an afterthought; it's the goal toward which all creation moves.
+
+            <p className="text-lg text-stone-700 leading-relaxed">
+              Notice the parallel structure. The first three days are about forming spaces — light, sky, land. The next three days are about filling those spaces with inhabitants. The sun, moon, and stars fill the realm of light. Fish and birds fill the waters and sky. Animals and humans fill the land. This isn't random; it's poetry written in prose.
+            </p>
+
+            <p className="text-lg text-stone-700 leading-relaxed">
+              The refrain "And God saw that it was good" echoes throughout, culminating in the seventh day when God declares everything "very good." This first account emphasizes God's sovereignty, order, and the fundamental goodness of creation.
+            </p>
+
+            <div className="bg-stone-100 p-6 rounded-lg">
+              <h3 className="text-lg font-bold text-stone-900 mb-2">Key Characteristics of Genesis 1:</h3>
+              <ul className="space-y-2 text-stone-700">
+                <li>• Uses the divine name <em>Elohim</em> (God)</li>
+                <li>• Highly structured, almost liturgical in style</li>
+                <li>• Emphasizes God's transcendence — He speaks, and creation obeys</li>
+                <li>• Humanity created last, as the crown of creation</li>
+                <li>• Both male and female created simultaneously "in the image of God"</li>
+                <li>• Ends with the Sabbath rest (2:4a)</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Chapter 2: The Intimate Portrait */}
+          <section className="space-y-6">
+            <h2 className="text-3xl font-serif font-bold text-stone-900 flex items-center">
+              <Heart className="h-7 w-7 mr-3 text-vatican-red" />
+              The Second Account: An Intimate Portrait (Genesis 2:4b–25)
+            </h2>
+
+            <p className="text-lg text-stone-700 leading-relaxed">
+              Then something shifts. Genesis 2:4b introduces a completely different style: "In the day that the Lord God made the earth and the heavens..." Suddenly, we're not watching from a cosmic vantage point. We're down in the dust, watching God form Adam from clay like a potter at his wheel.
+            </p>
+
+            <p className="text-lg text-stone-700 leading-relaxed">
+              This second account is earthy, intimate, and anthropomorphic. God doesn't just speak — He forms, breathes, plants, walks. The Hebrew name changes from <em>Elohim</em> to <em>YHWH Elohim</em> — "the Lord God" — a more personal designation that emphasizes covenant relationship.
+            </p>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+              <h3 className="text-xl font-bold text-stone-900 mb-4">The Garden Narrative</h3>
+              <ul className="space-y-3 text-stone-700">
+                <li><strong>Adam formed:</strong> From dust, animated by God's breath (2:7)</li>
+                <li><strong>Garden planted:</strong> Eden as a divine sanctuary (2:8)</li>
+                <li><strong>Trees of life and knowledge:</strong> Choice and consequence (2:9)</li>
+                <li><strong>Rivers flow:</strong> Four rivers from one source (2:10-14)</li>
+                <li><strong>Human vocation:</strong> To work and keep the garden (2:15)</li>
+                <li><strong>The command:</strong> Do not eat from the tree of knowledge (2:16-17)</li>
+                <li><strong>Eve created:</strong> From Adam's side, "bone of my bones" (2:18-25)</li>
+              </ul>
+            </div>
+
+            <p className="text-lg text-stone-700 leading-relaxed">
+              Notice the order is completely different from Genesis 1. Here, the man is created before vegetation (there was "no plant of the field" yet, 2:5). The animals are formed after Adam, as God seeks a suitable helper. Eve comes last, not simultaneously with Adam. These differences have troubled literalist readers for centuries.
+            </p>
+
+            <div className="bg-stone-100 p-6 rounded-lg">
+              <h3 className="text-lg font-bold text-stone-900 mb-2">Key Characteristics of Genesis 2:</h3>
+              <ul className="space-y-2 text-stone-700">
+                <li>• Uses <em>YHWH Elohim</em> (Lord God) — personal, covenantal name</li>
+                <li>• Intimate, anthropomorphic — God forms, breathes, walks in the garden</li>
+                <li>• Emphasizes God's immanence — He is present, involved, relational</li>
+                <li>• Adam created first, then animals, then Eve</li>
+                <li>• Focuses on human relationships, vocation, and moral choice</li>
+                <li>• Sets up the narrative for the Fall (Genesis 3)</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Historical Context */}
+          <section className="space-y-6">
+            <h2 className="text-3xl font-serif font-bold text-stone-900 flex items-center">
+              <Layers className="h-7 w-7 mr-3 text-vatican-red" />
+              Historical Perspectives: How the Church Has Read These Texts
+            </h2>
+
+            <p className="text-lg text-stone-700 leading-relaxed">
+              The early Church Fathers were well aware of the differences between the two accounts. They didn't see this as a problem but as an invitation to deeper meaning. St. Augustine, writing in the fifth century, suggested that Scripture often speaks in accommodated language — using imagery and structure that teaches theological truth rather than providing a scientific report.
+            </p>
+
+            <p className="text-lg text-stone-700 leading-relaxed">
+              The Catechism of the Catholic Church affirms this approach: "The account of the fall in Genesis 3 uses figurative language, but affirms a primeval event, a deed that took place at the beginning of the history of man" (CCC 390). The Church has long recognized that Genesis teaches <em>that</em> God created, <em>why</em> He created, and <em>what</em> our relationship to Him should be — without necessarily teaching <em>exactly how</em> in scientific terms.
+            </p>
+
+            <div className="bg-amber-50 p-6 rounded-lg border border-amber-200">
+              <h3 className="text-lg font-bold text-stone-900 mb-3">The Documental Hypothesis (Academic View)</h3>
+              <p className="text-stone-700 leading-relaxed">
+                Modern biblical scholarship often attributes the two accounts to different literary sources — the "Priestly" source (P) for Genesis 1 and the "Yahwist" source (J) for Genesis 2. These traditions were likely compiled and edited together during Israel's history. While this academic framework can be helpful, it doesn't diminish the theological unity of the final text as we have it.
               </p>
             </div>
           </section>
 
-          <hr className="border-stone-200" />
+          {/* Complementary Truths */}
+          <section className="space-y-6">
+            <h2 className="text-3xl font-serif font-bold text-stone-900 flex items-center">
+              <Sparkles className="h-7 w-7 mr-3 text-vatican-red" />
+              Complementary, Not Contradictory: Seeing the Whole Picture
+            </h2>
 
-          {/* Section 2 */}
-          <section className="grid md:grid-cols-12 gap-12 items-start">
-            <div className="md:col-span-4 sticky top-24">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 text-center">
-                <div className="bg-stone-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Layers className="h-8 w-8 text-stone-600" />
-                </div>
-                <h2 className="text-2xl font-serif font-bold text-stone-900 mb-2">The Intimate View</h2>
-                <div className="w-12 h-1 bg-stone-400 mx-auto my-4 rounded-full"></div>
-                <p className="text-stone-500 text-sm font-medium uppercase tracking-widest">Genesis 2</p>
+            <p className="text-lg text-stone-700 leading-relaxed">
+              What if the differences aren't contradictions but intentional theological emphases? What if the inspired author (or final editor) wanted us to see creation from multiple angles?
+            </p>
+
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-4">
+              <h3 className="text-xl font-bold text-stone-900">Genesis 1 Emphasizes:</h3>
+              <ul className="space-y-2 text-stone-700">
+                <li>✦ God's sovereign power over all creation</li>
+                <li>✦ The ordered, purposeful nature of the cosmos</li>
+                <li>✦ Humanity's shared dignity — male and female together in God's image</li>
+                <li>✦ The goodness of the material world</li>
+                <li>✦ Sabbath rest as the goal of creation</li>
+              </ul>
+
+              <h3 className="text-xl font-bold text-stone-900 pt-4">Genesis 2 Emphasizes:</h3>
+              <ul className="space-y-2 text-stone-700">
+                <li>✦ God's intimate, personal relationship with humanity</li>
+                <li>✦ Human vocation as stewards and keepers of creation</li>
+                <li>✦ The gift of relationship and companionship</li>
+                <li>✦ Moral responsibility and the reality of choice</li>
+                <li>✦ The sanctuary-like nature of Eden as God's dwelling place</li>
+              </ul>
+            </div>
+
+            <p className="text-lg text-stone-700 leading-relaxed">
+              Together, these two accounts give us a fuller picture than either could alone. We need both the cosmic perspective and the intimate portrait. We need to know that God is transcendent — speaking universes into being — and immanent — breathing life into dust, walking with us in the garden.
+            </p>
+          </section>
+
+          {/* Why It Matters */}
+          <section className="space-y-6">
+            <h2 className="text-3xl font-serif font-bold text-stone-900 flex items-center">
+              <MessageCircle className="h-7 w-7 mr-3 text-vatican-red" />
+              Why This Matters for Faith Today
+            </h2>
+
+            <p className="text-lg text-stone-700 leading-relaxed">
+              Understanding the two creation accounts helps us in several ways:
+            </p>
+
+            <div className="space-y-4">
+              <div className="bg-white p-5 rounded-lg border-l-4 border-vatican-gold">
+                <h4 className="font-bold text-stone-900 mb-2">1. It Frees Us from False Conflicts</h4>
+                <p className="text-stone-700">
+                  When we recognize that Genesis isn't trying to give us a scientific account of creation, we don't have to force it into conflict with modern cosmology, evolution, or geology. The theological truths remain: God created, creation is good, humanity has a special place and responsibility.
+                </p>
+              </div>
+
+              <div className="bg-white p-5 rounded-lg border-l-4 border-vatican-gold">
+                <h4 className="font-bold text-stone-900 mb-2">2. It Deepens Our Understanding of God</h4>
+                <p className="text-stone-700">
+                  We see both God's majesty and His intimacy. He is the cosmic Creator and the personal Lord. He speaks galaxies into existence and breathes life into each human soul. This dual revelation enriches our worship and trust.
+                </p>
+              </div>
+
+              <div className="bg-white p-5 rounded-lg border-l-4 border-vatican-gold">
+                <h4 className="font-bold text-stone-900 mb-2">3. It Affirms Human Dignity and Responsibility</h4>
+                <p className="text-stone-700">
+                  Genesis 1 tells us we bear God's image. Genesis 2 tells us we have work to do — to cultivate and keep creation. Both truths are essential for understanding who we are and why we're here.
+                </p>
+              </div>
+
+              <div className="bg-white p-5 rounded-lg border-l-4 border-vatican-gold">
+                <h4 className="font-bold text-stone-900 mb-2">4. It Invites Deeper Reading of Scripture</h4>
+                <p className="text-stone-700">
+                  When we see how carefully these texts were constructed, with parallel structures, repeated themes, and intentional literary devices, we're drawn into a richer engagement with God's Word. The Bible rewards careful, prayerful reading.
+                </p>
               </div>
             </div>
-            <div className="md:col-span-8 prose prose-stone prose-lg">
-              <p>
-                Genesis 2 feels completely different. "These are the generations of the heavens and the earth..." The tone shifts from cosmic to intimate. Here God is <em>YHWH Elohim</em> — the LORD God — using His covenant name that speaks of personal relationship. Instead of speaking creation into existence, God forms Adam from dust like a potter, breathes life into his nostrils, walks with him in the garden.
-              </p>
-              <p>
-                The order of events changes too. In Genesis 1, humans are created last, after everything else is prepared. In Genesis 2, Adam is created before vegetation appears, before the animals are formed, before Eve is made from his rib. Critics have called this a contradiction. But the ancient authors weren't writing modern history — they were telling theological truth through narrative.
-              </p>
-              <p>
-                Genesis 2 focuses on relationship — between God and human, between human and creation, between man and woman. The questions it answers aren't about chronology but about meaning: What does it mean to be human? Why do we work? Why do we marry? Why do we struggle?
-              </p>
-            </div>
           </section>
 
-          <hr className="border-stone-200" />
-
-          {/* Section 3 */}
-          <section className="grid md:grid-cols-12 gap-12 items-start">
-            <div className="md:col-span-4 sticky top-24">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 text-center">
-                <div className="bg-vatican-red/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Scroll className="h-8 w-8 text-vatican-red" />
-                </div>
-                <h2 className="text-2xl font-serif font-bold text-stone-900 mb-2">Two Lenses</h2>
-                <div className="w-12 h-1 bg-vatican-red mx-auto my-4 rounded-full"></div>
-                <p className="text-stone-500 text-sm font-medium uppercase tracking-widest">One Truth</p>
-              </div>
-            </div>
-            <div className="md:col-span-8 prose prose-stone prose-lg">
-              <p>
-                Rather than seeing these accounts as competing, we might see them as complementary — like looking at the same object from different angles. Genesis 1 answers the question: "Who is God and what is the nature of the world He made?" The answer: He is the all-powerful, transcendent Creator who brings order from chaos, and the world is good.
-              </p>
-              <p>
-                Genesis 2 answers a different question: "What is humanity's place in creation, and what is our relationship with God?" The answer: We are intimately known, personally formed, given meaningful work, created for relationship. God is not just the distant architect but the near presence who walks with us in the garden.
-              </p>
-              <p>
-                This pattern — multiple perspectives on the same event — appears throughout Scripture. The Gospels give us four accounts of Jesus' life, each with different emphases and details. The psalms approach God's character from dozens of angles. God seems to delight in showing us truth through stories, through poetry, through multiple witnesses, rather than through a single systematic treatise.
-              </p>
-              <p>
-                Perhaps this teaches us something about the nature of truth itself: that reality is too rich, too deep, to be captured from a single perspective. Like a diamond, divine truth refracts light differently depending on the angle. Both accounts are true — not in the sense that they provide identical information, but in the sense that they reveal different facets of the same divine reality.
-              </p>
-            </div>
+          {/* Questions for Reflection */}
+          <section className="bg-stone-100 p-8 rounded-lg">
+            <h2 className="text-2xl font-serif font-bold text-stone-900 mb-6">Questions for Reflection</h2>
+            <ul className="space-y-4 text-stone-700">
+              <li className="flex items-start">
+                <span className="text-vatican-gold mr-3">◆</span>
+                <span>Which creation account resonates more with you — the cosmic grandeur of Genesis 1 or the intimate garden narrative of Genesis 2? Why?</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-vatican-gold mr-3">◆</span>
+                <span>How does understanding these as complementary perspectives change how you read Genesis?</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-vatican-gold mr-3">◆</span>
+                <span>What does it mean to you that God is both transcendent (far above creation) and immanent (present within it)?</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-vatican-gold mr-3">◆</span>
+                <span>How might these two accounts inform how we think about our relationship with creation today?</span>
+              </li>
+            </ul>
           </section>
 
-          {/* CTA */}
-          <section className="text-center pt-16 border-t border-stone-200">
-            <h3 className="text-2xl font-serif font-bold text-stone-900 mb-6">Continue Exploring Genesis</h3>
-            <Link 
-              href="/genesis"
-              className="inline-block px-8 py-3 bg-vatican-gold text-stone-900 font-semibold rounded-lg hover:bg-stone-800 hover:text-white transition-colors duration-300 shadow-md"
-            >
-              Return to Genesis Series
-            </Link>
+          {/* Further Reading */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">Further Reading & Resources</h2>
+            <ul className="space-y-2 text-stone-600">
+              <li>• <em>Catechism of the Catholic Church</em>, paragraphs 279-314 (Creation)</li>
+              <li>• St. Augustine, <em>The Literal Meaning of Genesis</em></li>
+              <li>• BibleProject, "One Creation Story or Two?" (video)</li>
+              <li>• Biblical Archaeology Society, "Should We Take Creation Stories in Genesis Literally?"</li>
+            </ul>
           </section>
 
+          {/* Navigation Footer */}
+          <section className="border-t border-stone-200 pt-8 mt-8">
+            <div className="flex flex-col sm:flex-row justify-between gap-4">
+              <Link href="/genesis" className="inline-flex items-center text-vatican-red hover:text-vatican-gold transition-colors font-medium">
+                <ChevronLeft className="h-5 w-5 mr-1" />
+                Back to Genesis Overview
+              </Link>
+              <Link href="/genesis/edens-rivers" className="inline-flex items-center text-vatican-red hover:text-vatican-gold transition-colors font-medium">
+                Next: Eden's Rivers
+                <ChevronLeft className="h-5 w-5 ml-1 rotate-180" />
+              </Link>
+            </div>
+          </section>
         </article>
       </main>
     </div>

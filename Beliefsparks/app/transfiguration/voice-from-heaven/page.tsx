@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, Sun, BookOpen, Volume2, Mountain } from "lucide-react";
+import { ChevronLeft, Volume2, BookOpen, ArrowRight } from "lucide-react";
 
 export default function VoiceFromHeavenPage() {
   return (
@@ -19,76 +19,69 @@ export default function VoiceFromHeavenPage() {
       </header>
 
       <main className="pt-24 pb-24">
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center p-2 mb-6 bg-stone-100 rounded-full">
-            <Sun className="h-5 w-5 text-vatican-gold mr-2" />
-            <span className="text-sm font-semibold text-stone-600 uppercase tracking-wide">Transfiguration Series</span>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 mb-6 leading-tight">
-            The Voice from Heaven — <br />
-            <span className="text-vatican-gold">Divine Affirmation</span>
-          </h1>
-          <p className="text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed italic">
-            We ourselves heard this voice that came from heaven when we were with him on the sacred mountain. The Transfiguration wasn't just a miraculous event — it was God the Father speaking from heaven: "This is my beloved Son, in whom I am well pleased." What does this divine affirmation tell us about Jesus' identity and the Trinity revealed at this moment?
-          </p>
+        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 mb-6">The Voice from Heaven</h1>
         </section>
 
-        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          <div className="bg-amber-50 border-l-4 border-vatican-gold p-8 rounded-r-lg shadow-sm">
-            <p className="text-stone-800 text-lg">
-              <strong>The Voice:</strong> Three times in the Gospels, God the Father speaks audibly — at Jesus' baptism, at the Transfiguration, and in John 12:28. Each time, He affirms His Son. At the Transfiguration, this voice doesn't just confirm Jesus' identity to Him — it reveals that identity to Peter, James, and John. The curtain pulls back, and the disciples glimpse the Trinity in action.
-            </p>
-          </div>
+        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <section className="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-r-lg">
+            <h2 className="text-xl font-serif font-bold text-stone-900 mb-3">The Father Speaks</h2>
+            <p className="text-stone-800 text-lg">"While he was still speaking, a bright cloud covered them, and a voice from the cloud said, 'This is my Son, whom I love; with him I am well pleased. Listen to him!'" (Matthew 17:5)</p>
+          </section>
 
-          <section className="grid md:grid-cols-12 gap-12 items-start">
-            <div className="md:col-span-4 sticky top-24">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 text-center">
-                <div className="bg-vatican-gold/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Volume2 className="h-8 w-8 text-vatican-gold" />
-                </div>
-                <h2 className="text-2xl font-serif font-bold text-stone-900 mb-2">The Words</h2>
-                <div className="w-12 h-1 bg-vatican-gold mx-auto my-4 rounded-full"></div>
-                <p className="text-stone-500 text-sm font-medium uppercase tracking-widest">"This is My Beloved Son"</p>
+          <section className="space-y-6">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">Three Declarations</h2>
+            <div className="space-y-3">
+              <div className="bg-white p-5 rounded-lg border border-stone-200">
+                <h3 className="font-bold text-stone-900 mb-2">1. This Is My Son</h3>
+                <p className="text-stone-700">Jesus isn't merely a prophet, teacher, or miracle-worker. He is the Son — eternal, divine, one with the Father.</p>
               </div>
-            </div>
-            <div className="md:col-span-8 prose prose-stone prose-lg">
-              <p>
-                "This is my beloved Son, with whom I am well pleased; listen to him" (Matthew 17:5). These words echo Psalm 2:7 — "You are my Son; today I have begotten you" — a royal psalm that Israel understood messianically. They also echo Isaiah 42:1 — "Behold my servant, whom I uphold, my chosen, in whom my soul delights." The Father is declaring Jesus to be both King and Servant, the Messiah Israel had been waiting for.
-              </p>
-              <p>
-                The command "listen to him" is significant. In Deuteronomy 18:15, Moses prophesied: "The LORD your God will raise up for you a prophet like me from among you, from your brothers — it is to him you shall listen." The Father is telling the disciples: this is the prophet Moses predicted. Listen to Him. His words carry divine authority.
-              </p>
+              <div className="bg-white p-5 rounded-lg border border-stone-200">
+                <h3 className="font-bold text-stone-900 mb-2">2. Whom I Love</h3>
+                <p className="text-stone-700">The Father's love for the Son is infinite. Their relationship is perfect communion of love.</p>
+              </div>
+              <div className="bg-white p-5 rounded-lg border border-stone-200">
+                <h3 className="font-bold text-stone-900 mb-2">3. Listen to Him</h3>
+                <p className="text-stone-700">The command to the disciples — and to us — is clear. Jesus is the definitive Word of God.</p>
+              </div>
             </div>
           </section>
 
-          <hr className="border-stone-200" />
-
-          <section className="grid md:grid-cols-12 gap-12 items-start">
-            <div className="md:col-span-4 sticky top-24">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 text-center">
-                <div className="bg-stone-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Mountain className="h-8 w-8 text-stone-600" />
-                </div>
-                <h2 className="text-2xl font-serif font-bold text-stone-900 mb-2">The Trinity Revealed</h2>
-                <div className="w-12 h-1 bg-stone-400 mx-auto my-4 rounded-full"></div>
-                <p className="text-stone-500 text-sm font-medium uppercase tracking-widest">Father, Son, Spirit</p>
+          <section className="space-y-6">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">Connections to Other Events</h2>
+            <div className="space-y-4">
+              <div className="bg-stone-100 p-5 rounded-lg">
+                <h3 className="font-bold text-stone-900 mb-2">Baptism</h3>
+                <p className="text-stone-700">"This is my beloved Son, with whom I am well pleased" (Matthew 3:17). The same voice at Transfiguration confirms what was declared at baptism.</p>
               </div>
-            </div>
-            <div className="md:col-span-8 prose prose-stone prose-lg">
-              <p>
-                The Transfiguration is one of the clearest revelations of the Trinity in Scripture. The Father speaks from heaven. The Son stands transfigured before them. The Spirit's presence is implied — just as the cloud of God's glory in the Old Testament represented His presence, so the bright cloud that overshadows them represents the Spirit.
-              </p>
-              <p>
-                Peter later writes: "We ourselves heard this very voice borne from heaven, for we were with him on the holy mountain" (2 Peter 1:18). The experience marked him deeply. He had seen the Trinity — not as abstract theology but as living reality. The Father loving the Son, the Son in glory, the Spirit present in the cloud.
-              </p>
+              <div className="bg-stone-100 p-5 rounded-lg">
+                <h3 className="font-bold text-stone-900 mb-2">Psalm 2</h3>
+                <p className="text-stone-700">"I have installed my king on Zion, my holy mountain... You are my son; today I have become your father" (Psalm 2:6-7). This messianic psalm points to Christ.</p>
+              </div>
+              <div className="bg-stone-100 p-5 rounded-lg">
+                <h3 className="font-bold text-stone-900 mb-2">Isaiah 42</h3>
+                <p className="text-stone-700">"Here is my servant, whom I uphold, my chosen one in whom I delight" (Isaiah 42:1). The Servant of the Lord is the Son.</p>
+              </div>
             </div>
           </section>
 
-          <section className="text-center pt-16 border-t border-stone-200">
-            <h3 className="text-2xl font-serif font-bold text-stone-900 mb-6">Continue the Transfiguration Journey</h3>
-            <Link href="/transfiguration" className="inline-block px-8 py-3 bg-vatican-gold text-stone-900 font-semibold rounded-lg hover:bg-stone-800 hover:text-white transition-colors duration-300 shadow-md">
-              Return to Transfiguration Series
-            </Link>
+          <section className="space-y-6">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">The Cloud and Glory</h2>
+            <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-vatican-gold">
+              <p className="text-stone-800 text-lg mb-4">The bright cloud that covers them is the Shekinah — God's glory presence.</p>
+              <ul className="space-y-2 text-stone-700">
+                <li>• It led Israel through the wilderness</li>
+                <li>• It filled the Tabernacle and Temple</li>
+                <li>• It now dwells in Christ (Colossians 1:19)</li>
+              </ul>
+            </div>
+          </section>
+
+          <section className="border-t border-stone-200 pt-8">
+            <div className="flex justify-between">
+              <Link href="/transfiguration/moses-elijah" className="text-vatican-red hover:text-vatican-gold">Previous: Moses and Elijah</Link>
+              <Link href="/transfiguration/the-tent" className="text-vatican-red hover:text-vatican-gold">Next: The Tent/Tabernacle</Link>
+            </div>
           </section>
         </article>
       </main>

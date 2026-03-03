@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, Sun, BookOpen, Lightbulb, Eye } from "lucide-react";
+import { ChevronLeft, Sun, BookOpen, ArrowRight } from "lucide-react";
 
 export default function DazzlingLightPage() {
   return (
@@ -19,76 +19,48 @@ export default function DazzlingLightPage() {
       </header>
 
       <main className="pt-24 pb-24">
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center p-2 mb-6 bg-stone-100 rounded-full">
-            <Sun className="h-5 w-5 text-vatican-gold mr-2" />
-            <span className="text-sm font-semibold text-stone-600 uppercase tracking-wide">Transfiguration Series</span>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 mb-6 leading-tight">
-            Dazzling Light and <br />
-            <span className="text-vatican-gold">Transformed Glory</span>
-          </h1>
-          <p className="text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed italic">
-            Jesus' face shone like the sun, and his clothes became dazzlingly bright. Peter, James, and John were overwhelmed by this vision. But the Transfiguration wasn't about light — it was about glory. This glory that Jesus always possessed, hidden beneath his human form, being revealed to the world. How does seeing beyond human limitations change how we understand Christ's nature?
-          </p>
+        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 mb-6">The Dazzling Light of Glory</h1>
         </section>
 
-        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          <div className="bg-amber-50 border-l-4 border-vatican-gold p-8 rounded-r-lg shadow-sm">
-            <p className="text-stone-800 text-lg">
-              <strong>The Vision:</strong> Matthew 17:2 tells us "he was transfigured before them, and his face shone like the sun, and his clothes became white as light." The Greek word is <em>metamorphoo</em> — the root of our word "metamorphosis." It means a change of form, a transformation. What was hidden became visible. The glory that was always there was unveiled.
-            </p>
-          </div>
+        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <section className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg">
+            <h2 className="text-xl font-serif font-bold text-stone-900 mb-3">Uncreated Light</h2>
+            <p className="text-stone-800 text-lg">"His face shone like the sun, and his clothes became as white as the light" (Matthew 17:2). This wasn't reflected sunlight. This was the uncreated light of God's glory.</p>
+          </section>
 
-          <section className="grid md:grid-cols-12 gap-12 items-start">
-            <div className="md:col-span-4 sticky top-24">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 text-center">
-                <div className="bg-vatican-gold/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Lightbulb className="h-8 w-8 text-vatican-gold" />
-                </div>
-                <h2 className="text-2xl font-serif font-bold text-stone-900 mb-2">Glory Revealed</h2>
-                <div className="w-12 h-1 bg-vatican-gold mx-auto my-4 rounded-full"></div>
-                <p className="text-stone-500 text-sm font-medium uppercase tracking-widest">Divine Nature</p>
+          <section className="space-y-6">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">Light in Scripture</h2>
+            <div className="space-y-4">
+              <div className="bg-white p-5 rounded-lg border border-stone-200">
+                <h3 className="font-bold text-stone-900 mb-2">At Sinai</h3>
+                <p className="text-stone-700">"The glory of the Lord settled on Mount Sinai... The appearance of the glory of the Lord was like a consuming fire" (Exodus 24:16-17).</p>
               </div>
-            </div>
-            <div className="md:col-span-8 prose prose-stone prose-lg">
-              <p>
-                Jesus didn't become divine at the Transfiguration — He had always been divine. John 1:14 says "we have seen his glory, glory as of the only Son from the Father." The Transfiguration was a moment when that glory, usually hidden, became visible. The disciples weren't seeing something new; they were seeing what had always been true.
-              </p>
-              <p>
-                This connects to the Old Testament. When Moses came down from Sinai, his face shone from being in God's presence (Exodus 34:29-35). But Jesus' face shines not because He encountered God — He shines because He <em>is</em> God. The light comes from within, not from without. This is glory in its source, not glory reflected.
-              </p>
+              <div className="bg-white p-5 rounded-lg border border-stone-200">
+                <h3 className="font-bold text-stone-900 mb-2">In the Temple</h3>
+                <p className="text-stone-700">Solomon's dedication: "The priests could not perform their service because of the cloud, for the glory of the Lord filled his temple" (1 Kings 8:11).</p>
+              </div>
+              <div className="bg-white p-5 rounded-lg border border-stone-200">
+                <h3 className="font-bold text-stone-900 mb-2">In Christ</h3>
+                <p className="text-stone-700">"The Word became flesh and made his dwelling among us, and we have seen his glory, the glory of the One and Only, full of grace and truth" (John 1:14).</p>
+              </div>
             </div>
           </section>
 
-          <hr className="border-stone-200" />
-
-          <section className="grid md:grid-cols-12 gap-12 items-start">
-            <div className="md:col-span-4 sticky top-24">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 text-center">
-                <div className="bg-stone-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Eye className="h-8 w-8 text-stone-600" />
-                </div>
-                <h2 className="text-2xl font-serif font-bold text-stone-900 mb-2">Seeing Beyond</h2>
-                <div className="w-12 h-1 bg-stone-400 mx-auto my-4 rounded-full"></div>
-                <p className="text-stone-500 text-sm font-medium uppercase tracking-widest">Faith & Sight</p>
-              </div>
-            </div>
-            <div className="md:col-span-8 prose prose-stone prose-lg">
-              <p>
-                The Transfiguration was a gift to the disciples. They would soon witness Jesus' arrest, trial, and crucifixion. They would see Him beaten, mocked, and killed. The memory of this moment — the dazzling light, the divine voice, the glory revealed — would sustain them through the dark days ahead. They had seen who He really was, even when everything around them suggested otherwise.
-              </p>
-              <p>
-                This is why the Church includes the Transfiguration in its liturgical calendar — to remind us that behind the suffering servant stands the glorious Son. The cross is not the final word. Resurrection glory awaits. The Transfiguration is a foretaste of Easter, a glimpse of the destiny that awaits all who are in Christ.
-              </p>
+          <section className="space-y-6">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">What This Light Reveals</h2>
+            <div className="space-y-3">
+              <p className="bg-amber-50 p-4 rounded-lg border-l-4 border-vatican-gold"><strong>1. Jesus is fully God.</strong> The glory is His by nature, not something conferred upon Him.</p>
+              <p className="bg-amber-50 p-4 rounded-lg border-l-4 border-vatican-gold"><strong>2. Heaven touches earth.</strong> The mountain becomes a thin place where divine reality breaks through.</p>
+              <p className="bg-amber-50 p-4 rounded-lg border-l-4 border-vatican-gold"><strong>3. We will share this glory.</strong> "We will be like him, for we will see him as he is" (1 John 3:2).</p>
             </div>
           </section>
 
-          <section className="text-center pt-16 border-t border-stone-200">
-            <h3 className="text-2xl font-serif font-bold text-stone-900 mb-6">Continue the Transfiguration Journey</h3>
-            <Link href="/transfiguration" className="inline-block px-8 py-3 bg-vatican-gold text-stone-900 font-semibold rounded-lg hover:bg-stone-800 hover:text-white transition-colors duration-300 shadow-md">
-              Return to Transfiguration Series
-            </Link>
+          <section className="border-t border-stone-200 pt-8">
+            <div className="flex justify-between">
+              <Link href="/transfiguration" className="text-vatican-red hover:text-vatican-gold">Previous: Transfiguration Overview</Link>
+              <Link href="/transfiguration/moses-elijah" className="text-vatican-red hover:text-vatican-gold">Next: Moses and Elijah</Link>
+            </div>
           </section>
         </article>
       </main>
