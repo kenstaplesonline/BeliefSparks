@@ -231,6 +231,44 @@ export default function ChristianityUniquePage() {
              </div>
           </section>
 
+          {/* Series Section */}
+          <section className="bg-amber-50 p-8 rounded-2xl border border-amber-200">
+            <h2 className="text-2xl font-serif font-bold text-stone-900 mb-6 flex items-center">
+              <BookOpen className="h-6 w-6 text-amber-600 mr-3" />
+              Explore Christianity Series
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white p-6 rounded-xl border border-stone-200">
+                <h3 className="text-xl font-bold text-stone-900 mb-2">Genesis Series</h3>
+                <p className="text-stone-600 mb-4 text-sm">
+                  Explore the creation narratives, Eden as temple, the Fall, and how Genesis compares to ancient myths. Discover what these ancient texts reveal about God, humanity, and our world.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-xs bg-stone-100 px-2 py-1 rounded">Two Creation Stories</span>
+                  <span className="text-xs bg-stone-100 px-2 py-1 rounded">Eden's Rivers</span>
+                  <span className="text-xs bg-stone-100 px-2 py-1 rounded">The Fall</span>
+                </div>
+                <Link href="/genesis" className="inline-flex items-center text-vatican-red hover:text-vatican-gold font-semibold">
+                  Explore Genesis <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+              <div className="bg-white p-6 rounded-xl border border-stone-200">
+                <h3 className="text-xl font-bold text-stone-900 mb-2">Transfiguration Series</h3>
+                <p className="text-stone-600 mb-4 text-sm">
+                  When Jesus was transfigured on the mountain, His glory was revealed. Explore the dazzling light, Moses and Elijah, the voice from heaven, and what this moment means for us today.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-xs bg-stone-100 px-2 py-1 rounded">Dazzling Light</span>
+                  <span className="text-xs bg-stone-100 px-2 py-1 rounded">Moses & Elijah</span>
+                  <span className="text-xs bg-stone-100 px-2 py-1 rounded">Glory to Suffering</span>
+                </div>
+                <Link href="/transfiguration" className="inline-flex items-center text-vatican-red hover:text-vatican-gold font-semibold">
+                  Explore Transfiguration <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </section>
+
           {/* Sources Section */}
           <section className="bg-white p-8 rounded-2xl border border-stone-200 shadow-sm">
             <h2 className="text-2xl font-serif font-bold text-stone-900 mb-6 flex items-center">
