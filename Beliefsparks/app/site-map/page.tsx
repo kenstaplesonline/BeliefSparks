@@ -7,42 +7,40 @@ export default function Sitemap() {
       title: "Main",
       links: [
         { name: "Home", href: "/" },
-        { name: "Catholicism", href: "/catholicism" },
-        { name: "Catholicism: Vatican II", href: "/catholicism/vatican-ii" },
-        { name: "Christianity", href: "/christianity" },
       ],
     },
     {
-      title: "Genesis Series",
+      title: "Christianity",
       links: [
+        { name: "Christianity Overview", href: "/christianity" },
+        { name: "— Genesis Series —", href: "", isHeader: true },
         { name: "Genesis Overview", href: "/genesis" },
         { name: "Two Creation Stories", href: "/genesis/two-creation-stories" },
         { name: "Eden's Rivers", href: "/genesis/edens-rivers" },
         { name: "Eden as Temple?", href: "/genesis/eden-temple-question" },
         { name: "The Serpent, Tree, and Choice", href: "/genesis/serpent-tree-choice" },
         { name: "Ancient Creation Myths", href: "/genesis/ancient-myths" },
-      ],
-    },
-    {
-      title: "St. Michael Series",
-      links: [
-        { name: "St. Michael Overview", href: "/st-michael" },
-        { name: "Angels in the Bible", href: "/st-michael/angels-in-bible" },
-        { name: "Defender of the Church", href: "/st-michael/defender-of-church" },
-        { name: "Michael in the End Times", href: "/st-michael/end-times" },
-        { name: "Devotional Practices", href: "/st-michael/devotion-practice" },
-        { name: "Intercessory Prayer", href: "/st-michael/intercessory-prayer" },
-      ],
-    },
-    {
-      title: "Transfiguration Series",
-      links: [
+        { name: "— Transfiguration Series —", href: "", isHeader: true },
         { name: "Transfiguration Overview", href: "/transfiguration" },
         { name: "The Dazzling Light", href: "/transfiguration/dazzling-light" },
         { name: "Moses and Elijah", href: "/transfiguration/moses-elijah" },
         { name: "Voice from Heaven", href: "/transfiguration/voice-from-heaven" },
         { name: "The Tent/Tabernacle", href: "/transfiguration/the-tent" },
         { name: "Glory to Suffering", href: "/transfiguration/glory-to-suffering" },
+      ],
+    },
+    {
+      title: "Catholicism",
+      links: [
+        { name: "Catholicism Overview", href: "/catholicism" },
+        { name: "Vatican II", href: "/catholicism/vatican-ii" },
+        { name: "— St. Michael Series —", href: "", isHeader: true },
+        { name: "St. Michael Overview", href: "/st-michael" },
+        { name: "Angels in the Bible", href: "/st-michael/angels-in-bible" },
+        { name: "Defender of the Church", href: "/st-michael/defender-of-church" },
+        { name: "Michael in the End Times", href: "/st-michael/end-times" },
+        { name: "Devotional Practices", href: "/st-michael/devotion-practice" },
+        { name: "Intercessory Prayer", href: "/st-michael/intercessory-prayer" },
       ],
     },
     {
@@ -90,15 +88,21 @@ export default function Sitemap() {
                 {section.title}
               </h2>
               <ul className="space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.href}>
-                    <Link 
-                      href={link.href}
-                      className="group flex items-center justify-between text-stone-600 hover:text-vatican-red transition-colors duration-200"
-                    >
-                      <span className="font-medium text-sm">{link.name}</span>
-                      <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
-                    </Link>
+                {section.links.map((link, index) => (
+                  <li key={link.href || index}>
+                    {link.isHeader ? (
+                      <span className="block text-sm font-semibold text-vatican-gold mt-4 mb-2 first:mt-0">
+                        {link.name}
+                      </span>
+                    ) : (
+                      <Link 
+                        href={link.href}
+                        className="group flex items-center justify-between text-stone-600 hover:text-vatican-red transition-colors duration-200"
+                      >
+                        <span className="font-medium text-sm">{link.name}</span>
+                        <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
