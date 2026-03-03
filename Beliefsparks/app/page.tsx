@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BookOpen, MessageCircle, Heart } from "lucide-react";
+import { BookOpen, MessageCircle, Heart, TreeDeciduous, Sun, Shield, Sparkles } from "lucide-react";
 
 export default function Home() {
   return (
@@ -92,6 +92,58 @@ export default function Home() {
               </div>
             </div>
 
+          </div>
+        </section>
+
+        {/* Content Series Section */}
+        <section className="py-24 bg-stone-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-4">Explore Our Series</h2>
+              <p className="text-lg text-stone-600 max-w-2xl mx-auto">Deep dives into faith, scripture, and Catholic tradition.</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <Link href="/heterodox" className="group bg-white rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <div className="p-8">
+                  <div className="bg-amber-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-amber-200 transition-colors">
+                    <Sparkles className="h-6 w-6 text-amber-700" />
+                  </div>
+                  <h3 className="text-xl font-serif font-bold text-stone-900 mb-2 group-hover:text-vatican-red transition-colors">Heterodox</h3>
+                  <p className="text-stone-600 text-sm">Faith dialogue, theological diversity, and learning from different perspectives.</p>
+                </div>
+              </Link>
+              
+              <Link href="/genesis" className="group bg-white rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <div className="p-8">
+                  <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-green-200 transition-colors">
+                    <TreeDeciduous className="h-6 w-6 text-green-700" />
+                  </div>
+                  <h3 className="text-xl font-serif font-bold text-stone-900 mb-2 group-hover:text-vatican-red transition-colors">Genesis</h3>
+                  <p className="text-stone-600 text-sm">Creation narratives, the Garden of Eden, and humanity's origin story.</p>
+                </div>
+              </Link>
+              
+              <Link href="/transfiguration" className="group bg-white rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <div className="p-8">
+                  <div className="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-yellow-200 transition-colors">
+                    <Sun className="h-6 w-6 text-yellow-700" />
+                  </div>
+                  <h3 className="text-xl font-serif font-bold text-stone-900 mb-2 group-hover:text-vatican-red transition-colors">Transfiguration</h3>
+                  <p className="text-stone-600 text-sm">The moment Jesus' divine glory was revealed on the mountain.</p>
+                </div>
+              </Link>
+              
+              <Link href="/st-michael" className="group bg-white rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <div className="p-8">
+                  <div className="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-200 transition-colors">
+                    <Shield className="h-6 w-6 text-red-700" />
+                  </div>
+                  <h3 className="text-xl font-serif font-bold text-stone-900 mb-2 group-hover:text-vatican-red transition-colors">St. Michael</h3>
+                  <p className="text-stone-600 text-sm">Angelic devotion, intercession, and spiritual warfare in Catholic tradition.</p>
+                </div>
+              </Link>
+            </div>
           </div>
         </section>
 
