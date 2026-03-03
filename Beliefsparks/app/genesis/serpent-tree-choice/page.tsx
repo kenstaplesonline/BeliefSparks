@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, AlertTriangle, Apple, Brain, Heart, MessageCircle, BookOpen } from "lucide-react";
+import { ChevronLeft, AlertTriangle, Apple, Brain, Heart, MessageCircle, BookOpen, Sparkles } from "lucide-react";
 
 export default function SerpentTreeChoicePage() {
   return (

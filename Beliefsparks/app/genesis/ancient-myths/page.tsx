@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, Scroll, Globe, BookOpen, ShieldCheck, ArrowRight } from "lucide-react";
+import { ChevronLeft, Scroll, Globe, BookOpen, ShieldCheck, ArrowRight, Sparkles } from "lucide-react";
 
 export default function AncientMythsPage() {
   return (

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, Building, Sparkles, BookOpen, Church, Candle, Question } from "lucide-react";
+import { ChevronLeft, Building, Sparkles, BookOpen, Church, HelpCircle, Flame } from "lucide-react";
 
 export default function EdenTempleQuestionPage() {
   return (
@@ -47,7 +47,7 @@ export default function EdenTempleQuestionPage() {
           {/* Introduction */}
           <section className="bg-amber-50 border-l-4 border-vatican-gold p-8 rounded-r-lg shadow-sm">
             <h2 className="text-2xl font-serif font-bold text-stone-900 mb-4 flex items-center">
-              <Question className="h-6 w-6 mr-2 text-vatican-gold" />
+              <HelpCircle className="h-6 w-6 mr-2 text-vatican-gold" />
               A Garden — or Something More?
             </h2>
             <p className="text-stone-800 text-lg leading-relaxed mb-4">
@@ -72,7 +72,7 @@ export default function EdenTempleQuestionPage() {
             <div className="space-y-4">
               <div className="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
                 <h3 className="text-xl font-bold text-stone-900 mb-3 flex items-center">
-                  <Candle className="h-5 w-5 mr-2 text-vatican-gold" />
+                  <Flame className="h-5 w-5 mr-2 text-vatican-gold" />
                   God Walks in the Garden
                 </h3>
                 <p className="text-stone-700 mb-3">
