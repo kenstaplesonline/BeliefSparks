@@ -200,22 +200,37 @@ export default function CatholicismHistory() {
           <div className="bg-blue-50 p-8 rounded-2xl border border-blue-200">
             <h2 className="text-2xl font-serif font-bold text-stone-900 mb-6 flex items-center">
               <ShieldCheck className="h-6 w-6 text-blue-600 mr-3" />
-              Explore Catholic Devotions
+              Explore Catholic Series
             </h2>
-            <div className="bg-white p-6 rounded-xl border border-stone-200">
-              <h3 className="text-xl font-bold text-stone-900 mb-2">St. Michael the Archangel Series</h3>
-              <p className="text-stone-600 mb-4 text-sm">
-                "Who is like God?" Michael's name is a declaration of God's supremacy. Explore the biblical teaching on angels, Michael's role as defender of the Church, his eschatological significance, and Catholic devotional practices.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="text-xs bg-stone-100 px-2 py-1 rounded">Angels in the Bible</span>
-                <span className="text-xs bg-stone-100 px-2 py-1 rounded">Defender of the Church</span>
-                <span className="text-xs bg-stone-100 px-2 py-1 rounded">Intercessory Prayer</span>
-                <span className="text-xs bg-stone-100 px-2 py-1 rounded">End Times</span>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white p-6 rounded-xl border border-stone-200">
+                <h3 className="text-xl font-bold text-stone-900 mb-2">Vatican II Series</h3>
+                <p className="text-stone-600 mb-4 text-sm">
+                  From 1962-1965, the Second Vatican Council transformed the Church. Explore the context, the four constitutions, liturgical changes, ecumenism, and the lasting legacy 60 years later.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-xs bg-stone-100 px-2 py-1 rounded">Four Constitutions</span>
+                  <span className="text-xs bg-stone-100 px-2 py-1 rounded">Liturgy</span>
+                  <span className="text-xs bg-stone-100 px-2 py-1 rounded">Ecumenism</span>
+                </div>
+                <Link href="/catholicism/vatican-ii" className="inline-flex items-center text-vatican-red hover:text-vatican-gold font-semibold">
+                  Explore Vatican II <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </div>
-              <Link href="/st-michael" className="inline-flex items-center text-vatican-red hover:text-vatican-gold font-semibold">
-                Explore St. Michael <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              <div className="bg-white p-6 rounded-xl border border-stone-200">
+                <h3 className="text-xl font-bold text-stone-900 mb-2">St. Michael the Archangel</h3>
+                <p className="text-stone-600 mb-4 text-sm">
+                  "Who is like God?" Michael's name is a declaration of God's supremacy. Explore the biblical teaching on angels, Michael's role as defender of the Church, and Catholic devotional practices.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-xs bg-stone-100 px-2 py-1 rounded">Angels in the Bible</span>
+                  <span className="text-xs bg-stone-100 px-2 py-1 rounded">Defender</span>
+                  <span className="text-xs bg-stone-100 px-2 py-1 rounded">Intercession</span>
+                </div>
+                <Link href="/st-michael" className="inline-flex items-center text-vatican-red hover:text-vatican-gold font-semibold">
+                  Explore St. Michael <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>

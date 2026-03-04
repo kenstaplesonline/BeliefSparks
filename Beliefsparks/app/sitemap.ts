@@ -35,6 +35,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/catholicism/vatican-ii`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/catholicism/vatican-ii/context`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/catholicism/vatican-ii/constitutions`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/catholicism/vatican-ii/liturgy`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/catholicism/vatican-ii/ecumenism`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/catholicism/vatican-ii/legacy`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
       priority: 0.6,
     },
 
