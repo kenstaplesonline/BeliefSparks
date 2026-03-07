@@ -48,26 +48,26 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-4 relative min-h-[100px] md:min-h-[120px]">
           
-          {/* Left: Logo */}
-          <div className={`transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}>
+          {/* Center: Logo (absolute positioned) */}
+          <div className={`absolute left-1/2 -translate-x-1/2 transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}>
             <Link href="/">
                 <Image 
                 src="/logo-header-new.png" 
                 alt="Belief Sparks" 
                 width={360} 
                 height={90} 
-                className={`transition-all duration-300 ${isScrolled ? 'h-[60px]' : 'h-[80px]'} w-auto object-contain`}
+                className={`transition-all duration-300 ${isScrolled ? 'h-[75px]' : 'h-[100px]'} w-auto object-contain`}
                 priority
                 />
             </Link>
           </div>
           
           {/* Right: Desktop Nav OR Hamburger */}
-          <div className="flex items-center">
+          <div className="flex items-center ml-auto">
             {/* Desktop Nav - fades out when scrolled */}
-            <nav className={`hidden md:flex space-x-8 transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none absolute right-16' : 'opacity-100'}`}>
+            <nav className={`hidden md:flex space-x-8 transition-opacity duration-300 mr-4 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
               <Link href="/" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Home</Link>
               <Link href="/christianity" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Christianity</Link>
               <Link href="/catholicism" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Catholicism</Link>
@@ -76,7 +76,7 @@ export default function Header() {
 
             {/* Desktop Hamburger - appears when scrolled */}
             <button 
-              className={`hidden md:block text-stone-600 p-2 rounded-lg hover:bg-stone-100 transition-all ${
+              className={`hidden md:flex text-stone-600 p-2 rounded-lg hover:bg-stone-100 transition-all ${
                 isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'
               }`}
               onClick={toggleMenu}
