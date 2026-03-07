@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ArrowLeft, Church, Temple, TreeDeciduous, Scroll } from "lucide-react";
+import { ArrowRight, ArrowLeft, Church, Building, TreeDeciduous, Scroll } from "lucide-react";
 
 export default function HolyMondayPage() {
   return (
@@ -76,7 +76,7 @@ export default function HolyMondayPage() {
             <div className="md:col-span-4 sticky top-36">
               <div className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 text-center">
                 <div className="bg-amber-50 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Temple className="h-8 w-8 text-amber-700" />
+                  <Building className="h-8 w-8 text-amber-700" />
                 </div>
                 <h2 className="text-2xl font-serif font-bold text-stone-900 mb-2">Cleansing the Temple</h2>
                 <div className="w-12 h-1 bg-amber-700 mx-auto my-4 rounded-full"></div>
