@@ -48,10 +48,21 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center py-4 relative">
+        <div className="flex items-center justify-between py-4 relative">
           
-          {/* Logo Area */}
-          <div className={`transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}>
+          {/* Left: Hamburger Button (appears on scroll for desktop, always on mobile) */}
+          <button 
+            className={`text-stone-600 p-2 rounded-lg hover:bg-stone-100 transition-all ${
+              isScrolled ? 'opacity-100' : 'md:opacity-0 md:pointer-events-none'
+            }`}
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+          
+          {/* Center: Logo */}
+          <div className={`absolute left-1/2 -translate-x-1/2 transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}>
             <Link href="/">
                 <Image 
                 src="/logo-header-new.png" 
@@ -64,17 +75,22 @@ export default function Header() {
             </Link>
           </div>
           
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-8 mt-2">
+          {/* Right: Desktop Nav */}
+          <nav className={`hidden md:flex space-x-8 transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
             <Link href="/" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Home</Link>
             <Link href="/christianity" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Christianity</Link>
             <Link href="/catholicism" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Catholicism</Link>
             <Link href="/heterodox" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Heterodox</Link>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Right: Placeholder for desktop when scrolled (keeps layout stable) */}
+          <div className={`hidden md:flex space-x-8 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none absolute'}`}>
+            <span className="w-[400px]"></span>
+          </div>
+
+          {/* Mobile Menu Button (always visible on mobile) */}
           <button 
-            className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 text-stone-600 p-2"
+            className="md:hidden text-stone-600 p-2"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -82,9 +98,9 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Nav Dropdown */}
+        {/* Full Menu Dropdown (Desktop when scrolled + Mobile) */}
         {isMenuOpen && (
-          <div className="md:hidden pb-6 animate-in slide-in-from-top-2 duration-200">
+          <div className="pb-6 animate-in slide-in-from-top-2 duration-200">
             <nav className="flex flex-col space-y-4 text-center border-t border-stone-200 pt-4">
                 <Link 
                   href="/" 
@@ -114,6 +130,15 @@ export default function Header() {
                 >
                   Heterodox
                 </Link>
+                <div className="border-t border-stone-200 pt-4 mt-2">
+                  <Link 
+                    href="/site-map" 
+                    className="text-base font-medium text-stone-500 hover:text-vatican-red py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Sitemap
+                  </Link>
+                </div>
             </nav>
           </div>
         )}

@@ -8,8 +8,9 @@ export default function Footer() {
           <span className="font-serif text-xl font-bold text-stone-900">Belief Sparks</span>
           <p className="text-sm text-stone-500 mt-2">© 2026 Belief Sparks. All rights reserved.</p>
         </div>
-        <div className="flex space-x-8">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
           <Link href="/site-map" className="text-stone-500 hover:text-stone-900 font-medium transition-colors">Sitemap</Link>
+          <Link href="/references" className="text-stone-500 hover:text-stone-900 font-medium transition-colors">References</Link>
           <Link href="/privacy" className="text-stone-500 hover:text-stone-900 font-medium transition-colors">Privacy</Link>
           <Link href="/terms" className="text-stone-500 hover:text-stone-900 font-medium transition-colors">Terms</Link>
           <Link href="#" className="text-stone-500 hover:text-stone-900 font-medium transition-colors">Contact</Link>
