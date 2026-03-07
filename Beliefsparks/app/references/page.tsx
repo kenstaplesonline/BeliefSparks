@@ -34,8 +34,8 @@ export default function References() {
         {
           title: "Vatican II Documents",
           description: "Conciliar and post-conciliar documents from the Holy See",
-          note: "Sourced from Vatican Archives",
-          url: "https://www.vatican.va/archive/hist_councils/ii_vatican_council/",
+          note: "Complete collection of council documents",
+          url: "https://www.ewtn.com/catholicism/vatican-ii",
         },
         {
           title: "Code of Canon Law",
