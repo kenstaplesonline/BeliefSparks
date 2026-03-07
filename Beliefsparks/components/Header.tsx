@@ -48,21 +48,10 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-4 relative">
+        <div className="flex items-center justify-between py-4">
           
-          {/* Left: Hamburger Button (appears on scroll for desktop, always on mobile) */}
-          <button 
-            className={`text-stone-600 p-2 rounded-lg hover:bg-stone-100 transition-all ${
-              isScrolled ? 'opacity-100' : 'md:opacity-0 md:pointer-events-none'
-            }`}
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-          
-          {/* Center: Logo */}
-          <div className={`absolute left-1/2 -translate-x-1/2 transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}>
+          {/* Left: Logo */}
+          <div className={`transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}>
             <Link href="/">
                 <Image 
                 src="/logo-header-new.png" 
@@ -75,27 +64,36 @@ export default function Header() {
             </Link>
           </div>
           
-          {/* Right: Desktop Nav */}
-          <nav className={`hidden md:flex space-x-8 transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-            <Link href="/" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Home</Link>
-            <Link href="/christianity" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Christianity</Link>
-            <Link href="/catholicism" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Catholicism</Link>
-            <Link href="/heterodox" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Heterodox</Link>
-          </nav>
+          {/* Right: Desktop Nav OR Hamburger */}
+          <div className="flex items-center">
+            {/* Desktop Nav - fades out when scrolled */}
+            <nav className={`hidden md:flex space-x-8 transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none absolute right-16' : 'opacity-100'}`}>
+              <Link href="/" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Home</Link>
+              <Link href="/christianity" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Christianity</Link>
+              <Link href="/catholicism" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Catholicism</Link>
+              <Link href="/heterodox" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Heterodox</Link>
+            </nav>
 
-          {/* Right: Placeholder for desktop when scrolled (keeps layout stable) */}
-          <div className={`hidden md:flex space-x-8 transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none absolute'}`}>
-            <span className="w-[400px]"></span>
+            {/* Desktop Hamburger - appears when scrolled */}
+            <button 
+              className={`hidden md:block text-stone-600 p-2 rounded-lg hover:bg-stone-100 transition-all ${
+                isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'
+              }`}
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button 
+              className="md:hidden text-stone-600 p-2"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
+            </button>
           </div>
-
-          {/* Mobile Menu Button (always visible on mobile) */}
-          <button 
-            className="md:hidden text-stone-600 p-2"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
-          </button>
         </div>
 
         {/* Full Menu Dropdown (Desktop when scrolled + Mobile) */}
