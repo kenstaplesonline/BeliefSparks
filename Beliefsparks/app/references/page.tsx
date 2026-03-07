@@ -35,7 +35,7 @@ export default function References() {
           title: "Vatican II Documents",
           description: "Conciliar and post-conciliar documents from the Holy See",
           note: "Complete collection of council documents",
-          url: "https://www.ewtn.com/catholicism/vatican-ii",
+          url: "https://www.papalencyclicals.net/councils/ecum21.htm",
         },
         {
           title: "Code of Canon Law",
