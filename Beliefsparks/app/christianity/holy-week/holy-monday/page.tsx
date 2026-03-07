@@ -148,6 +148,7 @@ export default function HolyMondayPage() {
             <p>
               Jesus quoted Isaiah 56:7: "My house shall be called a house of prayer for all peoples." This prophecy looked forward to the day when Gentiles would join themselves to the LORD and worship Him. The Court of the Gentiles was supposed to be the place where this began—a space where non-Jews could draw near to the God of Israel.
             </p>
+            <p>
               But the commercial activity had effectively excluded the Gentiles. The noise, the stench, the chaos made prayer impossible. By cleansing the Temple, Jesus restored it to its intended purpose: a house of prayer for all nations.
             </p>
 
