@@ -48,10 +48,13 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-4 relative min-h-[100px] md:min-h-[120px]">
+        <div className="grid grid-cols-3 items-center py-4 min-h-[100px] md:min-h-[120px]">
           
-          {/* Center: Logo (absolute positioned) */}
-          <div className={`absolute left-1/2 -translate-x-1/2 transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}>
+          {/* Left: Empty spacer */}
+          <div className="flex items-center"></div>
+          
+          {/* Center: Logo */}
+          <div className={`flex justify-center transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}>
             <Link href="/">
                 <Image 
                 src="/logo-header-new.png" 
@@ -65,19 +68,19 @@ export default function Header() {
           </div>
           
           {/* Right: Desktop Nav OR Hamburger */}
-          <div className="flex items-center ml-auto">
+          <div className="flex items-center justify-end">
             {/* Desktop Nav - fades out when scrolled */}
-            <nav className={`hidden md:flex space-x-8 transition-opacity duration-300 mr-4 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-              <Link href="/" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Home</Link>
-              <Link href="/christianity" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Christianity</Link>
-              <Link href="/catholicism" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Catholicism</Link>
-              <Link href="/heterodox" className="text-stone-600 hover:text-vatican-red transition-colors font-medium">Heterodox</Link>
+            <nav className={`hidden md:flex items-center space-x-8 transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none absolute' : 'opacity-100'}`}>
+              <Link href="/" className="text-stone-600 hover:text-vatican-red transition-colors font-medium whitespace-nowrap">Home</Link>
+              <Link href="/christianity" className="text-stone-600 hover:text-vatican-red transition-colors font-medium whitespace-nowrap">Christianity</Link>
+              <Link href="/catholicism" className="text-stone-600 hover:text-vatican-red transition-colors font-medium whitespace-nowrap">Catholicism</Link>
+              <Link href="/heterodox" className="text-stone-600 hover:text-vatican-red transition-colors font-medium whitespace-nowrap">Heterodox</Link>
             </nav>
 
             {/* Desktop Hamburger - appears when scrolled */}
             <button 
-              className={`hidden md:flex text-stone-600 p-2 rounded-lg hover:bg-stone-100 transition-all ${
-                isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'
+              className={`hidden md:flex items-center justify-center text-stone-600 p-2 rounded-lg hover:bg-stone-100 transition-all ${
+                isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none absolute'
               }`}
               onClick={toggleMenu}
               aria-label="Toggle menu"
