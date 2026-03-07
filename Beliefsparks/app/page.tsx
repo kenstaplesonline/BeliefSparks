@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BookOpen, MessageCircle, Heart, TreeDeciduous, Sun, Shield, Sparkles } from "lucide-react";
+import { BookOpen, MessageCircle, Heart, TreeDeciduous, Sun, Shield, Calendar } from "lucide-react";
 
 export default function Home() {
   return (
@@ -104,13 +104,13 @@ export default function Home() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <Link href="/heterodox" className="group bg-white rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+              <Link href="/christianity/holy-week" className="group bg-white rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
                 <div className="p-8">
-                  <div className="bg-amber-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-amber-200 transition-colors">
-                    <Sparkles className="h-6 w-6 text-amber-700" />
+                  <div className="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-200 transition-colors">
+                    <Calendar className="h-6 w-6 text-red-700" />
                   </div>
-                  <h3 className="text-xl font-serif font-bold text-stone-900 mb-2 group-hover:text-vatican-red transition-colors">Heterodox</h3>
-                  <p className="text-stone-600 text-sm">Faith dialogue, theological diversity, and learning from different perspectives.</p>
+                  <h3 className="text-xl font-serif font-bold text-stone-900 mb-2 group-hover:text-vatican-red transition-colors">Holy Week</h3>
+                  <p className="text-stone-600 text-sm">Journey through the final days of Jesus—from Palm Sunday to Easter Sunday.</p>
                 </div>
               </Link>
               
@@ -136,8 +136,8 @@ export default function Home() {
               
               <Link href="/st-michael" className="group bg-white rounded-2xl border border-stone-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
                 <div className="p-8">
-                  <div className="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-200 transition-colors">
-                    <Shield className="h-6 w-6 text-red-700" />
+                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
+                    <Shield className="h-6 w-6 text-blue-700" />
                   </div>
                   <h3 className="text-xl font-serif font-bold text-stone-900 mb-2 group-hover:text-vatican-red transition-colors">St. Michael</h3>
                   <p className="text-stone-600 text-sm">Angelic devotion, intercession, and spiritual warfare in Catholic tradition.</p>
