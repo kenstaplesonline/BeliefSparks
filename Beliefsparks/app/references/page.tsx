@@ -29,7 +29,7 @@ export default function References() {
           title: "Catechism of the Catholic Church",
           description: "Official compendium of Catholic doctrine",
           note: "Referenced in Catholicism sections",
-          url: "https://www.vatican.va/archive/ENG0015/_INDEX.HTM",
+          url: "https://www.usccb.org/sites/default/files/flipbooks/catechism/",
         },
         {
           title: "Vatican II Documents",
@@ -40,7 +40,7 @@ export default function References() {
         {
           title: "Code of Canon Law",
           description: "The official body of laws for the Latin Church",
-          url: "https://www.vatican.va/archive/ENG1105/_INDEX.HTM",
+          url: "https://www.intratext.com/IXT/ENG0017/",
         },
       ],
     },
@@ -160,7 +160,7 @@ export default function References() {
         {
           title: "Pontifical Biblical Commission",
           description: "Authoritative interpretations and guidance on Scripture",
-          url: "https://www.vatican.va/roman_curia/congregations/cfaith/pcb_index.htm",
+          url: "https://www.vatican.va/roman_curia/congregations/cfaith/pcb_documents/pcb_index.htm",
         },
         {
           title: "Journal of Theological Studies",
@@ -216,6 +216,16 @@ export default function References() {
           title: "EWTN",
           description: "Eternal Word Television Network - Catholic media",
           url: "https://www.ewtn.com/",
+        },
+        {
+          title: "BibleProject",
+          description: "Animated videos and resources for understanding Scripture",
+          url: "https://bibleproject.com/",
+        },
+        {
+          title: "Biblical Archaeology Society",
+          description: "Archaeological insights into the biblical world",
+          url: "https://www.baslibrary.org/",
         },
       ],
     },

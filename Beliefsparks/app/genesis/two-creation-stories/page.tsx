@@ -285,11 +285,11 @@ export default function TwoCreationStoriesPage() {
           {/* Further Reading */}
           <section className="space-y-4">
             <h2 className="text-2xl font-serif font-bold text-stone-900">Further Reading & Resources</h2>
-            <ul className="space-y-2 text-stone-600">
-              <li>• <em>Catechism of the Catholic Church</em>, paragraphs 279-314 (Creation)</li>
-              <li>• St. Augustine, <em>The Literal Meaning of Genesis</em></li>
-              <li>• BibleProject, "One Creation Story or Two?" (video)</li>
-              <li>• Biblical Archaeology Society, "Should We Take Creation Stories in Genesis Literally?"</li>
+            <ul className="space-y-3 text-stone-600">
+              <li>• <a href="https://www.usccb.org/sites/default/files/flipbooks/catechism/" target="_blank" rel="noopener noreferrer" className="text-vatican-red hover:text-vatican-gold transition-colors"><em>Catechism of the Catholic Church</em></a>, paragraphs 279-314 (Creation)</li>
+              <li>• St. Augustine, <a href="https://www.newadvent.org/fathers/1201.htm" target="_blank" rel="noopener noreferrer" className="text-vatican-red hover:text-vatican-gold transition-colors"><em>The Literal Meaning of Genesis</em></a></li>
+              <li>• <a href="https://bibleproject.com/explore/video/genesis-1-11/" target="_blank" rel="noopener noreferrer" className="text-vatican-red hover:text-vatican-gold transition-colors">BibleProject, "One Creation Story or Two?" (video)</a></li>
+              <li>• <a href="https://www.baslibrary.org/" target="_blank" rel="noopener noreferrer" className="text-vatican-red hover:text-vatican-gold transition-colors">Biblical Archaeology Society</a>, "Should We Take Creation Stories in Genesis Literally?"</li>
             </ul>
           </section>
 
