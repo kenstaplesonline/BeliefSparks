@@ -13,6 +13,16 @@ export default function Sitemap() {
       title: "Christianity",
       links: [
         { name: "Christianity Overview", href: "/christianity" },
+        { name: "— Holy Week Series —", href: "", isHeader: true },
+        { name: "Holy Week Overview", href: "/christianity/holy-week" },
+        { name: "Palm Sunday", href: "/christianity/holy-week/palm-sunday" },
+        { name: "Holy Monday", href: "/christianity/holy-week/holy-monday" },
+        { name: "Holy Tuesday", href: "/christianity/holy-week/holy-tuesday" },
+        { name: "Holy Wednesday", href: "/christianity/holy-week/holy-wednesday" },
+        { name: "Maundy Thursday", href: "/christianity/holy-week/maundy-thursday" },
+        { name: "Good Friday", href: "/christianity/holy-week/good-friday" },
+        { name: "Easter Saturday", href: "/christianity/holy-week/easter-saturday" },
+        { name: "Easter Sunday", href: "/christianity/holy-week/easter-sunday" },
         { name: "— Genesis Series —", href: "", isHeader: true },
         { name: "Genesis Overview", href: "/genesis" },
         { name: "Two Creation Stories", href: "/genesis/two-creation-stories" },
@@ -61,10 +71,11 @@ export default function Sitemap() {
       ],
     },
     {
-      title: "Legal",
+      title: "Legal & Utility",
       links: [
         { name: "Privacy Policy", href: "/privacy" },
         { name: "Terms of Service", href: "/terms" },
+        { name: "References", href: "/references" },
       ],
     },
   ];

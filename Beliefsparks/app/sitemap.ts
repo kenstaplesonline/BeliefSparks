@@ -68,6 +68,62 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
 
+    // Christianity - Holy Week
+    {
+      url: `${baseUrl}/christianity/holy-week`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/christianity/holy-week/palm-sunday`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/christianity/holy-week/holy-monday`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/christianity/holy-week/holy-tuesday`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/christianity/holy-week/holy-wednesday`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/christianity/holy-week/maundy-thursday`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/christianity/holy-week/good-friday`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/christianity/holy-week/easter-saturday`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/christianity/holy-week/easter-sunday`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+
     // Heterodox subpages
     {
       url: `${baseUrl}/heterodox/tower-of-babel`,
@@ -234,6 +290,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.4,
+    },
+    {
+      url: `${baseUrl}/references`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
     },
   ]
 }
