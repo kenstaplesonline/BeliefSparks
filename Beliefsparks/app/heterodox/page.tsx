@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, Microscope, BookOpen, Fingerprint, History, Sparkles, Scroll, Brain, CloudRain, Tent, Sword, ExternalLink, ArrowRight, Building2, Users, Divide, Heart, Church, ShieldCheck } from "lucide-react";
+import { ChevronLeft, Microscope, BookOpen, Fingerprint, History, Sparkles, Scroll, Brain, CloudRain, Tent, Sword, ExternalLink, ArrowRight, Building2, Users, Divide, Heart, Church, ShieldCheck, Globe2, Sunrise } from "lucide-react";
 
 export default function HeterodoxPage() {
   return (
@@ -65,6 +65,32 @@ export default function HeterodoxPage() {
                 <Link 
                   href="/heterodox/tower-of-babel"
                   className="inline-flex items-center px-6 py-3 bg-vatican-gold text-stone-900 font-semibold rounded-lg hover:bg-white transition-colors duration-300"
+                >
+                  Read Full Exploration <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          <div className="flex justify-center my-16">
+            <div className="w-24 h-px bg-stone-300"></div>
+          </div>
+
+          {/* Featured: Homo Sapiens Divinus */}
+          <section className="bg-gradient-to-br from-vatican-gold/20 to-stone-100 text-stone-900 p-10 rounded-2xl shadow-xl border border-vatican-gold/30">
+            <div className="flex items-start justify-between">
+              <div className="flex-1">
+                <div className="inline-flex items-center p-2 bg-vatican-gold/20 rounded-full mb-4">
+                  <Sparkles className="h-5 w-5 text-vatican-gold mr-2" />
+                  <span className="text-xs font-semibold uppercase tracking-widest text-vatican-gold">New Exploration</span>
+                </div>
+                <h2 className="text-3xl font-serif font-bold text-stone-900 mb-4">Homo Sapiens Divinus: The Awakening</h2>
+                <p className="text-stone-600 text-lg mb-6 max-w-2xl leading-relaxed">
+                  Around 4000 BC, consciousness shifted fundamentally. Explore humanity&apos;s awakening to divine identity—how 4.54 billion years of Earth&apos;s history led to the emergence of spiritually conscious beings.
+                </p>
+                <Link 
+                  href="/heterodox/homo-sapiens-divinus"
+                  className="inline-flex items-center px-6 py-3 bg-vatican-gold text-stone-900 font-semibold rounded-lg hover:bg-stone-800 hover:text-white transition-colors duration-300"
                 >
                   Read Full Exploration <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
