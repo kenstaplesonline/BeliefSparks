@@ -516,6 +516,20 @@ export default function KenStaplesPage() {
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Hitmen</h4>
                 <p className="text-red-200">WHL Team - Junior hockey excellence</p>
               </div>
+
+              {/* Calgary Wild FC */}
+              <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-green-600 to-green-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-5xl mb-3">⚽</div>
+                <h4 className="text-2xl font-bold text-white mb-2">Calgary Wild FC</h4>
+                <p className="text-green-100">FC Team - Professional soccer excellence</p>
+              </div>
+
+              {/* Calgary Roughnecks */}
+              <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-slate-700 to-slate-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-5xl mb-3">🥍</div>
+                <h4 className="text-2xl font-bold text-white mb-2">Calgary Roughnecks</h4>
+                <p className="text-slate-200">NLL Team - Lacrosse champions</p>
+              </div>
             </div>
           </div>
         </motion.div>
