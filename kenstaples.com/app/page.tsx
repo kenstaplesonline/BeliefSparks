@@ -177,7 +177,7 @@ export default function KenStaplesPage() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-square">
               <Image
-                src="/selfie2blackoffset.png"
+                src="/selfie4.png"
                 alt="Ken Staples - Professional Profile"
                 fill
                 className="object-cover transform hover:scale-105 transition-transform duration-500"
