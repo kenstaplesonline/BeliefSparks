@@ -491,42 +491,84 @@ export default function KenStaplesPage() {
             <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth">
               {/* Calgary Flames */}
               <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-orange-600 to-red-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-5xl mb-3">🔥</div>
+                <div className="relative w-16 h-16 mx-auto mb-3">
+                  <Image
+                    src="/flames-logo.svg"
+                    alt="Calgary Flames Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Flames</h4>
                 <p className="text-orange-100">NHL Team - Proud supporter of the Red and Gold</p>
               </div>
 
               {/* Calgary Surge */}
               <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-5xl mb-3">🏀</div>
+                <div className="relative w-16 h-16 mx-auto mb-3">
+                  <Image
+                    src="/surge-logo.png"
+                    alt="Calgary Surge Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Surge</h4>
                 <p className="text-blue-100">CEBL Team - Supporting the best in Canadian basketball</p>
               </div>
 
               {/* Cavalry FC */}
               <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-5xl mb-3">⚽</div>
+                <div className="relative w-16 h-16 mx-auto mb-3">
+                  <Image
+                    src="/cavalry-logo.svg"
+                    alt="Cavalry FC Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Cavalry FC</h4>
                 <p className="text-orange-100">CPL Team - The best of Canadian soccer</p>
               </div>
 
               {/* Calgary Hitmen */}
               <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-red-700 to-black rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-5xl mb-3">🥅</div>
+                <div className="relative w-16 h-16 mx-auto mb-3">
+                  <Image
+                    src="/hitmen-logo.svg"
+                    alt="Calgary Hitmen Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Hitmen</h4>
                 <p className="text-red-200">WHL Team - Junior hockey excellence</p>
               </div>
 
               {/* Calgary Wild FC */}
               <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-green-600 to-green-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-5xl mb-3">⚽</div>
+                <div className="relative w-16 h-16 mx-auto mb-3">
+                  <Image
+                    src="/wild-logo.svg"
+                    alt="Calgary Wild FC Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Wild FC</h4>
                 <p className="text-green-100">FC Team - Professional soccer excellence</p>
               </div>
 
               {/* Calgary Roughnecks */}
               <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-slate-700 to-slate-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-5xl mb-3">🥍</div>
+                <div className="relative w-16 h-16 mx-auto mb-3">
+                  <Image
+                    src="/roughnecks-logo.svg"
+                    alt="Calgary Roughnecks Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Roughnecks</h4>
                 <p className="text-slate-200">NLL Team - Lacrosse champions</p>
               </div>
