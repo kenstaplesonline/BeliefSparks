@@ -16,22 +16,22 @@ export default function KenStaplesPage() {
     },
     {
       title: 'Belief Sparks',
-      description: 'A Christian portal for faith dialogue and reflection',
+      description: 'A Christian portal for faith dialogue and reflection featuring comprehensive Holy Week series, theological discussions, and Catholic faith resources for spiritual growth.',
       url: 'https://www.beliefsparks.com',
       tags: ['Faith', 'Christianity', 'Roman Catholicism'],
       icon: '✝️'
     },
     {
       title: 'The Neighbourhoods',
-      description: 'Showcasing Calgary\'s neighborhoods with data-driven insights',
+      description: 'Showcasing Calgary\'s neighborhoods with data-driven insights, community stories, and local insights celebrating each area\'s unique character.',
       url: 'https://theneighbourhoods.com',
       tags: ['Calgary', 'Neighborhoods', 'Data'],
       icon: '🏠'
     },
     {
       title: 'Totally Random Thoughts',
-      description: 'Personal blog for random thoughts and reflections',
-      url: '#',
+      description: 'Personal blog for random thoughts and reflections on life, technology, faith, and everything in between.',
+      url: 'https://totalrandomthoughts.com',
       tags: ['Blog', 'Personal'],
       icon: '💭'
     }
@@ -39,35 +39,38 @@ export default function KenStaplesPage() {
 
   const skills = [
     { name: 'Web Development', icon: <Code className="h-6 w-6" /> },
-    { name: 'HTML/CSS/JavaScript', icon: <Code className="h-6 w-6" /> },
+    { name: 'HTML/CSS/JS', icon: <Code className="h-6 w-6" /> },
+    { name: 'React & Next.js', icon: <Code className="h-6 w-6" /> },
     { name: 'Microsoft Office', icon: <FileText className="h-6 w-6" /> },
     { name: 'Photography', icon: <Camera className="h-6 w-6" /> },
     { name: 'Problem Solving', icon: <Star className="h-6 w-6" /> },
-    { name: 'Communication', icon: <MessageSquare className="h-6 w-6" /> }
+    { name: 'Communication', icon: <MessageSquare className="h-6 w-6" /> },
+    { name: 'Learning', icon: <Star className="h-6 w-6" /> },
+    { name: 'Creativity', icon: <Star className="h-6 w-6" /> }
   ]
 
   const interests = [
     {
       title: 'Science Fiction',
-      description: 'Loves Star Trek, Transformers, Ghostbusters, and works by Robert L. Forward',
+      description: 'Loves Star Trek, Transformers, Ghostbusters, and works by Robert L. Forward. Fascinated by hard science fiction and futuristic technology.',
       icon: '🚀',
       image: '/startrek.jpg'
     },
     {
       title: 'Science',
-      description: 'Fascinated with astronomy, astrophysics, meteorology, and technology',
+      description: 'Fascinated with astronomy, astrophysics, meteorology, and technology. Follows leading scientists and researchers.',
       icon: '🔭',
       image: '/space2.png'
     },
     {
       title: 'Faith',
-      description: 'Roman Catholic, passionate about biblical history and science-religion dialogue',
+      description: 'Roman Catholic, passionate about biblical history and science-religion dialogue. Deep believer in finding harmony between faith and reason.',
       icon: '✝️',
       image: '/church.jpg'
     },
     {
       title: 'Photography',
-      description: 'Capturing beauty in outdoors, architecture, and family moments',
+      description: 'Capturing beauty in outdoors, architecture, and family moments. Canon and Google Pixel enthusiast.',
       icon: '📷',
       image: '/camera1.png'
     }
@@ -164,7 +167,7 @@ export default function KenStaplesPage() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-square">
               <Image
-                src="/selfie4.png"
+                src="/selfie2blackoffset.png"
                 alt="Ken Staples - Professional Profile"
                 fill
                 className="object-cover transform hover:scale-105 transition-transform duration-500"
@@ -192,16 +195,27 @@ export default function KenStaplesPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Who I Am</h3>
-              <p className="text-gray-600 leading-relaxed">
+
+              {/* About Me Image */}
+              <div className="relative mb-6 rounded-lg overflow-hidden aspect-video">
+                <Image
+                  src="/selfie4.png"
+                  alt="Ken Staples - Professional Profile"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <p className="text-gray-600 leading-relaxed mb-4">
                 Born in Calgary on December 18, 1975, I grew up in Airdrie before returning to Calgary where I've lived ever since. I have a diverse work background in customer service and retail, including Amazon, Dairy Queen, Calgary Stampede Food Services, and more.
               </p>
-              <p className="text-gray-600 leading-relaxed mt-4">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 What sets me apart is my passion for technology and continuous learning. I'm comfortable writing code in HTML, CSS, and JavaScript, and I love building websites that help people. Microsoft Office proficiency rounds out my technical skills.
               </p>
-              <p className="text-gray-600 leading-relaxed mt-4">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 Beyond coding, I'm a lifelong learner fascinated by science, technology, and the intersection of faith and reason. I enjoy photography, especially capturing moments in nature and cityscapes around Calgary. My favorite team? The Calgary Stampeders, Flames, Calvary, Surge, Hitmen, Wranglers, Wilds, Roughnecks!!!!
               </p>
-              <p className="text-gray-600 leading-relaxed mt-4">
+              <p className="text-gray-600 leading-relaxed">
                 I believe in the power of authentic storytelling to connect people and inspire change. Whether it's through technology, photography, or just sharing stories, I'm always looking for ways to make a positive impact.
               </p>
             </div>
@@ -211,19 +225,27 @@ export default function KenStaplesPage() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">Years of Experience</span>
-                  <span className="text-2xl font-bold text-calgary-red">20+</span>
+                  <span className="text-2xl font-bold text-white">20+</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">Projects Completed</span>
-                  <span className="text-2xl font-bold text-calgary-red">15+</span>
+                  <span className="text-2xl font-bold text-white">15+</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">Technologies</span>
-                  <span className="text-2xl font-bold text-calgary-red">10+</span>
+                  <span className="text-2xl font-bold text-white">10+</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">Coffee Consumed</span>
-                  <span className="text-2xl font-bold text-calgary-red">∞</span>
+                  <span className="text-2xl font-bold text-white">∞</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-700">Sports Teams Supported</span>
+                  <span className="text-2xl font-bold text-white">8+</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-700">YouTube Channels Followed</span>
+                  <span className="text-2xl font-bold text-white">9+</span>
                 </div>
               </div>
             </div>
@@ -284,7 +306,7 @@ export default function KenStaplesPage() {
                 className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-calgary-red transition-all"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="text-4xl mb-2">🎮</div>
+                  <div className="text-4xl mb-2">💾</div>
                   <span className="font-medium text-gray-900">The 8-Bit Guy</span>
                 </div>
               </a>
@@ -295,7 +317,7 @@ export default function KenStaplesPage() {
                 className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-calgary-red transition-all"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="text-4xl mb-2">🌟</div>
+                  <div className="text-4xl mb-2">🔭</div>
                   <span className="font-medium text-gray-900">PBS Space Time</span>
                 </div>
               </a>
@@ -342,14 +364,17 @@ export default function KenStaplesPage() {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-lg p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow hover:border-calgary-red"
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 mb-2">
                     <div className="bg-calgary-red p-3 rounded-lg">
                       {skill.icon}
                     </div>
-                    <span className="font-medium text-gray-700">{skill.name}</span>
+                    <span className="font-semibold text-gray-900">{skill.name}</span>
                   </div>
+                  <p className="text-sm text-gray-600">
+                    Proficient in building modern web applications and solving complex problems with code.
+                  </p>
                 </div>
               ))}
             </div>
@@ -391,7 +416,7 @@ export default function KenStaplesPage() {
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-3 py-1 bg-calgary-red text-calgary-red text-sm font-medium rounded-full"
+                        className="px-3 py-1 bg-calgary-red text-white text-sm font-medium rounded-full"
                       >
                         {tag}
                       </span>
@@ -432,22 +457,20 @@ export default function KenStaplesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
               >
-                <div className="flex flex-col h-full">
-                  <div className="relative overflow-hidden rounded-lg mb-4 aspect-video">
-                    <Image
-                      src={interest.image}
-                      alt={interest.title}
-                      fill
-                      className="object-cover transform hover:scale-110 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, 400px"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{interest.title}</h3>
-                    <p className="text-gray-600">{interest.description}</p>
-                  </div>
+                <div className="relative w-full aspect-square">
+                  <Image
+                    src={interest.image}
+                    alt={interest.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{interest.title}</h3>
+                  <p className="text-gray-600">{interest.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -571,6 +594,20 @@ export default function KenStaplesPage() {
                 </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Roughnecks</h4>
                 <p className="text-slate-200">NLL Team - Lacrosse champions</p>
+              </div>
+
+              {/* Calgary Wranglers */}
+              <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-red-600 to-red-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="relative w-16 h-16 mx-auto mb-3">
+                  <Image
+                    src="/wranglers-logo.svg"
+                    alt="Calgary Wranglers Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h4 className="text-2xl font-bold text-white mb-2">Calgary Wranglers</h4>
+                <p className="text-red-200">AHL Team - Flames affiliate hockey</p>
               </div>
             </div>
           </div>
