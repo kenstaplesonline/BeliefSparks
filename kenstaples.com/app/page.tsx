@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, ArrowLeft, Github, Linkedin, Mail, Menu, X, User, Briefcase, Camera, Code, BookOpen, Star, ChevronRight, FileText, MessageSquare } from 'lucide-react'
+import { ArrowRight, ArrowLeft, Github, Linkedin, Mail, Menu, X, User, Briefcase, Camera, Code, BookOpen, Star, ChevronRight, FileText, MessageSquare, Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function KenStaplesPage() {
@@ -31,9 +31,23 @@ export default function KenStaplesPage() {
     {
       title: 'Totally Random Thoughts',
       description: 'Personal blog for random thoughts and reflections on life, technology, faith, and everything in between.',
-      url: 'https://totalrandomthoughts.com',
+      url: 'https://totallyrandomthoughts.com',
       tags: ['Blog', 'Personal'],
       icon: '💭'
+    },
+    {
+      title: 'Confluence Curiosity',
+      description: 'Science stories and events around Calgary, focusing on astronomy, meteorology, geology, history, and other fields. A Calgary-focused cross between Natgeo.com and SI.edu.',
+      url: 'https://confluencecuriosity.com',
+      tags: ['Science', 'Calgary', 'Stories'],
+      icon: '🌌'
+    },
+    {
+      title: 'Horsepower Hiking',
+      description: 'Hiking day trips from Calgary to locations around Alberta, featuring Google Earth Studio videos with audio narration and itinerary planning.',
+      url: 'https://horsepowerhiking.com',
+      tags: ['Hiking', 'Alberta', 'Videos'],
+      icon: '🏔️'
     }
   ]
 
@@ -137,10 +151,6 @@ export default function KenStaplesPage() {
               I'm a passionate developer with a love for technology, science fiction, and helping others learn. Based in Calgary, Alberta, I build digital experiences that make a difference.
             </p>
             <div className="mb-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-calgary-red rounded-full text-sm font-medium text-white mb-3">
-                <span className="text-lg">✨</span>
-                <span>CACNAE Studios</span>
-              </div>
               <p className="text-xl text-gray-700 italic">"Curious. Create. Inspire."</p>
             </div>
             <div className="flex flex-wrap gap-4">
@@ -192,7 +202,7 @@ export default function KenStaplesPage() {
             <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-1 gap-8">
             <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Who I Am</h3>
 
@@ -215,37 +225,40 @@ export default function KenStaplesPage() {
               <p className="text-gray-600 leading-relaxed mb-4">
                 Beyond coding, I'm a lifelong learner fascinated by science, technology, and the intersection of faith and reason. I enjoy photography, especially capturing moments in nature and cityscapes around Calgary. My favorite team? The Calgary Stampeders, Flames, Calvary, Surge, Hitmen, Wranglers, Wilds, Roughnecks!!!!
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 I believe in the power of authentic storytelling to connect people and inspire change. Whether it's through technology, photography, or just sharing stories, I'm always looking for ways to make a positive impact.
               </p>
-            </div>
+              <p className="text-gray-600 leading-relaxed">
+                I'm a technology enthusiast, developer, photographer, and lifelong learner based in Calgary, Alberta. I love building websites that help people, capturing moments through photography, and exploring the intersection of faith and reason. Always curious, always creating, always inspired.
+              </p>
 
-            <div className="bg-gradient-to-br from-calgary-red to-calgary-red rounded-xl p-8 shadow-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">My Stats</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700">Years of Experience</span>
-                  <span className="text-2xl font-bold text-white">20+</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700">Projects Completed</span>
-                  <span className="text-2xl font-bold text-white">15+</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700">Technologies</span>
-                  <span className="text-2xl font-bold text-white">10+</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700">Coffee Consumed</span>
-                  <span className="text-2xl font-bold text-white">∞</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700">Sports Teams Supported</span>
-                  <span className="text-2xl font-bold text-white">8+</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700">YouTube Channels Followed</span>
-                  <span className="text-2xl font-bold text-white">9+</span>
+              {/* Stats */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-calgary-red mb-1">20+</div>
+                    <div className="text-sm text-gray-600">Years of Experience</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-calgary-red mb-1">15+</div>
+                    <div className="text-sm text-gray-600">Projects Completed</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-calgary-red mb-1">10+</div>
+                    <div className="text-sm text-gray-600">Technologies</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-calgary-red mb-1">∞</div>
+                    <div className="text-sm text-gray-600">Coffee Consumed</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-calgary-red mb-1">8+</div>
+                    <div className="text-sm text-gray-600">Sports Teams Supported</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-calgary-red mb-1">9+</div>
+                    <div className="text-sm text-gray-600">YouTube Channels Followed</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -492,7 +505,7 @@ export default function KenStaplesPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer aspect-video">
+            <div className="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer aspect-[16/9]">
               <Image
                 src="/stampeders.jpg"
                 alt="Calgary Stampeders"
@@ -500,9 +513,18 @@ export default function KenStaplesPage() {
                 className="object-cover transform group-hover:scale-110 transition-transform duration-500"
                 sizes="(max-width: 768px) 100vw, 600px"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-calgary-red to-calgary-red/80 p-6">
+              {/* Stampeders Logo Overlay */}
+              <div className="absolute top-4 right-4 w-20 h-20 md:w-24 md:h-24">
+                <Image
+                  src="/stampeders-logo.svg"
+                  alt="Stampeders Logo"
+                  fill
+                  className="object-contain drop-shadow-lg"
+                />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                 <h4 className="text-2xl font-bold text-white">Calgary Stampeders</h4>
-                <p className="text-white">CFL Team - Proud supporter of the Red and White</p>
+                <p className="text-white/90">CFL Team - Proud supporter of the Red and White</p>
               </div>
             </div>
           </div>
@@ -665,6 +687,45 @@ export default function KenStaplesPage() {
               <Mail className="h-5 w-5" />
               <span>Email</span>
             </a>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="mt-12">
+            <p className="text-center text-white/80 mb-4">Follow me on social media</p>
+            <div className="flex justify-center gap-4">
+              <a
+                href="https://facebook.com/kenstaples"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+              >
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a
+                href="https://instagram.com/kenstaples"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+              >
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a
+                href="https://twitter.com/kenstaples"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+              >
+                <Twitter className="h-6 w-6" />
+              </a>
+              <a
+                href="https://youtube.com/kenstaples"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+              >
+                <Youtube className="h-6 w-6" />
+              </a>
+            </div>
           </div>
         </motion.div>
       </section>
