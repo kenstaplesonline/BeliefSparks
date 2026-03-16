@@ -8,6 +8,13 @@ import { motion } from 'framer-motion'
 export default function KenStaplesPage() {
   const projects = [
     {
+      title: 'CACNAE Studios',
+      description: 'Inspire, educate, and entertain through content that bridges science and spirituality, celebrates community, and sparks curiosity. Rooted in Calgary, expanding outward.',
+      url: 'https://kenstaples.com',
+      tags: ['Content Studio', 'Calgary', 'Science-Spirituality'],
+      icon: '✨'
+    },
+    {
       title: 'Belief Sparks',
       description: 'A Christian portal for faith dialogue and reflection',
       url: 'https://www.beliefsparks.com',
@@ -114,7 +121,7 @@ export default function KenStaplesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-calgary-red rounded-full text-sm font-medium text-calgary-red mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-calgary-red rounded-full text-sm font-medium text-black mb-6">
               <span>👋</span>
               <span>Hello, I'm Ken Staples</span>
             </div>
@@ -123,9 +130,16 @@ export default function KenStaplesPage() {
               <br />
               <span className="text-calgary-red">Science & Faith Explorer</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-lg text-gray-600 mb-4 leading-relaxed">
               I'm a passionate developer with a love for technology, science fiction, and helping others learn. Based in Calgary, Alberta, I build digital experiences that make a difference.
             </p>
+            <div className="mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-calgary-red rounded-full text-sm font-medium text-white mb-3">
+                <span className="text-lg">✨</span>
+                <span>CACNAE Studios</span>
+              </div>
+              <p className="text-xl text-gray-700 italic">"Curious. Create. Inspire."</p>
+            </div>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="#contact"
@@ -185,7 +199,7 @@ export default function KenStaplesPage() {
                 What sets me apart is my passion for technology and continuous learning. I'm comfortable writing code in HTML, CSS, and JavaScript, and I love building websites that help people. Microsoft Office proficiency rounds out my technical skills.
               </p>
               <p className="text-gray-600 leading-relaxed mt-4">
-                Beyond coding, I'm a lifelong learner fascinated by science, technology, and the intersection of faith and reason. I enjoy photography, especially capturing moments in nature and cityscapes around Calgary. My favorite team? The Calgary Stampeders - I bleed Blue and Gold (well, Red and White in my case)!
+                Beyond coding, I'm a lifelong learner fascinated by science, technology, and the intersection of faith and reason. I enjoy photography, especially capturing moments in nature and cityscapes around Calgary. My favorite team? The Calgary Stampeders, Flames, Calvary, Surge, Hitmen, Wranglers, Wilds, Roughnecks!!!!
               </p>
               <p className="text-gray-600 leading-relaxed mt-4">
                 I believe in the power of authentic storytelling to connect people and inspire change. Whether it's through technology, photography, or just sharing stories, I'm always looking for ways to make a positive impact.
@@ -567,13 +581,16 @@ export default function KenStaplesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <span className="text-gray-600">© 2024 Ken Staples. All rights reserved.</span>
+              <span className="text-gray-600">© 2024 CACNAE Studios. All rights reserved.</span>
             </div>
             <div className="flex items-center gap-2">
               <span>Made with</span>
               <span className="text-red-500">❤</span>
               <span>in Calgary, Alberta</span>
             </div>
+          </div>
+          <div className="mt-4 text-center md:text-left">
+            <p className="text-sm text-gray-500 italic">"Curious. Create. Inspire."</p>
           </div>
         </div>
       </footer>
