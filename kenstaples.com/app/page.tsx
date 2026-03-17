@@ -506,7 +506,7 @@ export default function KenStaplesPage() {
 
           <div className="grid md:grid-cols-1 gap-6 max-w-3xl mx-auto">
             <a
-              href="https://www.cfl.ca/"
+              href="https://www.stampeders.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer aspect-[16/9]"
@@ -516,7 +516,7 @@ export default function KenStaplesPage() {
                 alt="Calgary Stampeders"
                 fill
                 className="object-cover transform group-hover:scale-110 transition-transform duration-500"
-                sizes="(max-width: 768px) 100vw, 100vw"
+                sizes="(max-width: 768px) 100vw, 100vh"
               />
               {/* Stampeders Logo Overlay */}
               <div className="absolute top-4 right-4 w-20 h-20 md:w-24 md:h-24">
@@ -766,6 +766,42 @@ export default function KenStaplesPage() {
                 <Youtube className="h-6 w-6" />
               </a>
             </div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Land Acknowledgement */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-gray-50">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Land Acknowledgement</h2>
+          <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full mb-8"></div>
+          <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <p className="text-gray-700 leading-relaxed mb-4">
+              <strong className="text-calgary-red">KenStaples.com</strong> acknowledges that we are on Treaty 7 territory, the traditional and ancestral lands of the:
+            </p>
+            <ul className="text-left text-gray-700 space-y-2 mb-6">
+              <li className="flex items-start gap-2">
+                <span className="text-calgary-red mt-1">•</span>
+                <span><strong>Blackfoot Confederacy:</strong> Kainai Nation, Piikani Nation, Amskapi Piikani, and Siksika Nation</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-calgary-red mt-1">•</span>
+                <span><strong>Other First Nations:</strong> Tsuut'ina Nation and Stoney Nakoda</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-calgary-red mt-1">•</span>
+                <span><strong>Métis:</strong> Historical Northwest Métis Homeland (Battle River Territory)</span>
+              </li>
+            </ul>
+            <p className="text-gray-600 italic text-sm">
+              We honour the First Nations, Inuit, and Métis peoples for their care and stewardship of this land, and acknowledge the ongoing impact of colonization. We are committed to learning, understanding, and building respectful relationships with Indigenous communities.
+            </p>
           </div>
         </motion.div>
       </section>
