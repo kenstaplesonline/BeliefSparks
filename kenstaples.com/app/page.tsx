@@ -97,7 +97,13 @@ export default function KenStaplesPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2">
-              <span className="text-2xl">👨‍💻</span>
+              <Image
+                src="/KSlogo1.png"
+                alt="Ken Staples Logo"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
               <span className="font-semibold text-gray-900">Ken Staples</span>
             </Link>
             <div className="hidden md:flex items-center gap-8">
@@ -138,23 +144,11 @@ export default function KenStaplesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <Image
-                src="/KSlogo1.png"
-                alt="Ken Staples Logo"
-                width={60}
-                height={60}
-                className="rounded-full"
-              />
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Ken Staples
-              </h1>
-            </div>
-            <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
               Calgarian • Technology Enthusiast •
               <br />
               <span className="text-calgary-red">Science & Faith Explorer</span>
-            </h2>
+            </h1>
             <p className="text-lg text-gray-600 mb-4 leading-relaxed">
               I'm a passionate developer with a love for technology, science fiction, and helping others learn. Based in Calgary, Alberta, I build digital experiences that make a difference.
             </p>
