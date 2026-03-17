@@ -500,7 +500,7 @@ export default function KenStaplesPage() {
           transition={{ duration: 0.6 }}
         >
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Calgary Sports & Teams</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Calgary Sport Teams</h2>
             <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full"></div>
           </div>
 
@@ -516,7 +516,7 @@ export default function KenStaplesPage() {
                 alt="Calgary Stampeders"
                 fill
                 className="object-cover transform group-hover:scale-110 transition-transform duration-500"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 100vw"
               />
               {/* Stampeders Logo Overlay */}
               <div className="absolute top-4 right-4 w-20 h-20 md:w-24 md:h-24">
@@ -541,7 +541,7 @@ export default function KenStaplesPage() {
             <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth">
               {/* Calgary Flames */}
               <a
-                href="https://www.flames.ca/"
+                href="https://www.nhl.com/flames/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-orange-600 to-red-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
@@ -579,7 +579,7 @@ export default function KenStaplesPage() {
 
               {/* Cavalry FC */}
               <a
-                href="https://www.cavalryfc.com/"
+                href="https://www.canpl.ca/cavalryfc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
@@ -598,7 +598,7 @@ export default function KenStaplesPage() {
 
               {/* Calgary Hitmen */}
               <a
-                href="https://www.hitmen.ca/"
+                href="https://chl.ca/whl-hitmen/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-red-700 to-black rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
@@ -655,7 +655,7 @@ export default function KenStaplesPage() {
 
               {/* Calgary Wranglers */}
               <a
-                href="https://www.calgarywranglers.ca/"
+                href="https://www.calgarywranglers.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-red-600 to-red-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
