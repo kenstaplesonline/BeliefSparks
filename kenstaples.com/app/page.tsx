@@ -785,7 +785,7 @@ export default function KenStaplesPage() {
           <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full mb-8"></div>
           <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
             <p className="text-gray-700 leading-relaxed mb-4">
-              <strong className="text-calgary-red">KenStaples.com</strong> acknowledges that we are on Treaty 7 territory<br> the traditional and ancestral lands of the:
+              <strong className="text-calgary-red">KenStaples.com</strong> acknowledges that we are on Treaty 7 territory, the traditional and ancestral lands of the:
             </p>
             <ul className="text-left text-gray-700 space-y-2 mb-6">
               <li className="flex items-start gap-2">
