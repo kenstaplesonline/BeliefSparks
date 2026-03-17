@@ -511,7 +511,7 @@ export default function KenStaplesPage() {
                 alt="Calgary Stampeders"
                 fill
                 className="object-cover transform group-hover:scale-110 transition-transform duration-500"
-                sizes="(max-width: 768px) 100vw, 600px"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               {/* Stampeders Logo Overlay */}
               <div className="absolute top-4 right-4 w-20 h-20 md:w-24 md:h-24">
@@ -545,7 +545,7 @@ export default function KenStaplesPage() {
                   />
                 </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Flames</h4>
-                <p className="text-orange-100">NHL Team - Proud supporter of the Red and Gold</p>
+                <p className="text-orange-100">NHL Team - Proud supporter since 1980</p>
               </div>
 
               {/* Calgary Surge */}
