@@ -504,8 +504,13 @@ export default function KenStaplesPage() {
             <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer aspect-[16/9]">
+          <div className="grid md:grid-cols-1 gap-6 max-w-3xl mx-auto">
+            <a
+              href="https://www.cfl.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer aspect-[16/9]"
+            >
               <Image
                 src="/stampeders.jpg"
                 alt="Calgary Stampeders"
@@ -526,7 +531,7 @@ export default function KenStaplesPage() {
                 <h4 className="text-2xl font-bold text-white">Calgary Stampeders</h4>
                 <p className="text-white/90">CFL Team - Proud supporter of the Red and White</p>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Calgary Sports Teams Carousel */}
@@ -535,7 +540,12 @@ export default function KenStaplesPage() {
             <p className="text-gray-600 text-center mb-6">Swipe to see more! →</p>
             <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth">
               {/* Calgary Flames */}
-              <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-orange-600 to-red-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <a
+                href="https://www.flames.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-orange-600 to-red-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <div className="relative w-16 h-16 mx-auto mb-3">
                   <Image
                     src="/flames-logo.svg"
@@ -546,10 +556,15 @@ export default function KenStaplesPage() {
                 </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Flames</h4>
                 <p className="text-orange-100">NHL Team - Proud supporter since 1980</p>
-              </div>
+              </a>
 
               {/* Calgary Surge */}
-              <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <a
+                href="https://www.calgarysurge.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <div className="relative w-16 h-16 mx-auto mb-3">
                   <Image
                     src="/surge-logo.png"
@@ -560,10 +575,15 @@ export default function KenStaplesPage() {
                 </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Surge</h4>
                 <p className="text-blue-100">CEBL Team - Supporting the best in Canadian basketball</p>
-              </div>
+              </a>
 
               {/* Cavalry FC */}
-              <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <a
+                href="https://www.cavalryfc.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <div className="relative w-16 h-16 mx-auto mb-3">
                   <Image
                     src="/cavalry-logo.svg"
@@ -574,10 +594,15 @@ export default function KenStaplesPage() {
                 </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Cavalry FC</h4>
                 <p className="text-orange-100">CPL Team - The best of Canadian soccer</p>
-              </div>
+              </a>
 
               {/* Calgary Hitmen */}
-              <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-red-700 to-black rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <a
+                href="https://www.hitmen.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-red-700 to-black rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <div className="relative w-16 h-16 mx-auto mb-3">
                   <Image
                     src="/hitmen-logo.svg"
@@ -588,10 +613,15 @@ export default function KenStaplesPage() {
                 </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Hitmen</h4>
                 <p className="text-red-200">WHL Team - Junior hockey excellence</p>
-              </div>
+              </a>
 
               {/* Calgary Wild FC */}
-              <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-green-600 to-green-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <a
+                href="https://www.calgarywildfc.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-green-600 to-green-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <div className="relative w-16 h-16 mx-auto mb-3">
                   <Image
                     src="/wild-logo.svg"
@@ -602,10 +632,15 @@ export default function KenStaplesPage() {
                 </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Wild FC</h4>
                 <p className="text-green-100">FC Team - Professional soccer excellence</p>
-              </div>
+              </a>
 
               {/* Calgary Roughnecks */}
-              <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-slate-700 to-slate-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <a
+                href="https://www.calgaryroughnecks.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-slate-700 to-slate-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <div className="relative w-16 h-16 mx-auto mb-3">
                   <Image
                     src="/roughnecks-logo.svg"
@@ -616,10 +651,15 @@ export default function KenStaplesPage() {
                 </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Roughnecks</h4>
                 <p className="text-slate-200">NLL Team - Lacrosse champions</p>
-              </div>
+              </a>
 
               {/* Calgary Wranglers */}
-              <div className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-red-600 to-red-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <a
+                href="https://www.calgarywranglers.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-red-600 to-red-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <div className="relative w-16 h-16 mx-auto mb-3">
                   <Image
                     src="/wranglers-logo.svg"
@@ -630,7 +670,7 @@ export default function KenStaplesPage() {
                 </div>
                 <h4 className="text-2xl font-bold text-white mb-2">Calgary Wranglers</h4>
                 <p className="text-red-200">AHL Team - Flames affiliate hockey</p>
-              </div>
+              </a>
             </div>
           </div>
         </motion.div>
