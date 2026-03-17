@@ -138,15 +138,23 @@ export default function KenStaplesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-calgary-red rounded-full text-sm font-medium text-black mb-6">
-              <span>👋</span>
-              <span>Hello, I'm Ken Staples</span>
+            <div className="flex items-center gap-4 mb-6">
+              <Image
+                src="/KSlogo1.png"
+                alt="Ken Staples Logo"
+                width={60}
+                height={60}
+                className="rounded-full"
+              />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                Ken Staples
+              </h1>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 leading-tight mb-6">
               Calgarian • Technology Enthusiast •
               <br />
               <span className="text-calgary-red">Science & Faith Explorer</span>
-            </h1>
+            </h2>
             <p className="text-lg text-gray-600 mb-4 leading-relaxed">
               I'm a passionate developer with a love for technology, science fiction, and helping others learn. Based in Calgary, Alberta, I build digital experiences that make a difference.
             </p>
