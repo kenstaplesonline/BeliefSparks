@@ -699,15 +699,6 @@ export default function KenStaplesPage() {
               <Mail className="h-5 w-5" />
               Get in Touch
             </a>
-            <a
-              href="https://linkedin.com/in/kenstaples"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-calgary-red text-white font-semibold rounded-lg hover:bg-calgary-red transition-colors"
-            >
-              <Linkedin className="h-5 w-5" />
-              LinkedIn
-            </a>
           </div>
 
           <div className="flex justify-center gap-6 mt-12">
@@ -750,15 +741,26 @@ export default function KenStaplesPage() {
                 <Instagram className="h-6 w-6" />
               </a>
               <a
-                href="https://twitter.com/kenstaples"
+                href="https://linkedin.com/in/kenstaples"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors"
               >
-                <Twitter className="h-6 w-6" />
+                <Linkedin className="h-6 w-6" />
               </a>
               <a
-                href="https://youtube.com/kenstaples"
+                href="https://twitter.com/kenstaples"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                title="X (formerly Twitter)"
+              >
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <a
+                href="http://www.youtube.com/@KenStaplesonline"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors"
@@ -783,7 +785,7 @@ export default function KenStaplesPage() {
           <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full mb-8"></div>
           <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
             <p className="text-gray-700 leading-relaxed mb-4">
-              <strong className="text-calgary-red">KenStaples.com</strong> acknowledges that we are on Treaty 7 territory, the traditional and ancestral lands of the:
+              <strong className="text-calgary-red">KenStaples.com</strong> acknowledges that we are on Treaty 7 territory,<br> the traditional and ancestral lands of the:
             </p>
             <ul className="text-left text-gray-700 space-y-2 mb-6">
               <li className="flex items-start gap-2">
