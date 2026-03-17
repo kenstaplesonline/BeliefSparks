@@ -288,7 +288,7 @@ export default function KenStaplesPage() {
                 className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-calgary-red transition-all"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="text-4xl mb-2">🤠</div>
+                  <div className="text-4xl mb-2">🌪</div>
                   <span className="font-medium text-gray-900">Pecos Hank</span>
                 </div>
               </a>
