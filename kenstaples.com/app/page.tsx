@@ -249,7 +249,7 @@ export default function KenStaplesPage() {
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-calgary-red mb-1">∞</div>
-                    <div className="text-sm text-gray-600">Coffee Consumed</div>
+                    <div className="text-sm text-gray-600">Coca Cola Consumed</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-calgary-red mb-1">8+</div>
@@ -509,7 +509,7 @@ export default function KenStaplesPage() {
               href="https://www.stampeders.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer aspect-[16/9]"
+              className="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer aspect-[1/1]"
             >
               <Image
                 src="/stampeders.jpg"
@@ -785,7 +785,7 @@ export default function KenStaplesPage() {
           <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full mb-8"></div>
           <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
             <p className="text-gray-700 leading-relaxed mb-4">
-              <strong className="text-calgary-red">KenStaples.com</strong> acknowledges that we are on Treaty 7 territory, the traditional and ancestral lands of the:
+              <strong className="text-calgary-red">KenStaples.com</strong> acknowledges that we are on Treaty 7 territory<br> the traditional and ancestral lands of the:
             </p>
             <ul className="text-left text-gray-700 space-y-2 mb-6">
               <li className="flex items-start gap-2">
