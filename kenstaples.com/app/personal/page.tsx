@@ -62,14 +62,14 @@ export default function PersonalPage() {
   ]
 
   const sportsTeams = [
-    { name: 'Calgary Stampeders', league: 'CFL', colors: 'Red & White', logo: '/stampeders-logo.svg' },
-    { name: 'Calgary Flames', league: 'NHL', colors: 'Red & Gold', logo: '/flames-logo.svg' },
-    { name: 'Calgary Surge', league: 'CEBL', colors: 'Blue', logo: '/surge-logo.png' },
-    { name: 'Cavalry FC', league: 'CPL', colors: 'Orange', logo: '/cavalry-logo.svg' },
-    { name: 'Calgary Hitmen', league: 'WHL', colors: 'Red & Black', logo: '/hitmen-logo.svg' },
-    { name: 'Calgary Wild FC', league: 'FC', colors: 'Green', logo: '/wild-logo.svg' },
-    { name: 'Calgary Roughnecks', league: 'NLL', colors: 'Slate', logo: '/roughnecks-logo.svg' },
-    { name: 'Calgary Wranglers', league: 'AHL', colors: 'Red', logo: '/wranglers-logo.svg' }
+    { name: 'Calgary Stampeders', league: 'CFL', colors: 'Red & White', logo: '/stampeders-logo.svg', url: 'https://www.stampeders.com/' },
+    { name: 'Calgary Flames', league: 'NHL', colors: 'Red & Gold', logo: '/flames-logo.svg', url: 'https://www.nhl.com/flames' },
+    { name: 'Calgary Surge', league: 'CEBL', colors: 'Blue', logo: '/surge-logo.png', url: 'https://www.calgarysurge.ca/' },
+    { name: 'Cavalry FC', league: 'CPL', colors: 'Orange', logo: '/cavalry-logo.svg', url: 'https://cavalryfc.canpl.ca/' },
+    { name: 'Calgary Hitmen', league: 'WHL', colors: 'Red & Black', logo: '/hitmen-logo.svg', url: 'https://www.whl.ca/team/calgary-hitmen' },
+    { name: 'Calgary Wild FC', league: 'FC', colors: 'Green', logo: '/wild-logo.svg', url: 'https://www.nsl.ca/calgary-wild-fc' },
+    { name: 'Calgary Roughnecks', league: 'NLL', colors: 'Slate', logo: '/roughnecks-logo.svg', url: 'https://www.nll.com/team/calgary-roughnecks/' },
+    { name: 'Calgary Wranglers', league: 'AHL', colors: 'Red', logo: '/wranglers-logo.svg', url: 'https://www.nhl.com/flames/wranglers' }
   ]
 
   return (
@@ -214,13 +214,16 @@ export default function PersonalPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {sportsTeams.map((team, index) => (
-              <motion.div
+              <motion.a
                 key={index}
+                href={team.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-lg p-4 text-center border border-gray-200 hover:border-calgary-red hover:shadow-md transition-all"
+                className="bg-white rounded-lg p-4 text-center border border-gray-200 hover:border-calgary-red hover:shadow-md transition-all block"
               >
                 <div className="relative w-16 h-16 mx-auto mb-2">
                   <Image
@@ -233,7 +236,7 @@ export default function PersonalPage() {
                 <h4 className="font-semibold text-gray-900 text-sm">{team.name}</h4>
                 <p className="text-xs text-gray-600">{team.league}</p>
                 <p className="text-xs text-calgary-red mt-1">{team.colors}</p>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </motion.div>
