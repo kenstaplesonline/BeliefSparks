@@ -62,7 +62,7 @@ export default function PersonalPage() {
   ]
 
   const sportsTeams = [
-    { name: 'Calgary Stampeders', league: 'CFL', colors: 'Red & White', logo: '/stampeders-logo.png' },
+    { name: 'Calgary Stampeders', league: 'CFL', colors: 'Red & White', logo: '/stampeders-logo.svg' },
     { name: 'Calgary Flames', league: 'NHL', colors: 'Red & Gold', logo: '/flames-logo.svg' },
     { name: 'Calgary Surge', league: 'CEBL', colors: 'Blue', logo: '/surge-logo.png' },
     { name: 'Cavalry FC', league: 'CPL', colors: 'Orange', logo: '/cavalry-logo.svg' },
@@ -200,7 +200,7 @@ export default function PersonalPage() {
 
           <div className="relative rounded-xl overflow-hidden shadow-lg mb-12">
             <Image
-              src="/stampeders-logo.svg"
+              src="/stampeders.jpg"
               alt="Calgary Stampeders"
               width={1200}
               height={600}
