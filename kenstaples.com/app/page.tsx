@@ -463,17 +463,17 @@ export default function ProfessionalPage() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <div className="relative rounded-lg overflow-hidden shadow-lg mb-8 mx-auto" style={{ width: 300, height: 300 }}>
-            <Image
-              src="/LA.jpg"
-              alt="Land Acknowledgement Photography"
-              width={300}
-              height={300}
-              className="object-cover"
-            />
-            
-          </div>
           <div className="bg-[#0055A4] rounded-lg p-8">
+            <div className="relative rounded-lg overflow-hidden shadow-lg mb-8 mx-auto" style={{ width: 300, height: 300 }}>
+              <Image
+                src="/LA.jpg"
+                alt="Land Acknowledgement Photography"
+                width={300}
+                height={300}
+                className="object-cover"
+              />
+              
+            </div>
             <p className="text-lg text-white mb-6">
               KenStaples.com acknowledges that we are on the traditional, ancestral, and unceded territory of the Blackfoot Confederacy (Kainai, Piikani, Amskapi Piikani, Siksika), the Tsuut'ina Nation, the Stoney Nakoda First Nations (including Chiniki, Bearspaw, and Goodstoney), and the Métis Nation (Historical Northwest Métis Homeland, Battle River Territory).
             </p>
