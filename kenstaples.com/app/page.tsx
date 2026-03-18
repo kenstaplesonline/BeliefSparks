@@ -147,10 +147,9 @@ export default function ProfessionalPage() {
           >
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Ken Staples
+              <span className="font-highway">Ken Staples</span>
               <br />
-              <br />
-              <span className="text-calgary-red">Creator & Developer</span>
+              <span className="text-calgary-red text-2xl md:text-3xl lg:text-4xl">Creator & Developer</span>
             </h1>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
               Exploring ideas, building things, and sharing stories from Calgary, Alberta. 

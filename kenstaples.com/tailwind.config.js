@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        highway: ['var(--font-oswald)', 'Arial Narrow', 'sans-serif'],
+      },
       colors: {
         calgary: {
           // Core Colors

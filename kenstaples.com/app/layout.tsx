@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter, Merriweather } from 'next/font/google'
+import { Inter, Merriweather, Oswald } from 'next/font/google'
 import './globals.css'
 import { personSchema, websiteSchema } from './schema'
 
-const inter = Inter({ subsets: ['latin'] })
-const merriweather = Merriweather({ subsets: ['latin'], weight: ['300', '400', '700', '900'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const merriweather = Merriweather({ subsets: ['latin'], weight: ['300', '400', '700', '900'], variable: '--font-merriweather' })
+const oswald = Oswald({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-oswald' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kenstaples.com'),
@@ -70,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${merriweather.variable} ${oswald.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -81,7 +82,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className={`${inter.className} ${merriweather.className}`}>
+      <body className={inter.className}>
         {children}
       </body>
     </html>
