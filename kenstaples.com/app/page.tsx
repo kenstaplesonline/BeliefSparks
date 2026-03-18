@@ -371,13 +371,14 @@ export default function ProfessionalPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              { src: '/Picture10.png', alt: 'Photography 1' },
-              { src: '/Picture11.png', alt: 'Photography 2' },
-              { src: '/Picture13.png', alt: 'Photography 3' },
-              { src: '/Picture24.png', alt: 'Photography 4' },
-              { src: '/Picture27.png', alt: 'Photography 5' },
-              { src: '/Picture35.png', alt: 'Photography 6' },
-              { src: '/Picture38.png', alt: 'Photography 7' }
+              { src: '/Picture10.png', alt: 'Calgary skyline with skyscrapers', description: 'Calgary skyline with skyscrapers' },
+              { src: '/Picture11.png', alt: 'Historic stone school building', description: 'Historic stone school building' },
+              { src: '/Picture13.png', alt: 'Contemporary interior with angular skylight', description: 'Contemporary interior with angular skylight' },
+              { src: '/Picture24.png', alt: 'Ammonite fossil embedded in rock', description: 'Ammonite fossil embedded in rock' },
+              { src: '/Picture27.png', alt: 'Tyrannosaurus rex skull fossil', description: 'Tyrannosaurus rex skull fossil' },
+              { src: '/Picture35.png', alt: 'Car side mirror reflecting sunset', description: 'Car side mirror reflecting sunset' },
+              { src: '/Picture38.png', alt: 'Empress theater red brick facade', description: 'Empress theater red brick facade' },
+              { src: '/image001.png', alt: 'Log cabins with mountain peaks', description: 'Log cabins with mountain peaks' }
             ].map((photo, index) => (
               <motion.div
                 key={index}
