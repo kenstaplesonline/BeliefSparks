@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Merriweather, Oswald } from 'next/font/google'
 import './globals.css'
 import { personSchema, websiteSchema } from './schema'
+import { ThemeProvider } from './providers'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const merriweather = Merriweather({ subsets: ['latin'], weight: ['300', '400', '700', '900'], variable: '--font-merriweather' })
