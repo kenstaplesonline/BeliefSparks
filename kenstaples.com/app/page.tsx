@@ -114,9 +114,9 @@ export default function ProfessionalPage() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-gray-700 hover:text-calgary-red transition-colors"
+              className="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-calgary-red transition-colors"
             >
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {mobileMenuOpen ? <XIcon className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
 
