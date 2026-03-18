@@ -151,7 +151,7 @@ export default function ProfessionalPage() {
             transition={{ duration: 0.6 }}
           >
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 dark:text-white">
               <span className="font-highway">Ken Staples</span>
               <br />
               <span className="text-calgary-red text-2xl md:text-3xl lg:text-4xl">Creator & Developer</span>
