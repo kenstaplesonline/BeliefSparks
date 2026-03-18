@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Github, Linkedin, Mail, User, Briefcase, Camera, Code, FileText, MessageSquare, Star, Menu, X, ChevronUp } from 'lucide-react'
+import { ArrowRight, Github, Linkedin, Mail, User, Briefcase, Camera, Code, FileText, MessageSquare, Star, Menu, X, ChevronUp, Twitter, Instagram } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { ThemeToggle } from '../components/ThemeToggle'
 
@@ -454,6 +454,12 @@ export default function ProfessionalPage() {
             </a>
             <a href="https://www.linkedin.com/in/ken-staples/" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-calgary-red transition-colors">
               <Linkedin className="h-6 w-6" />
+            </a>
+            <a href="https://twitter.com/kenstaples" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-calgary-red transition-colors">
+              <Twitter className="h-6 w-6" />
+            </a>
+            <a href="https://instagram.com/kenstaples" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-calgary-red transition-colors">
+              <Instagram className="h-6 w-6" />
             </a>
           </div>
         </motion.div>
