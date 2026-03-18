@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowLeft, User, Menu, X, ChevronUp } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { ThemeToggle } from '../../components/ThemeToggle'
 
 export default function PersonalPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -73,9 +74,9 @@ export default function PersonalPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2">
@@ -86,21 +87,22 @@ export default function PersonalPage() {
                 height={40}
                 className="rounded-lg"
               />
-              <span className="font-semibold text-gray-900">Ken Staples</span>
+              <span className="font-semibold text-gray-900 dark:text-white">Ken Staples</span>
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-4">
-              <Link href="/" className="flex items-center gap-2 text-gray-700 hover:text-calgary-red transition-colors">
+              <Link href="/" className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-calgary-red transition-colors">
                 <ArrowLeft className="h-4 w-4" />
                 <span>Back to Professional</span>
               </Link>
+              <ThemeToggle />
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-gray-700 hover:text-calgary-red transition-colors"
+              className="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-calgary-red transition-colors"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -108,11 +110,14 @@ export default function PersonalPage() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden py-4 border-t border-gray-200">
-              <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 text-gray-700 hover:text-calgary-red transition-colors">
-                <ArrowLeft className="h-4 w-4" />
-                <span>Back to Professional</span>
-              </Link>
+            <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
+              <div className="flex flex-col gap-4">
+                <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-calgary-red transition-colors">
+                  <ArrowLeft className="h-4 w-4" />
+                  <span>Back to Professional</span>
+                </Link>
+                <ThemeToggle />
+              </div>
             </div>
           )}
         </div>
@@ -130,10 +135,10 @@ export default function PersonalPage() {
             <span>🎯</span>
             <span>Personal Side</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
             Beyond the <span className="text-calgary-red">Code</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             When I'm not building websites, you'll find me exploring science fiction, cheering for Calgary teams, 
             capturing moments through photography, and diving deep into faith and science.
           </p>
@@ -223,7 +228,7 @@ export default function PersonalPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-lg p-4 text-center border border-gray-200 hover:border-calgary-red hover:shadow-md transition-all block"
+                className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center border border-gray-200 dark:border-gray-600 hover:border-calgary-red hover:shadow-md transition-all block"
               >
                 <div className="relative w-16 h-16 mx-auto mb-2">
                   <Image
@@ -233,8 +238,8 @@ export default function PersonalPage() {
                     className="object-contain"
                   />
                 </div>
-                <h4 className="font-semibold text-gray-900 text-sm">{team.name}</h4>
-                <p className="text-xs text-gray-600">{team.league}</p>
+                <h4 className="font-semibold text-gray-900 dark:text-white text-sm">{team.name}</h4>
+                <p className="text-xs text-gray-600 dark:text-gray-400">{team.league}</p>
                 <p className="text-xs text-calgary-red mt-1">{team.colors}</p>
               </motion.a>
             ))}
@@ -251,7 +256,7 @@ export default function PersonalPage() {
           transition={{ duration: 0.6 }}
         >
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">YouTube Creators I Follow</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">YouTube Creators I Follow</h2>
             <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full"></div>
           </div>
 
@@ -266,11 +271,11 @@ export default function PersonalPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
-                className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-calgary-red transition-all"
+                className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-md border border-gray-100 dark:border-gray-700 hover:shadow-lg hover:border-calgary-red transition-all"
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="text-4xl mb-2">{creator.emoji}</div>
-                  <span className="font-medium text-gray-900 text-sm">{creator.name}</span>
+                  <span className="font-medium text-gray-900 dark:text-white text-sm">{creator.name}</span>
                 </div>
               </motion.a>
             ))}

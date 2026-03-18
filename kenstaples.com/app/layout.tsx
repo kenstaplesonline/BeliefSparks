@@ -71,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${merriweather.variable} ${oswald.variable}`}>
+    <html lang="en" className={`${inter.variable} ${merriweather.variable} ${oswald.variable}`} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -83,7 +83,14 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

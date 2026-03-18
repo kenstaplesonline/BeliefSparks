@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Github, Linkedin, Mail, User, Briefcase, Camera, Code, FileText, MessageSquare, Star, Menu, X, ChevronUp } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { ThemeToggle } from '../components/ThemeToggle'
 
 export default function ProfessionalPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -80,9 +81,9 @@ export default function ProfessionalPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2">
@@ -93,7 +94,7 @@ export default function ProfessionalPage() {
                 height={40}
                 className="rounded-lg"
               />
-              <span className="font-semibold text-gray-900">Ken Staples</span>
+              <span className="font-semibold text-gray-900 dark:text-white">Ken Staples</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -103,6 +104,7 @@ export default function ProfessionalPage() {
               <Link href="#photography" className="text-gray-700 hover:text-calgary-red transition-colors">Photography</Link>
               <Link href="#skills" className="text-gray-700 hover:text-calgary-red transition-colors">Skills</Link>
               <Link href="#contact" className="text-gray-700 hover:text-calgary-red transition-colors">Contact</Link>
+              <ThemeToggle />
               <Link href="/personal" className="inline-flex items-center gap-2 px-4 py-2 bg-calgary-red text-white rounded-lg hover:bg-calgary-red transition-colors">
                 <span>🎯</span>
                 <span>Personal</span>
@@ -120,17 +122,20 @@ export default function ProfessionalPage() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden py-4 border-t border-gray-200">
+            <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
               <div className="flex flex-col gap-4">
-                <Link href="#about" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-calgary-red transition-colors">About</Link>
-                <Link href="#projects" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-calgary-red transition-colors">Projects</Link>
-                <Link href="#photography" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-calgary-red transition-colors">Photography</Link>
-                <Link href="#skills" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-calgary-red transition-colors">Skills</Link>
-                <Link href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-calgary-red transition-colors">Contact</Link>
-                <Link href="/personal" className="inline-flex items-center gap-2 px-4 py-2 bg-calgary-red text-white rounded-lg hover:bg-calgary-red transition-colors w-fit">
-                  <span>🎯</span>
-                  <span>Personal</span>
-                </Link>
+                <Link href="#about" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 dark:text-gray-300 hover:text-calgary-red transition-colors">About</Link>
+                <Link href="#projects" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 dark:text-gray-300 hover:text-calgary-red transition-colors">Projects</Link>
+                <Link href="#photography" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 dark:text-gray-300 hover:text-calgary-red transition-colors">Photography</Link>
+                <Link href="#skills" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 dark:text-gray-300 hover:text-calgary-red transition-colors">Skills</Link>
+                <Link href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 dark:text-gray-300 hover:text-calgary-red transition-colors">Contact</Link>
+                <div className="flex items-center gap-4">
+                  <ThemeToggle />
+                  <Link href="/personal" className="inline-flex items-center gap-2 px-4 py-2 bg-calgary-red text-white rounded-lg hover:bg-calgary-red transition-colors w-fit">
+                    <span>🎯</span>
+                    <span>Personal</span>
+                  </Link>
+                </div>
               </div>
             </div>
           )}
@@ -168,7 +173,7 @@ export default function ProfessionalPage() {
               </Link>
               <Link
                 href="/personal"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-700 font-semibold rounded-lg border-2 border-gray-300 hover:border-calgary-red hover:text-calgary-red transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold rounded-lg border-2 border-gray-300 dark:border-gray-600 hover:border-calgary-red hover:text-calgary-red transition-colors"
               >
                 <span>🎯</span>
                 Personal Side
@@ -205,58 +210,58 @@ export default function ProfessionalPage() {
           transition={{ duration: 0.6 }}
         >
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
             <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Who I Am</h3>
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Who I Am</h3>
 
               {/* About Me Image - Smaller */}
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                 Born in Calgary on December 18, 1975, I grew up in Airdrie before returning to Calgary where I've lived ever since. I have a diverse work background in customer service and retail, including Amazon, Dairy Queen, Calgary Stampede Food Services, and more.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                 What sets me apart is my passion for technology and continuous learning. I'm comfortable writing code in HTML, CSS, and JavaScript, and I love building websites that help people. Microsoft Office proficiency rounds out my technical skills. Experimenting with AI techonology such as LLMs and OpenClaw.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                 I believe in the power of authentic storytelling to connect people and inspire change. Whether it's through technology, photography, or just sharing stories, I'm always looking for ways to make a positive impact.
               </p>
 
               {/* Stats */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
+              <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-calgary-red">20+</div>
-                    <div className="text-sm text-gray-600">Years Experience</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-calgary-red">15+</div>
-                    <div className="text-sm text-gray-600">Projects</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Projects</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-calgary-red">10+</div>
-                    <div className="text-sm text-gray-600">Technologies</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Technologies</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Work Experience</h3>
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Work Experience</h3>
               <div className="space-y-4">
                 <div className="border-l-4 border-calgary-red pl-4">
-                  <h4 className="font-semibold text-gray-900">Customer Service & Retail</h4>
-                  <p className="text-sm text-gray-600">Amazon, Dairy Queen, Calgary Stampede, Real Canadian Superstore, HomeSense, Delta Airlines</p>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">Customer Service & Retail</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Amazon, Dairy Queen, Calgary Stampede, Real Canadian Superstore, HomeSense, Delta Airlines</p>
                 </div>
                 <div className="border-l-4 border-calgary-red pl-4">
-                  <h4 className="font-semibold text-gray-900">Web Development</h4>
-                  <p className="text-sm text-gray-600">Building websites with coding and AI</p>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">Web Development</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Building websites with coding and AI</p>
                 </div>
                 <div className="border-l-4 border-calgary-red pl-4">
-                  <h4 className="font-semibold text-gray-900">Content Creation</h4>
-                  <p className="text-sm text-gray-600">CACNAE Studios - Creating content that bridges science and spirituality</p>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">Content Creation</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">CACNAE Studios - Creating content that bridges science and spirituality</p>
                 </div>
               </div>
             </div>
@@ -273,9 +278,9 @@ export default function ProfessionalPage() {
           transition={{ duration: 0.6 }}
         >
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
             <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full"></div>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
               Here are some of the projects I've been working on
             </p>
           </div>
@@ -288,12 +293,12 @@ export default function ProfessionalPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow"
               >
                 <div className="p-8">
                   <div className="text-4xl mb-4">{project.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag, tagIndex) => (
                       <span
@@ -327,7 +332,7 @@ export default function ProfessionalPage() {
           transition={{ duration: 0.6 }}
         >
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Skills & Expertise</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Skills & Expertise</h2>
             <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full"></div>
           </div>
 
@@ -335,15 +340,15 @@ export default function ProfessionalPage() {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow hover:border-calgary-red"
+                className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow hover:border-calgary-red"
               >
                 <div className="flex items-center gap-3 mb-2">
                   <div className="bg-calgary-red p-3 rounded-lg">
                     {skill.icon}
                   </div>
-                  <span className="font-semibold text-gray-900">{skill.name}</span>
+                  <span className="font-semibold text-gray-900 dark:text-white">{skill.name}</span>
                 </div>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
                   Proficient in building modern web applications and solving complex problems with code.
                 </p>
               </div>
@@ -361,9 +366,9 @@ export default function ProfessionalPage() {
           transition={{ duration: 0.6 }}
         >
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Photography Gallery</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Photography Gallery</h2>
             <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full"></div>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
               Capturing moments in nature, cityscapes, and architecture around Calgary and beyond.
             </p>
           </div>
@@ -426,9 +431,9 @@ export default function ProfessionalPage() {
           className="text-center"
         >
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Let's Connect</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Let's Connect</h2>
             <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full"></div>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
               Interested in working together? Let's talk about your project.
             </p>
           </div>
@@ -444,10 +449,10 @@ export default function ProfessionalPage() {
           </div>
 
           <div className="flex justify-center gap-6 mt-12">
-            <a href="https://github.com/Ken-Staples" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-calgary-red transition-colors">
+            <a href="https://github.com/Ken-Staples" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-calgary-red transition-colors">
               <Github className="h-6 w-6" />
             </a>
-            <a href="https://www.linkedin.com/in/ken-staples/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-calgary-red transition-colors">
+            <a href="https://www.linkedin.com/in/ken-staples/" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-400 hover:text-calgary-red transition-colors">
               <Linkedin className="h-6 w-6" />
             </a>
           </div>
@@ -485,11 +490,11 @@ export default function ProfessionalPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 bg-gray-900 text-gray-400">
+      <footer className="py-8 px-4 bg-gray-900 dark:bg-gray-950 text-gray-400 dark:text-gray-500">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <span className="text-gray-600">© 2026 CACNAE Studios. All rights reserved.</span>
+              <span className="text-gray-600 dark:text-gray-500">© 2026 CACNAE Studios. All rights reserved.</span>
             </div>
             <div className="flex items-center gap-2">
               <span>Made with</span>
@@ -498,7 +503,7 @@ export default function ProfessionalPage() {
             </div>
           </div>
           <div className="mt-4 text-center md:text-left">
-            <p className="text-sm text-gray-500 italic">"Curious. Create. Inspire."</p>
+            <p className="text-sm text-gray-500 dark:text-gray-600 italic">"Curious. Create. Inspire."</p>
           </div>
         </div>
       </footer>
