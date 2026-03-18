@@ -200,7 +200,7 @@ export default function PersonalPage() {
 
           <div className="relative rounded-xl overflow-hidden shadow-lg mb-12">
             <Image
-              src="/stampeders.jpg"
+              src="/stampeders-main.jpg"
               alt="Calgary Stampeders"
               width={1200}
               height={600}
