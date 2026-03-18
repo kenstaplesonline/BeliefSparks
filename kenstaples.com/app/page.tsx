@@ -145,12 +145,10 @@ export default function ProfessionalPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-calgary-red rounded-full text-sm font-medium text-white mb-6">
-              <span>👋</span>
-              <span>Welcome</span>
-            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
               Ken Staples
+              <br />
               <br />
               <span className="text-calgary-red">Creator & Developer</span>
             </h1>
@@ -221,7 +219,7 @@ export default function ProfessionalPage() {
                 Born in Calgary on December 18, 1975, I grew up in Airdrie before returning to Calgary where I've lived ever since. I have a diverse work background in customer service and retail, including Amazon, Dairy Queen, Calgary Stampede Food Services, and more.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                What sets me apart is my passion for technology and continuous learning. I'm comfortable writing code in HTML, CSS, and JavaScript, and I love building websites that help people. Microsoft Office proficiency rounds out my technical skills.
+                What sets me apart is my passion for technology and continuous learning. I'm comfortable writing code in HTML, CSS, and JavaScript, and I love building websites that help people. Microsoft Office proficiency rounds out my technical skills. Experimenting with AI techonology such as LLMs and OpenClaw.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 I believe in the power of authentic storytelling to connect people and inspire change. Whether it's through technology, photography, or just sharing stories, I'm always looking for ways to make a positive impact.
@@ -255,11 +253,11 @@ export default function ProfessionalPage() {
                 </div>
                 <div className="border-l-4 border-calgary-red pl-4">
                   <h4 className="font-semibold text-gray-900">Web Development</h4>
-                  <p className="text-sm text-gray-600">Building websites with HTML, CSS, JavaScript, React & Next.js</p>
+                  <p className="text-sm text-gray-600">Building websites with coding and AI</p>
                 </div>
                 <div className="border-l-4 border-calgary-red pl-4">
                   <h4 className="font-semibold text-gray-900">Content Creation</h4>
-                  <p className="text-sm text-gray-600">CACNAE Studios - Content that bridges science and spirituality</p>
+                  <p className="text-sm text-gray-600">CACNAE Studios - Creating content that bridges science and spirituality</p>
                 </div>
               </div>
             </div>
@@ -473,9 +471,7 @@ export default function ProfessionalPage() {
               height={300}
               className="object-cover"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-              <h4 className="text-xl font-bold text-white">Acknowledging Our Roots</h4>
-            </div>
+            
           </div>
           <div className="bg-gray-50 rounded-lg p-8">
             <p className="text-lg text-gray-800 mb-6">
