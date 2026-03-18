@@ -465,13 +465,13 @@ export default function ProfessionalPage() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <div className="relative rounded-lg overflow-hidden shadow-lg mb-8">
+          <div className="relative rounded-lg overflow-hidden shadow-lg mb-8 mx-auto" style={{ width: 300, height: 300 }}>
             <Image
               src="/LA.jpg"
               alt="Land Acknowledgement Photography"
-              width={50}
-              height={50}
-              className="object-cover w-full"
+              width={300}
+              height={300}
+              className="object-cover"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
               <h4 className="text-xl font-bold text-white">Acknowledging Our Roots</h4>
