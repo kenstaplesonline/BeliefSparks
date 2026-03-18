@@ -283,7 +283,7 @@ export default function PersonalPage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <span className="text-gray-600">© 2024 CACNAE Studios. All rights reserved.</span>
+              <span className="text-gray-600">© 2026 CACNAE Studios. All rights reserved.</span>
             </div>
             <div className="flex items-center gap-2">
               <span>Made with</span>
