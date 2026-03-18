@@ -473,11 +473,11 @@ export default function ProfessionalPage() {
             />
             
           </div>
-          <div className="bg-gray-50 rounded-lg p-8">
-            <p className="text-lg text-gray-800 mb-6">
+          <div className="bg-[#0055A4] rounded-lg p-8">
+            <p className="text-lg text-white mb-6">
               KenStaples.com acknowledges that we are on the traditional, ancestral, and unceded territory of the Blackfoot Confederacy (Kainai, Piikani, Amskapi Piikani, Siksika), the Tsuut'ina Nation, the Stoney Nakoda First Nations (including Chiniki, Bearspaw, and Goodstoney), and the Métis Nation (Historical Northwest Métis Homeland, Battle River Territory).
             </p>
-            <p className="text-lg text-gray-800 mb-4">
+            <p className="text-lg text-white mb-4">
               We recognize the history, resilience, and ongoing contributions of these First Nations and Métis communities to the land we share.
             </p>
           </div>
