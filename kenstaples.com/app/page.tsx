@@ -1,11 +1,27 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, ArrowLeft, Github, Linkedin, Mail, Menu, X, User, Briefcase, Camera, Code, BookOpen, Star, ChevronRight, FileText, MessageSquare, Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
+import { ArrowRight, Github, Linkedin, Mail, User, Briefcase, Camera, Code, FileText, MessageSquare, Star, Menu, X, ChevronUp } from 'lucide-react'
 import { motion } from 'framer-motion'
 
-export default function KenStaplesPage() {
+export default function ProfessionalPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [showScrollTop, setShowScrollTop] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const projects = [
     {
       title: 'CACNAE Studios',
@@ -63,35 +79,8 @@ export default function KenStaplesPage() {
     { name: 'Creativity', icon: <Star className="h-6 w-6" /> }
   ]
 
-  const interests = [
-    {
-      title: 'Science Fiction',
-      description: 'Loves Star Trek, Transformers, Ghostbusters, and works by Robert L. Forward. Fascinated by hard science fiction and futuristic technology.',
-      icon: '🚀',
-      image: '/startrek.jpg'
-    },
-    {
-      title: 'Science',
-      description: 'Fascinated with astronomy, astrophysics, meteorology, and technology. Follows leading scientists and researchers.',
-      icon: '🔭',
-      image: '/space2.png'
-    },
-    {
-      title: 'Faith',
-      description: 'Roman Catholic, passionate about biblical history and science-religion dialogue. Deep believer in finding harmony between faith and reason.',
-      icon: '✝️',
-      image: '/church.jpg'
-    },
-    {
-      title: 'Photography',
-      description: 'Capturing beauty in outdoors, architecture, and family moments. Canon and Google Pixel enthusiast.',
-      icon: '📷',
-      image: '/camera1.png'
-    }
-  ]
-
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,37 +91,49 @@ export default function KenStaplesPage() {
                 alt="Ken Staples Logo"
                 width={40}
                 height={40}
-                className="rounded-full"
+                className="rounded-lg"
               />
               <span className="font-semibold text-gray-900">Ken Staples</span>
             </Link>
-            <div className="hidden md:flex items-center gap-8">
-              <Link href="#about" className="flex items-center gap-2 text-gray-700 hover:text-calgary-red transition-colors">
-                <User className="h-4 w-4" />
-                About
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+              <Link href="#about" className="text-gray-700 hover:text-calgary-red transition-colors">About</Link>
+              <Link href="#projects" className="text-gray-700 hover:text-calgary-red transition-colors">Projects</Link>
+              <Link href="#photography" className="text-gray-700 hover:text-calgary-red transition-colors">Photography</Link>
+              <Link href="#skills" className="text-gray-700 hover:text-calgary-red transition-colors">Skills</Link>
+              <Link href="#contact" className="text-gray-700 hover:text-calgary-red transition-colors">Contact</Link>
+              <Link href="/personal" className="inline-flex items-center gap-2 px-4 py-2 bg-calgary-red text-white rounded-lg hover:bg-calgary-red transition-colors">
+                <span>🎯</span>
+                <span>Personal</span>
               </Link>
-              <Link href="#projects" className="flex items-center gap-2 text-gray-700 hover:text-calgary-red transition-colors">
-                <Briefcase className="h-4 w-4" />
-                Projects
-              </Link>
-              <Link href="#contact" className="flex items-center gap-2 text-gray-700 hover:text-calgary-red transition-colors">
-                <Mail className="h-4 w-4" />
-                Contact
-              </Link>
-              <a
-                href="https://github.com/kenstaplesonline"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-700 hover:text-calgary-red transition-colors"
-              >
-                <Github className="h-4 w-4" />
-                GitHub
-              </a>
             </div>
-            <button className="md:hidden text-gray-700">
-              <Menu className="h-6 w-6" />
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 text-gray-700 hover:text-calgary-red transition-colors"
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden py-4 border-t border-gray-200">
+              <div className="flex flex-col gap-4">
+                <Link href="#about" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-calgary-red transition-colors">About</Link>
+                <Link href="#projects" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-calgary-red transition-colors">Projects</Link>
+                <Link href="#photography" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-calgary-red transition-colors">Photography</Link>
+                <Link href="#skills" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-calgary-red transition-colors">Skills</Link>
+                <Link href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-calgary-red transition-colors">Contact</Link>
+                <Link href="/personal" className="inline-flex items-center gap-2 px-4 py-2 bg-calgary-red text-white rounded-lg hover:bg-calgary-red transition-colors w-fit">
+                  <span>🎯</span>
+                  <span>Personal</span>
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
@@ -144,13 +145,18 @@ export default function KenStaplesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-calgary-red rounded-full text-sm font-medium text-white mb-6">
+              <span>👋</span>
+              <span>Welcome</span>
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Calgarian • Technology Enthusiast •
+              Ken Staples
               <br />
-              <span className="text-calgary-red">Science & Faith Explorer</span>
+              <span className="text-calgary-red">Creator & Developer</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-              I'm a passionate developer with a love for technology, science fiction, and helping others learn. Based in Calgary, Alberta, I build digital experiences that make a difference.
+            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              Exploring ideas, building things, and sharing stories from Calgary, Alberta. 
+              Always curious about technology, science, faith, and the world around us.
             </p>
             <div className="mb-8">
               <p className="text-xl text-gray-700 italic">"Curious. Create. Inspire."</p>
@@ -164,13 +170,15 @@ export default function KenStaplesPage() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                href="#projects"
+                href="/personal"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-700 font-semibold rounded-lg border-2 border-gray-300 hover:border-calgary-red hover:text-calgary-red transition-colors"
               >
-                View My Work
+                <span>🎯</span>
+                Personal Side
               </Link>
             </div>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -204,201 +212,63 @@ export default function KenStaplesPage() {
             <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid md:grid-cols-1 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Who I Am</h3>
 
-              {/* About Me Image */}
-              <div className="relative mb-6 rounded-lg overflow-hidden aspect-video">
-                <Image
-                  src="/selfie4.png"
-                  alt="Ken Staples - Professional Profile"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
+              {/* About Me Image - Smaller */}
               <p className="text-gray-600 leading-relaxed mb-4">
                 Born in Calgary on December 18, 1975, I grew up in Airdrie before returning to Calgary where I've lived ever since. I have a diverse work background in customer service and retail, including Amazon, Dairy Queen, Calgary Stampede Food Services, and more.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 What sets me apart is my passion for technology and continuous learning. I'm comfortable writing code in HTML, CSS, and JavaScript, and I love building websites that help people. Microsoft Office proficiency rounds out my technical skills.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Beyond coding, I'm a lifelong learner fascinated by science, technology, and the intersection of faith and reason. I enjoy photography, especially capturing moments in nature and cityscapes around Calgary. My favorite team? The Calgary Stampeders, Flames, Calvary, Surge, Hitmen, Wranglers, Wilds, Roughnecks!!!!
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                I believe in the power of authentic storytelling to connect people and inspire change. Whether it's through technology, photography, or just sharing stories, I'm always looking for ways to make a positive impact.
-              </p>
               <p className="text-gray-600 leading-relaxed">
-                I'm a technology enthusiast, developer, photographer, and lifelong learner based in Calgary, Alberta. I love building websites that help people, capturing moments through photography, and exploring the intersection of faith and reason. Always curious, always creating, always inspired.
+                I believe in the power of authentic storytelling to connect people and inspire change. Whether it's through technology, photography, or just sharing stories, I'm always looking for ways to make a positive impact.
               </p>
 
               {/* Stats */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-calgary-red mb-1">20+</div>
-                    <div className="text-sm text-gray-600">Years of Experience</div>
+                    <div className="text-3xl font-bold text-calgary-red">20+</div>
+                    <div className="text-sm text-gray-600">Years Experience</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-calgary-red mb-1">15+</div>
-                    <div className="text-sm text-gray-600">Projects Completed</div>
+                    <div className="text-3xl font-bold text-calgary-red">15+</div>
+                    <div className="text-sm text-gray-600">Projects</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-calgary-red mb-1">10+</div>
+                    <div className="text-3xl font-bold text-calgary-red">10+</div>
                     <div className="text-sm text-gray-600">Technologies</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-calgary-red mb-1">∞</div>
-                    <div className="text-sm text-gray-600">Coca Cola Consumed</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-calgary-red mb-1">8+</div>
-                    <div className="text-sm text-gray-600">Sports Teams Supported</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-calgary-red mb-1">9+</div>
-                    <div className="text-sm text-gray-600">YouTube Channels Followed</div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* YouTube Creators Section */}
-          <div className="mt-12">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">YouTube Creators I Follow</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              <a
-                href="https://www.youtube.com/c/linustechtips"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-calgary-red transition-all"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="text-4xl mb-2">💻</div>
-                  <span className="font-medium text-gray-900">Linus Tech Tips</span>
+            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Work Experience</h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-calgary-red pl-4">
+                  <h4 className="font-semibold text-gray-900">Customer Service & Retail</h4>
+                  <p className="text-sm text-gray-600">Amazon, Dairy Queen, Calgary Stampede, Real Canadian Superstore, HomeSense, Delta Airlines</p>
                 </div>
-              </a>
-              <a
-                href="https://www.youtube.com/c/PecosHank"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-calgary-red transition-all"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="text-4xl mb-2">🌪</div>
-                  <span className="font-medium text-gray-900">Pecos Hank</span>
+                <div className="border-l-4 border-calgary-red pl-4">
+                  <h4 className="font-semibold text-gray-900">Web Development</h4>
+                  <p className="text-sm text-gray-600">Building websites with HTML, CSS, JavaScript, React & Next.js</p>
                 </div>
-              </a>
-              <a
-                href="https://www.youtube.com/user/Vsauce"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-calgary-red transition-all"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="text-4xl mb-2">🧠</div>
-                  <span className="font-medium text-gray-900">Vsauce</span>
+                <div className="border-l-4 border-calgary-red pl-4">
+                  <h4 className="font-semibold text-gray-900">Content Creation</h4>
+                  <p className="text-sm text-gray-600">CACNAE Studios - Content that bridges science and spirituality</p>
                 </div>
-              </a>
-              <a
-                href="https://www.youtube.com/c/Veritasium"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-calgary-red transition-all"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="text-4xl mb-2">🔬</div>
-                  <span className="font-medium text-gray-900">Veritasium</span>
-                </div>
-              </a>
-              <a
-                href="https://www.youtube.com/c/The8BitGuy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-calgary-red transition-all"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="text-4xl mb-2">💾</div>
-                  <span className="font-medium text-gray-900">The 8-Bit Guy</span>
-                </div>
-              </a>
-              <a
-                href="https://www.youtube.com/c/PBSSpacetime"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-calgary-red transition-all"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="text-4xl mb-2">🔭</div>
-                  <span className="font-medium text-gray-900">PBS Space Time</span>
-                </div>
-              </a>
-              <a
-                href="https://www.youtube.com/c/ClaireLuvcat"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-calgary-red transition-all"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="text-4xl mb-2">🐱</div>
-                  <span className="font-medium text-gray-900">Claire Luvcat</span>
-                </div>
-              </a>
-              <a
-                href="https://www.youtube.com/c/SarahnTuned"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-calgary-red transition-all"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="text-4xl mb-2">🚗</div>
-                  <span className="font-medium text-gray-900">Sarah-n-Tuned</span>
-                </div>
-              </a>
-              <a
-                href="https://www.youtube.com/@CertifiablyIngame"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-calgary-red transition-all"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="text-4xl mb-2">🎮</div>
-                  <span className="font-medium text-gray-900">Certifiably Ingame</span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          {/* Skills */}
-          <div className="mt-12">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">Skills & Expertise</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {skills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow hover:border-calgary-red"
-                >
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="bg-calgary-red p-3 rounded-lg">
-                      {skill.icon}
-                    </div>
-                    <span className="font-semibold text-gray-900">{skill.name}</span>
-                  </div>
-                  <p className="text-sm text-gray-600">
-                    Proficient in building modern web applications and solving complex problems with code.
-                  </p>
-                </div>
-              ))}
+              </div>
             </div>
           </div>
         </motion.div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-white">
+      <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -421,7 +291,7 @@ export default function KenStaplesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
               >
                 <div className="p-8">
                   <div className="text-4xl mb-4">{project.icon}</div>
@@ -451,8 +321,8 @@ export default function KenStaplesPage() {
         </motion.div>
       </section>
 
-      {/* Interests Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      {/* Skills Section */}
+      <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -460,41 +330,33 @@ export default function KenStaplesPage() {
           transition={{ duration: 0.6 }}
         >
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Interests & Passions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Skills & Expertise</h2>
             <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {interests.map((interest, index) => (
-              <motion.div
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {skills.map((skill, index) => (
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-lg p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow hover:border-calgary-red"
               >
-                <div className="relative w-full aspect-square">
-                  <Image
-                    src={interest.image}
-                    alt={interest.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="bg-calgary-red p-3 rounded-lg">
+                    {skill.icon}
+                  </div>
+                  <span className="font-semibold text-gray-900">{skill.name}</span>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{interest.title}</h3>
-                  <p className="text-gray-600">{interest.description}</p>
-                </div>
-              </motion.div>
+                <p className="text-sm text-gray-600">
+                  Proficient in building modern web applications and solving complex problems with code.
+                </p>
+              </div>
             ))}
           </div>
         </motion.div>
       </section>
 
-      {/* Calgary Sports Section */}
-      <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      {/* Photography Gallery Section */}
+      <section id="photography" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -502,280 +364,62 @@ export default function KenStaplesPage() {
           transition={{ duration: 0.6 }}
         >
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Calgary Sport Teams</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Photography Gallery</h2>
             <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full"></div>
-          </div>
-
-          <div className="grid md:grid-cols-1 gap-6 max-w-3xl mx-auto">
-            <a
-              href="https://www.stampeders.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer aspect-[1/1]"
-            >
-              <Image
-                src="/stampeders.jpg"
-                alt="Calgary Stampeders"
-                fill
-                className="object-cover transform group-hover:scale-110 transition-transform duration-500"
-                sizes="(max-width: 768px) 100vw, 100vh"
-              />
-              {/* Stampeders Logo Overlay */}
-              <div className="absolute top-4 right-4 w-20 h-20 md:w-24 md:h-24">
-                <Image
-                  src="/stampeders-logo.svg"
-                  alt="Stampeders Logo"
-                  fill
-                  className="object-contain drop-shadow-lg"
-                />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                <h4 className="text-2xl font-bold text-white">Calgary Stampeders</h4>
-                <p className="text-white/90">CFL Team - Proud supporter of the Red and White</p>
-              </div>
-            </a>
-          </div>
-
-          {/* Calgary Sports Teams Carousel */}
-          <div className="mt-12">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">Other Calgary Teams I Support</h3>
-            <p className="text-gray-600 text-center mb-6">Swipe to see more! →</p>
-            <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth">
-              {/* Calgary Flames */}
-              <a
-                href="https://www.nhl.com/flames/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-orange-600 to-red-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="relative w-16 h-16 mx-auto mb-3">
-                  <Image
-                    src="/flames-logo.svg"
-                    alt="Calgary Flames Logo"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="text-2xl font-bold text-white mb-2">Calgary Flames</h4>
-                <p className="text-orange-100">NHL Team - Proud supporter since 1980</p>
-              </a>
-
-              {/* Calgary Surge */}
-              <a
-                href="https://www.calgarysurge.ca/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="relative w-16 h-16 mx-auto mb-3">
-                  <Image
-                    src="/surge-logo.png"
-                    alt="Calgary Surge Logo"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="text-2xl font-bold text-white mb-2">Calgary Surge</h4>
-                <p className="text-blue-100">CEBL Team - Supporting the best in Canadian basketball</p>
-              </a>
-
-              {/* Cavalry FC */}
-              <a
-                href="https://www.canpl.ca/cavalryfc"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="relative w-16 h-16 mx-auto mb-3">
-                  <Image
-                    src="/cavalry-logo.svg"
-                    alt="Cavalry FC Logo"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="text-2xl font-bold text-white mb-2">Cavalry FC</h4>
-                <p className="text-orange-100">CPL Team - The best of Canadian soccer</p>
-              </a>
-
-              {/* Calgary Hitmen */}
-              <a
-                href="https://chl.ca/whl-hitmen/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-red-700 to-black rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="relative w-16 h-16 mx-auto mb-3">
-                  <Image
-                    src="/hitmen-logo.svg"
-                    alt="Calgary Hitmen Logo"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="text-2xl font-bold text-white mb-2">Calgary Hitmen</h4>
-                <p className="text-red-200">WHL Team - Junior hockey excellence</p>
-              </a>
-
-              {/* Calgary Wild FC */}
-              <a
-                href="https://www.calgarywildfc.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-green-600 to-green-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="relative w-16 h-16 mx-auto mb-3">
-                  <Image
-                    src="/wild-logo.svg"
-                    alt="Calgary Wild FC Logo"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="text-2xl font-bold text-white mb-2">Calgary Wild FC</h4>
-                <p className="text-green-100">FC Team - Professional soccer excellence</p>
-              </a>
-
-              {/* Calgary Roughnecks */}
-              <a
-                href="https://www.calgaryroughnecks.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-slate-700 to-slate-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="relative w-16 h-16 mx-auto mb-3">
-                  <Image
-                    src="/roughnecks-logo.svg"
-                    alt="Calgary Roughnecks Logo"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="text-2xl font-bold text-white mb-2">Calgary Roughnecks</h4>
-                <p className="text-slate-200">NLL Team - Lacrosse champions</p>
-              </a>
-
-              {/* Calgary Wranglers */}
-              <a
-                href="https://www.calgarywranglers.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 w-72 snap-center bg-gradient-to-br from-red-600 to-red-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="relative w-16 h-16 mx-auto mb-3">
-                  <Image
-                    src="/wranglers-logo.svg"
-                    alt="Calgary Wranglers Logo"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="text-2xl font-bold text-white mb-2">Calgary Wranglers</h4>
-                <p className="text-red-200">AHL Team - Flames affiliate hockey</p>
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-gradient-to-br from-calgary-red to-calgary-red text-white">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
-            <p className="text-calgary-red max-w-2xl mx-auto">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+              Capturing moments in nature, cityscapes, and architecture around Calgary and beyond.
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-center gap-4">
-            <a
-              href="mailto:hello@kenstaples.com?subject=I%27d%20like%20to%20connect"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-calgary-red font-semibold rounded-lg hover:bg-calgary-red transition-colors"
-            >
-              <Mail className="h-5 w-5" />
-              Get in Touch
-            </a>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { src: '/Picture10.png', alt: 'Photography 1' },
+              { src: '/Picture11.png', alt: 'Photography 2' },
+              { src: '/Picture13.png', alt: 'Photography 3' },
+              { src: '/Picture24.png', alt: 'Photography 4' },
+              { src: '/Picture27.png', alt: 'Photography 5' },
+              { src: '/Picture35.png', alt: 'Photography 6' },
+              { src: '/Picture38.png', alt: 'Photography 7' }
+            ].map((photo, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
+                className="relative aspect-square rounded-lg overflow-hidden shadow-lg group cursor-pointer"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <Camera className="h-6 w-6 text-white mb-2" />
+                    <p className="text-white text-sm font-medium">{photo.alt}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
 
-          <div className="flex justify-center gap-6 mt-12">
-            <a
-              href="https://github.com/kenstaplesonline"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-calgary-red hover:text-white transition-colors"
-            >
-              <Github className="h-5 w-5" />
-              <span>GitHub</span>
-            </a>
-            <a
-              href="mailto:hello@kenstaples.com?subject=I%27d%20like%20to%20connect"
-              className="flex items-center gap-2 text-calgary-red hover:text-white transition-colors"
-            >
-              <Mail className="h-5 w-5" />
-              <span>Email</span>
-            </a>
-          </div>
-
-          {/* Social Media Links */}
-          <div className="mt-12">
-            <p className="text-center text-white/80 mb-4">Follow me on social media</p>
-            <div className="flex justify-center gap-4">
-              <a
-                href="https://facebook.com/kenstaples"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-              >
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a
-                href="https://instagram.com/kenstaples"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-              >
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a
-                href="https://linkedin.com/in/kenstaples"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-              >
-                <Linkedin className="h-6 w-6" />
-              </a>
-              <a
-                href="https://twitter.com/kenstaples"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-                title="X (formerly Twitter)"
-              >
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-              <a
-                href="http://www.youtube.com/@KenStaplesonline"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-              >
-                <Youtube className="h-6 w-6" />
-              </a>
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 mb-4">
+              Equipment: Canon Rebel T6I, Google Pixel 4XL, Google Pixel 7 Pro, Google Pixel 9 Pro XL
+            </p>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full text-sm text-gray-700">
+              <Camera className="h-4 w-4" />
+              <span>Amateur Photographer</span>
             </div>
           </div>
         </motion.div>
       </section>
 
-      {/* Land Acknowledgement */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-gray-50">
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -783,29 +427,62 @@ export default function KenStaplesPage() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Land Acknowledgement</h2>
-          <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full mb-8"></div>
-          <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-            <p className="text-gray-700 leading-relaxed mb-4">
-              <strong className="text-calgary-red">KenStaples.com</strong> acknowledges that we are on Treaty 7 territory,<br />
-              the traditional and ancestral lands of the:
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Let's Connect</h2>
+            <div className="w-20 h-1 bg-calgary-red mx-auto rounded-full"></div>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+              Interested in working together? Let's talk about your project.
             </p>
-            <ul className="text-left text-gray-700 space-y-2 mb-6">
-              <li className="flex items-start gap-2">
-                <span className="text-calgary-red mt-1">•</span>
-                <span><strong>Blackfoot Confederacy:</strong> Kainai Nation, Piikani Nation, Amskapi Piikani, and Siksika Nation</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-calgary-red mt-1">•</span>
-                <span><strong>Other First Nations:</strong> Tsuut'ina Nation and Stoney Nakoda</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-calgary-red mt-1">•</span>
-                <span><strong>Métis:</strong> Historical Northwest Métis Homeland (Battle River Territory)</span>
-              </li>
-            </ul>
-            <p className="text-gray-600 italic text-sm">
-              We honour the First Nations, Inuit, and Métis peoples for their care and stewardship of this land, and acknowledge the ongoing impact of colonization. We are committed to learning, understanding, and building respectful relationships with Indigenous communities.
+          </div>
+
+          <div className="flex justify-center">
+            <a
+              href="mailto:hello@kenstaples.com?subject=I%27d%20like%20to%20connect"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-calgary-red text-white font-semibold rounded-lg hover:bg-calgary-red hover:text-white transition-colors shadow-lg"
+            >
+              <Mail className="h-5 w-5" />
+              Get in Touch
+            </a>
+          </div>
+
+          <div className="flex justify-center gap-6 mt-12">
+            <a href="https://github.com/Ken-Staples" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-calgary-red transition-colors">
+              <Github className="h-6 w-6" />
+            </a>
+            <a href="https://www.linkedin.com/in/ken-staples/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-calgary-red transition-colors">
+              <Linkedin className="h-6 w-6" />
+            </a>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Land Acknowledgement Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <div className="relative rounded-lg overflow-hidden shadow-lg mb-8">
+            <Image
+              src="/LA.jpg"
+              alt="Land Acknowledgement Photography"
+              width={50}
+              height={50}
+              className="object-cover w-full"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+              <h4 className="text-xl font-bold text-white">Acknowledging Our Roots</h4>
+            </div>
+          </div>
+          <div className="bg-gray-50 rounded-lg p-8">
+            <p className="text-lg text-gray-800 mb-6">
+              KenStaples.com acknowledges that we are on the traditional, ancestral, and unceded territory of the Blackfoot Confederacy (Kainai, Piikani, Amskapi Piikani, Siksika), the Tsuut'ina Nation, the Stoney Nakoda First Nations (including Chiniki, Bearspaw, and Goodstoney), and the Métis Nation (Historical Northwest Métis Homeland, Battle River Territory).
+            </p>
+            <p className="text-lg text-gray-800 mb-4">
+              We recognize the history, resilience, and ongoing contributions of these First Nations and Métis communities to the land we share.
             </p>
           </div>
         </motion.div>
@@ -829,6 +506,15 @@ export default function KenStaplesPage() {
           </div>
         </div>
       </footer>
+
+      {/* Scroll to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 p-3 bg-calgary-red text-white rounded-full shadow-lg hover:bg-calgary-red transition-all z-50"
+        aria-label="Scroll to top"
+      >
+        <ChevronUp className="h-6 w-6" />
+      </button>
     </div>
   )
 }
