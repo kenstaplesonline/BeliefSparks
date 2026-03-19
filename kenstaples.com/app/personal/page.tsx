@@ -64,7 +64,7 @@ export default function PersonalPage() {
 
   const sportsTeams = [
     { name: 'Calgary Stampeders', league: 'CFL', colors: 'Red & White', logo: '/stampeders-logo.svg', url: 'https://www.stampeders.com/', fanStory: 'Following since childhood! The Stamps have been my CFL team since the 90s. Love the tradition, the Grey Cup memories, and the red & white pride!' },
-    { name: 'Calgary Flames', league: 'NHL', colors: 'Red & Gold', logo: '/flames-logo.svg', url: 'https://www.nhl.com/flames', fanStory: 'Been a Flames fan since the 2004 Stanley Cup run. The C of Red is electric! Forever grateful for the Jarome Iginla era.' },
+    { name: 'Calgary Flames', league: 'NHL', colors: 'Red & Gold', logo: '/flames-logo.svg', url: 'https://www.nhl.com/flames', fanStory: 'Been a fan since 1980. Lived the Stanley Cup run in 1989 and 2004!!' },
     { name: 'Calgary Surge', league: 'CEBL', colors: 'Blue', logo: '/surge-logo.png', url: 'https://www.calgarysurge.ca/', fanStory: 'Following since their inaugural 2023 season! Love having pro basketball in Calgary and the energy at WinSport is amazing.' },
     { name: 'Cavalry FC', league: 'CPL', colors: 'Orange', logo: '/cavalry-logo.svg', url: 'https://cavalryfc.canpl.ca/', fanStory: 'Supporting since day one in 2019! Canadian Premier League soccer at ATCO Field is a must-see. The Cavalry passion is real!' },
     { name: 'Calgary Hitmen', league: 'WHL', colors: 'Red & Black', logo: '/hitmen-logo.svg', url: 'https://www.whl.ca/team/calgary-hitmen', fanStory: 'Following since the 90s! Great memories at the Saddledome watching future NHL stars. Affordable family hockey at its best.' },
