@@ -63,14 +63,14 @@ export default function PersonalPage() {
   ]
 
   const sportsTeams = [
-    { name: 'Calgary Stampeders', league: 'CFL', colors: 'Red & White', logo: '/stampeders-logo.svg', url: 'https://www.stampeders.com/' },
-    { name: 'Calgary Flames', league: 'NHL', colors: 'Red & Gold', logo: '/flames-logo.svg', url: 'https://www.nhl.com/flames' },
-    { name: 'Calgary Surge', league: 'CEBL', colors: 'Blue', logo: '/surge-logo.png', url: 'https://www.calgarysurge.ca/' },
-    { name: 'Cavalry FC', league: 'CPL', colors: 'Orange', logo: '/cavalry-logo.svg', url: 'https://cavalryfc.canpl.ca/' },
-    { name: 'Calgary Hitmen', league: 'WHL', colors: 'Red & Black', logo: '/hitmen-logo.svg', url: 'https://www.whl.ca/team/calgary-hitmen' },
-    { name: 'Calgary Wild FC', league: 'FC', colors: 'Green', logo: '/wild-logo.svg', url: 'https://www.nsl.ca/calgary-wild-fc' },
-    { name: 'Calgary Roughnecks', league: 'NLL', colors: 'Slate', logo: '/roughnecks-logo.svg', url: 'https://www.nll.com/team/calgary-roughnecks/' },
-    { name: 'Calgary Wranglers', league: 'AHL', colors: 'Red', logo: '/wranglers-logo.svg', url: 'https://www.nhl.com/flames/wranglers' }
+    { name: 'Calgary Stampeders', league: 'CFL', colors: 'Red & White', logo: '/stampeders-logo.svg', url: 'https://www.stampeders.com/', fanStory: 'Following since childhood! The Stamps have been my CFL team since the 90s. Love the tradition, the Grey Cup memories, and the red & white pride!' },
+    { name: 'Calgary Flames', league: 'NHL', colors: 'Red & Gold', logo: '/flames-logo.svg', url: 'https://www.nhl.com/flames', fanStory: 'Been a Flames fan since the 2004 Stanley Cup run. The C of Red is electric! Forever grateful for the Jarome Iginla era.' },
+    { name: 'Calgary Surge', league: 'CEBL', colors: 'Blue', logo: '/surge-logo.png', url: 'https://www.calgarysurge.ca/', fanStory: 'Following since their inaugural 2023 season! Love having pro basketball in Calgary and the energy at WinSport is amazing.' },
+    { name: 'Cavalry FC', league: 'CPL', colors: 'Orange', logo: '/cavalry-logo.svg', url: 'https://cavalryfc.canpl.ca/', fanStory: 'Supporting since day one in 2019! Canadian Premier League soccer at ATCO Field is a must-see. The Cavalry passion is real!' },
+    { name: 'Calgary Hitmen', league: 'WHL', colors: 'Red & Black', logo: '/hitmen-logo.svg', url: 'https://www.whl.ca/team/calgary-hitmen', fanStory: 'Following since the 90s! Great memories at the Saddledome watching future NHL stars. Affordable family hockey at its best.' },
+    { name: 'Calgary Wild FC', league: 'FC', colors: 'Green', logo: '/wild-logo.svg', url: 'https://www.nsl.ca/calgary-wild-fc', fanStory: 'Excited to support Calgary\'s newest pro team! Women\'s soccer in Calgary is long overdue and I\'m here for it!' },
+    { name: 'Calgary Roughnecks', league: 'NLL', colors: 'Slate', logo: '/roughnecks-logo.svg', url: 'https://www.nll.com/team/calgary-roughnecks/', fanStory: 'Lacrosse fan since the early 2000s! The Roughnecks bring fast-paced action and championship pedigree. Multiple Champion\'s Cup wins!' },
+    { name: 'Calgary Wranglers', league: 'AHL', colors: 'Red', logo: '/wranglers-logo.svg', url: 'https://www.nhl.com/flames/wranglers', fanStory: 'Following the Flames affiliate since they moved to Calgary in 2022! Great to watch future Flames develop up close.' }
   ]
 
   return (
@@ -219,29 +219,47 @@ export default function PersonalPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {sportsTeams.map((team, index) => (
-              <motion.a
+              <motion.div
                 key={index}
-                href={team.url}
-                target="_blank"
-                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-700 rounded-lg p-4 text-center border border-gray-200 dark:border-gray-600 hover:border-calgary-red hover:shadow-md transition-all block"
+                className="h-48"
+                style={{ perspective: '1000px' }}
               >
-                <div className="relative w-16 h-16 mx-auto mb-2">
-                  <Image
-                    src={team.logo}
-                    alt={`${team.name} logo`}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h4 className="font-semibold text-gray-900 dark:text-white text-sm">{team.name}</h4>
-                <p className="text-xs text-gray-600 dark:text-gray-400">{team.league}</p>
-                <p className="text-xs text-calgary-red mt-1">{team.colors}</p>
-              </motion.a>
+                <a
+                  href={team.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative w-full h-full group cursor-pointer"
+                >
+                  <div className="relative w-full h-full transition-transform duration-500 group-hover:[transform:rotateY(180deg)]" style={{ transformStyle: 'preserve-3d' }}>
+                    {/* Front */}
+                    <div className="absolute inset-0 bg-white dark:bg-gray-800 rounded-lg p-4 text-center border border-gray-200 dark:border-gray-700 flex flex-col items-center justify-center" style={{ backfaceVisibility: 'hidden' }}>
+                      <div className="relative w-16 h-16 mx-auto mb-2">
+                        <Image
+                          src={team.logo}
+                          alt={`${team.name} logo`}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                      <h4 className="font-semibold text-gray-900 dark:text-white text-sm">{team.name}</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">{team.league}</p>
+                      <p className="text-xs text-calgary-red mt-1">{team.colors}</p>
+                    </div>
+                    {/* Back */}
+                    <div className="absolute inset-0 bg-calgary-red rounded-lg p-4 text-center flex flex-col items-center justify-center" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
+                      <h4 className="font-bold text-white text-sm mb-2">{team.name}</h4>
+                      <p className="text-xs text-white/90 leading-relaxed overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: 5, WebkitBoxOrient: 'vertical' }}>
+                        {team.fanStory}
+                      </p>
+                      <span className="text-xs text-white/70 mt-2">Click to visit →</span>
+                    </div>
+                  </div>
+                </a>
+              </motion.div>
             ))}
           </div>
         </motion.div>
