@@ -69,15 +69,15 @@ export default function ProfessionalPage() {
   ]
 
   const skills = [
-    { name: 'Web Development', icon: <Code className="h-6 w-6" /> },
-    { name: 'HTML/CSS/JS', icon: <Code className="h-6 w-6" /> },
-    { name: 'React & Next.js', icon: <Code className="h-6 w-6" /> },
-    { name: 'Microsoft Office', icon: <FileText className="h-6 w-6" /> },
-    { name: 'Photography', icon: <Camera className="h-6 w-6" /> },
-    { name: 'Problem Solving', icon: <Star className="h-6 w-6" /> },
-    { name: 'Communication', icon: <MessageSquare className="h-6 w-6" /> },
-    { name: 'Learning', icon: <Star className="h-6 w-6" /> },
-    { name: 'Creativity', icon: <Star className="h-6 w-6" /> }
+    { name: 'Web Development', icon: <Code className="h-6 w-6" />, description: 'Building responsive, accessible websites using modern frameworks and best practices.' },
+    { name: 'HTML/CSS/JS', icon: <Code className="h-6 w-6" />, description: 'Core web technologies for creating interactive and visually appealing user interfaces.' },
+    { name: 'React & Next.js', icon: <Code className="h-6 w-6" />, description: 'Developing fast, SEO-friendly web applications with React and the Next.js framework.' },
+    { name: 'Microsoft Office', icon: <FileText className="h-6 w-6" />, description: 'Proficient in Word, Excel, PowerPoint, and other Office applications for productivity.' },
+    { name: 'Photography', icon: <Camera className="h-6 w-6" />, description: 'Capturing moments in nature, architecture, and urban landscapes around Calgary.' },
+    { name: 'Problem Solving', icon: <Star className="h-6 w-6" />, description: 'Analytical thinking and creative solutions for complex technical challenges.' },
+    { name: 'Communication', icon: <MessageSquare className="h-6 w-6" />, description: 'Clear, effective communication with technical and non-technical audiences alike.' },
+    { name: 'Learning', icon: <Star className="h-6 w-6" />, description: 'Continuously exploring new technologies, AI, and expanding my skill set.' },
+    { name: 'Creativity', icon: <Star className="h-6 w-6" />, description: 'Combining technical skills with creative vision for unique digital experiences.' }
   ]
 
   return (
@@ -349,7 +349,7 @@ export default function ProfessionalPage() {
                   <span className="font-semibold text-gray-900 dark:text-white">{skill.name}</span>
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Proficient in building modern web applications and solving complex problems with code.
+                  {skill.description}
                 </p>
               </div>
             ))}
